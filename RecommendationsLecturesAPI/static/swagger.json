@@ -1,0 +1,169 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Recommendations Lectures API",
+    "description": "API pour gérer les livres, auteurs et catégories.",
+    "version": "1.0.0"
+  },
+  "basePath": "/",
+  "schemes": ["http"],
+  "securityDefinitions": {
+    "Bearer": {
+      "type": "apiKey",
+      "name": "Authorization",
+      "in": "header",
+      "description": "Entrez 'Bearer' suivi d'un espace et du token JWT."
+    }
+  },
+  "paths": {
+    "/login": {
+      "post": {
+        "summary": "Connexion utilisateur",
+        "description": "Authentification avec JWT",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "credentials",
+            "description": "Nom d'utilisateur et mot de passe",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "username": {
+                  "type": "string"
+                },
+                "password": {
+                  "type": "string"
+                }
+              },
+              "required": ["username", "password"]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Token JWT",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "401": {
+            "description": "Mauvais identifiants"
+          }
+        }
+      }
+    },
+    "/books": {
+      "get": {
+        "summary": "Récupérer la liste des livres",
+        "description": "Retourne tous les livres disponibles",
+        "security": [
+          {
+            "Bearer": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Liste des livres"
+          }
+        }
+      }
+    },
+    "/books/title/{title}": {
+      "get": {
+        "summary": "Récupérer un livre spécifique par titre",
+        "description": "Retourne les informations d'un livre spécifique via son titre",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "title",
+            "required": true,
+            "type": "string",
+            "description": "Titre du livre"
+          }
+        ],
+        "security": [
+          {
+            "Bearer": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Détails du livre"
+          },
+          "404": {
+            "description": "Livre non trouvé"
+          }
+        }
+      }
+    },
+    "/authors": {
+      "get": {
+        "summary": "Récupérer la liste des auteurs",
+        "description": "Retourne tous les auteurs disponibles",
+        "security": [
+          {
+            "Bearer": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Liste des auteurs"
+          }
+        }
+      }
+    },
+    "/categories": {
+      "get": {
+        "summary": "Récupérer la liste des catégories",
+        "description": "Retourne toutes les catégories disponibles",
+        "security": [
+          {
+            "Bearer": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Liste des catégories"
+          }
+        }
+      }
+    },
+    "/recommendations": {
+      "post": {
+        "summary": "Obtenir des recommandations de livres",
+        "description": "Retourne une liste de livres recommandés basée sur un titre de livre donné.",
+        "security": [
+          {
+            "Bearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "book_title",
+            "description": "Titre du livre pour lequel des recommandations sont demandées",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "book_title": {
+                  "type": "string"
+                }
+              },
+              "required": ["book_title"]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Recommandations de livres basées sur le titre fourni"
+          },
+          "400": {
+            "description": "Titre du livre non fourni"
+          }
+        }
+      }
+    }
+  }
+}

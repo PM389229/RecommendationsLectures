@@ -1,0 +1,349 @@
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-342-546
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/docs/
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2024 14:54:36] "GET /docs/ HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/docs/index.css
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/docs/swagger-ui.css
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/docs/swagger-ui-bundle.js
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/docs/swagger-ui-standalone-preset.js
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2024 14:54:36] "[36mGET /docs/index.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2024 14:54:36] "[36mGET /docs/swagger-ui.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2024 14:54:38] "[36mGET /docs/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/docs/favicon-32x32.png
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2024 14:54:39] "GET /docs/favicon-32x32.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2024 14:54:40] "[36mGET /docs/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/static/swagger.json
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2024 14:54:40] "[36mGET /static/swagger.json HTTP/1.1[0m" 304 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/login
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2024 14:55:32] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\User\\Downloads\\CoursAlternance\\Chefoeuvre\\RecommendationsLectures\\RecommendationsLecturesAPI\\app.py', reloading
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-342-546
+INFO:werkzeug: * Detected change in 'c:\\Users\\User\\Downloads\\CoursAlternance\\Chefoeuvre\\RecommendationsLectures\\RecommendationsLecturesAPI\\app.py', reloading
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-342-546
+INFO:werkzeug: * Detected change in 'c:\\Users\\User\\Downloads\\CoursAlternance\\Chefoeuvre\\RecommendationsLectures\\RecommendationsLecturesAPI\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-342-546
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-342-546
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-342-546
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2024 16:02:27] "GET / HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\User\\Downloads\\CoursAlternance\\Chefoeuvre\\RecommendationsLectures\\RecommendationsLecturesAPI\\pytest_api.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-342-546
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-342-546
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-342-546
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-342-546
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-342-546
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-342-546
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-342-546
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-342-546
+INFO:werkzeug: * Detected change in 'c:\\Users\\User\\Downloads\\CoursAlternance\\Chefoeuvre\\RecommendationsLectures\\RecommendationsLecturesAPI\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-342-546
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-342-546
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 09:48:38] "GET / HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/login
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 09:48:51] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/login
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 09:48:56] "POST /login HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/login
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 09:49:01] "POST /login HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/books
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 09:49:02] "GET /books HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\User\\Downloads\\CoursAlternance\\Chefoeuvre\\RecommendationsLectures\\RecommendationsLecturesAPI\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-342-546
+INFO:werkzeug: * Detected change in 'c:\\Users\\User\\Downloads\\CoursAlternance\\Chefoeuvre\\RecommendationsLectures\\RecommendationsLecturesAPI\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-342-546
+INFO:werkzeug: * Detected change in 'c:\\Users\\User\\Downloads\\CoursAlternance\\Chefoeuvre\\RecommendationsLectures\\RecommendationsLecturesAPI\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-342-546
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/books/title/The%20One%20Tree
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 09:57:54] "GET /books/title/The%20One%20Tree HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/books/title/The%20One%20Tree
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 10:02:56] "GET /books/title/The%20One%20Tree HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/books/title/The%20One%20Tree
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 10:03:36] "GET /books/title/The%20One%20Tree HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/books/title/The%20One%20Treeeeeeees
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 10:03:38] "[33mGET /books/title/The%20One%20Treeeeeeees HTTP/1.1[0m" 404 -
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/books/title/The%20One%20Tree
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 10:05:28] "[31m[1mGET /books/title/The%20One%20Tree HTTP/1.1[0m" 401 -
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/books/title/The%20One%20Tree
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 10:05:42] "[31m[1mGET /books/title/The%20One%20Tree HTTP/1.1[0m" 401 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/login
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 10:06:01] "POST /login HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/login
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 10:06:04] "POST /login HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/books
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 10:06:04] "GET /books HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/books/title/The%20One%20Tree
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 10:06:11] "GET /books/title/The%20One%20Tree HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/login
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 10:08:07] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/login
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 10:08:08] "POST /login HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/books/title/The%20One%20Tree
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 10:09:00] "GET /books/title/The%20One%20Tree HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\User\\Downloads\\CoursAlternance\\Chefoeuvre\\RecommendationsLectures\\RecommendationsLecturesAPI\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-342-546
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/docs/
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 10:46:21] "GET /docs/ HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/docs/index.css
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/docs/swagger-ui.css
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/docs/swagger-ui-bundle.js
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/docs/swagger-ui-standalone-preset.js
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 10:46:21] "[36mGET /docs/index.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 10:46:21] "[36mGET /docs/swagger-ui.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 10:46:23] "[36mGET /docs/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 10:46:25] "[36mGET /docs/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/static/swagger.json
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 10:46:25] "[36mGET /static/swagger.json HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-342-546
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/docs/
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 10:46:59] "GET /docs/ HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/docs/swagger-ui-bundle.js
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/docs/swagger-ui-standalone-preset.js
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/docs/index.css
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/docs/swagger-ui.css
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 10:47:00] "[36mGET /docs/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 10:47:00] "[36mGET /docs/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 10:47:00] "[36mGET /docs/index.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 10:47:00] "[36mGET /docs/swagger-ui.css HTTP/1.1[0m" 304 -
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/static/swagger.json
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 10:47:00] "[36mGET /static/swagger.json HTTP/1.1[0m" 304 -
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/docs/
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 10:49:12] "GET /docs/ HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/docs/swagger-ui-bundle.js
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/docs/swagger-ui-standalone-preset.js
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/docs/index.css
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/docs/swagger-ui.css
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 10:49:12] "[36mGET /docs/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 10:49:12] "[36mGET /docs/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 10:49:12] "[36mGET /docs/swagger-ui.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 10:49:12] "[36mGET /docs/index.css HTTP/1.1[0m" 304 -
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/static/swagger.json
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 10:49:12] "[36mGET /static/swagger.json HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\User\\Downloads\\CoursAlternance\\Chefoeuvre\\RecommendationsLectures\\RecommendationsLecturesAPI\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-342-546
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/docs/
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 10:58:04] "GET /docs/ HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/docs/swagger-ui-bundle.js
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/docs/swagger-ui-standalone-preset.js
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/docs/index.css
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/docs/swagger-ui.css
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 10:58:05] "[36mGET /docs/swagger-ui.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 10:58:05] "[36mGET /docs/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 10:58:05] "[36mGET /docs/index.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 10:58:05] "[36mGET /docs/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/docs/favicon-32x32.png
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 10:58:05] "GET /docs/favicon-32x32.png HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/static/swagger.json
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 10:58:05] "[36mGET /static/swagger.json HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\User\\Downloads\\CoursAlternance\\Chefoeuvre\\RecommendationsLectures\\RecommendationsLecturesAPI\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-342-546
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/docs/
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 11:07:07] "GET /docs/ HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/docs/index.css
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/docs/swagger-ui.css
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/docs/swagger-ui-bundle.js
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/docs/swagger-ui-standalone-preset.js
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 11:07:08] "[36mGET /docs/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 11:07:08] "GET /docs/index.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 11:07:08] "[36mGET /docs/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 11:07:08] "GET /docs/swagger-ui.css HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/static/swagger.json
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 11:07:08] "GET /static/swagger.json HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-342-546
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/swagger
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 11:12:25] "[33mGET /swagger HTTP/1.1[0m" 404 -
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/docs/
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 11:12:39] "[33mGET /docs/ HTTP/1.1[0m" 404 -
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/swagger*
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 11:12:54] "[33mGET /swagger* HTTP/1.1[0m" 404 -
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/swagger
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 11:12:58] "[33mGET /swagger HTTP/1.1[0m" 404 -
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/swagger
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 11:15:43] "[33mGET /swagger HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\User\\Downloads\\CoursAlternance\\Chefoeuvre\\RecommendationsLectures\\RecommendationsLecturesAPI\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-342-546
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/swagger
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 11:19:33] "GET /swagger HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/swaggerui/droid-sans.css
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/swaggerui/swagger-ui.css
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/swaggerui/swagger-ui-bundle.js
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/swaggerui/swagger-ui-standalone-preset.js
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 11:19:33] "GET /swaggerui/droid-sans.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 11:19:33] "GET /swaggerui/swagger-ui.css HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/swaggerui/favicon-32x32.png
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 11:19:35] "GET /swaggerui/favicon-32x32.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 11:19:35] "GET /swaggerui/swagger-ui-standalone-preset.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 11:19:37] "GET /swaggerui/swagger-ui-bundle.js HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/swagger.json
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 11:19:37] "GET /swagger.json HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\User\\Downloads\\CoursAlternance\\Chefoeuvre\\RecommendationsLectures\\RecommendationsLecturesAPI\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-342-546
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/docs/
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 11:20:55] "GET /docs/ HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/docs/index.css
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/docs/swagger-ui.css
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/docs/swagger-ui-bundle.js
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/docs/swagger-ui-standalone-preset.js
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 11:20:55] "GET /docs/index.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 11:20:55] "[36mGET /docs/swagger-ui.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 11:20:55] "[36mGET /docs/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 11:20:55] "[36mGET /docs/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/static/swagger.json
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 11:20:56] "GET /static/swagger.json HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\User\\Downloads\\CoursAlternance\\Chefoeuvre\\RecommendationsLectures\\RecommendationsLecturesAPI\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-342-546
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/login
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 11:24:05] "POST /login HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 11:24:05] "[35m[1mPOST /recommendations HTTP/1.1[0m" 500 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/login
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 11:24:21] "POST /login HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 11:24:22] "[35m[1mPOST /recommendations HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-342-546
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 12:10:34] "GET / HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/login
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 12:10:36] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/login
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 12:10:38] "POST /login HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/login
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 12:10:41] "POST /login HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/books
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 12:10:41] "GET /books HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/books/title/The%20One%20Tree
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 12:10:43] "GET /books/title/The%20One%20Tree HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/books/title/The%20One%20Treeeeeeees
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 12:10:47] "[33mGET /books/title/The%20One%20Treeeeeeees HTTP/1.1[0m" 404 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/login
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 12:10:52] "POST /login HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 12:10:53] "POST /recommendations HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/login
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 12:11:18] "POST /login HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 12:11:19] "POST /recommendations HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/login
+INFO:flask-limiter:ratelimit 5 per 1 minute (127.0.0.1) exceeded at endpoint: login
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 12:11:26] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 12:11:36] "GET / HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/login
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 12:11:38] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/login
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 12:11:40] "POST /login HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/login
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 12:11:43] "POST /login HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/books
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 12:11:43] "GET /books HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/books/title/The%20One%20Tree
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 12:11:44] "GET /books/title/The%20One%20Tree HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/books/title/The%20One%20Treeeeeeees
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 12:11:47] "[33mGET /books/title/The%20One%20Treeeeeeees HTTP/1.1[0m" 404 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/login
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 12:11:49] "POST /login HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 12:11:50] "POST /recommendations HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/login
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 12:12:21] "POST /login HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 12:12:22] "POST /recommendations HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 12:16:53] "POST /recommendations HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/books/title/The%20Great%20Gatsby
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 12:17:10] "GET /books/title/The%20Great%20Gatsby HTTP/1.1" 200 -

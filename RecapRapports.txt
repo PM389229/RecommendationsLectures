@@ -1,0 +1,24 @@
+
+
+
+
+
+Résumé des rendus
+
+Un rapport du cas pratique du mec d'ARKEA (2-5 pages)
+
+un rapport de la veille (15-20) 5 pages pour chaque competence donc
+
+un rapport sur le chef d'oeuvre complet (47-65) ( donc 2/3 pages par competence ? )
+
+Date de rendu des rapports – 2 decembre et possible de les montrer debut novembre 
+
+COMMENTER AU MAXIUM LES SCRIPTS POUR POUVOIR LES EXPLIQUER
+
+
+Faire un depot GIT 
+
+On peut faire des vidéos des manips pour montrer que ca marche au cas ou ca plante
+
+
+faire 'python app.py' plutot que de lire le script app.py pour lancer l'API ca a l'air de mieux marcher

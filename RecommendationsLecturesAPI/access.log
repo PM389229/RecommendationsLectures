@@ -1,0 +1,221 @@
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-342-546
+INFO:werkzeug: * Detected change in 'C:\\Users\\User\\Downloads\\CoursAlternance\\Chefoeuvre\\RecommendationsLectures\\RecommendationsLecturesAPI\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-342-546
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-342-546
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 09:29:50] "GET / HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/login
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 09:30:56] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/login
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 09:31:12] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/login
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 09:33:14] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\User\\Downloads\\CoursAlternance\\Chefoeuvre\\RecommendationsLectures\\RecommendationsLecturesAPI\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-342-546
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/login
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 09:35:46] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-342-546
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/login
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 15:36:48] "POST /login HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 15:36:48] "POST /recommendations HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/login
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 15:47:46] "POST /login HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 15:47:55] "POST /recommendations HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 15:48:45] "POST /recommendations HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 15:49:11] "POST /recommendations HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\User\\Downloads\\CoursAlternance\\Chefoeuvre\\RecommendationsLectures\\RecommendationsLecturesAPI\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-342-546
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/login
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2024 10:42:22] "POST /login HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/login
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2024 10:42:22] "POST /login HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/login
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2024 10:42:22] "POST /login HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2024 10:42:25] "POST /recommendations HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2024 10:42:31] "POST /recommendations HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2024 10:42:41] "POST /recommendations HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\User\\Downloads\\CoursAlternance\\Chefoeuvre\\RecommendationsLectures\\RecommendationsLecturesAPI\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-342-546
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2024 10:50:34] "GET / HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/login
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2024 10:50:34] "POST /login HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/login
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2024 10:50:34] "POST /login HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/login
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/login
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2024 10:50:34] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2024 10:50:34] "POST /login HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/login
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2024 10:50:34] "POST /login HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/login
+INFO:flask-limiter:ratelimit 5 per 1 minute (127.0.0.1) exceeded at endpoint: login
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2024 10:50:34] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/login
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/login
+INFO:flask-limiter:ratelimit 5 per 1 minute (127.0.0.1) exceeded at endpoint: login
+INFO:flask-limiter:ratelimit 5 per 1 minute (127.0.0.1) exceeded at endpoint: login
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2024 10:50:34] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2024 10:50:34] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2024 10:50:48] "POST /recommendations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2024 10:50:48] "POST /recommendations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2024 10:50:48] "POST /recommendations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2024 10:50:48] "POST /recommendations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2024 10:50:48] "POST /recommendations HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2024 10:50:48] "POST /recommendations HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2024 10:52:06] "POST /recommendations HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2024 10:57:06] "GET / HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/login
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2024 10:57:37] "POST /login HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2024 10:57:48] "POST /recommendations HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2024 11:01:15] "POST /recommendations HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\User\\Downloads\\CoursAlternance\\Chefoeuvre\\RecommendationsLectures\\RecommendationsLecturesAPI\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-342-546
+INFO:werkzeug: * Detected change in 'C:\\Users\\User\\Downloads\\CoursAlternance\\Chefoeuvre\\RecommendationsLectures\\RecommendationsLecturesAPI\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-342-546
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/login
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2024 11:57:45] "POST /login HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/login
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2024 11:57:45] "POST /login HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/login
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2024 11:57:45] "POST /login HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/login
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2024 11:57:45] "POST /login HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/login
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2024 11:57:45] "POST /login HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/login
+INFO:flask-limiter:ratelimit 5 per 1 minute (127.0.0.1) exceeded at endpoint: login
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2024 11:57:45] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/login
+INFO:flask-limiter:ratelimit 5 per 1 minute (127.0.0.1) exceeded at endpoint: login
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2024 11:57:46] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/login
+INFO:flask-limiter:ratelimit 5 per 1 minute (127.0.0.1) exceeded at endpoint: login
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2024 11:57:46] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/login
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/login
+INFO:flask-limiter:ratelimit 5 per 1 minute (127.0.0.1) exceeded at endpoint: login
+INFO:flask-limiter:ratelimit 5 per 1 minute (127.0.0.1) exceeded at endpoint: login
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2024 11:57:46] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2024 11:57:46] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/login
+INFO:flask-limiter:ratelimit 5 per 1 minute (127.0.0.1) exceeded at endpoint: login
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2024 11:57:46] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/login
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/login
+INFO:flask-limiter:ratelimit 5 per 1 minute (127.0.0.1) exceeded at endpoint: login
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2024 11:57:46] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:flask-limiter:ratelimit 5 per 1 minute (127.0.0.1) exceeded at endpoint: login
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2024 11:57:46] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/login
+INFO:flask-limiter:ratelimit 5 per 1 minute (127.0.0.1) exceeded at endpoint: login
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2024 11:57:46] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/login
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/login
+INFO:flask-limiter:ratelimit 5 per 1 minute (127.0.0.1) exceeded at endpoint: login
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2024 11:57:46] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/login
+INFO:flask-limiter:ratelimit 5 per 1 minute (127.0.0.1) exceeded at endpoint: login
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/login
+INFO:flask-limiter:ratelimit 5 per 1 minute (127.0.0.1) exceeded at endpoint: login
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2024 11:57:46] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:flask-limiter:ratelimit 5 per 1 minute (127.0.0.1) exceeded at endpoint: login
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2024 11:57:46] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2024 11:57:46] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/login
+INFO:flask-limiter:ratelimit 5 per 1 minute (127.0.0.1) exceeded at endpoint: login
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2024 11:57:46] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/login
+INFO:flask-limiter:ratelimit 5 per 1 minute (127.0.0.1) exceeded at endpoint: login
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2024 11:57:46] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/login
+INFO:flask-limiter:ratelimit 5 per 1 minute (127.0.0.1) exceeded at endpoint: login
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2024 11:57:46] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/login
+INFO:flask-limiter:ratelimit 5 per 1 minute (127.0.0.1) exceeded at endpoint: login
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2024 11:57:46] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/login
+INFO:flask-limiter:ratelimit 5 per 1 minute (127.0.0.1) exceeded at endpoint: login
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2024 11:57:46] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2024 11:59:05] "POST /recommendations HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\User\\Downloads\\CoursAlternance\\Chefoeuvre\\RecommendationsLectures\\RecommendationsLecturesAPI\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-342-546
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2024 14:11:50] "[31m[1mPOST /recommendations HTTP/1.1[0m" 401 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2024 14:11:54] "[31m[1mPOST /recommendations HTTP/1.1[0m" 401 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2024 14:12:01] "[31m[1mPOST /recommendations HTTP/1.1[0m" 401 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2024 14:12:04] "[31m[1mPOST /recommendations HTTP/1.1[0m" 401 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/login
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2024 14:12:15] "POST /login HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2024 14:12:22] "POST /recommendations HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2024 14:15:12] "POST /recommendations HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2024 14:25:02] "POST /recommendations HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2024 14:26:24] "POST /recommendations HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2024 14:26:49] "POST /recommendations HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2024 15:32:13] "[31m[1mPOST /recommendations HTTP/1.1[0m" 401 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2024 15:32:29] "[31m[1mPOST /recommendations HTTP/1.1[0m" 401 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2024 15:32:40] "[31m[1mPOST /recommendations HTTP/1.1[0m" 401 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/login
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2024 15:34:14] "POST /login HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2024 15:34:17] "POST /recommendations HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2024 15:39:02] "POST /recommendations HTTP/1.1" 200 -

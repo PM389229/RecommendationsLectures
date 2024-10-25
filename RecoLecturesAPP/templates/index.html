@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendation App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Book Recommendation App</h1>
+        <div id="login-section">
+            <h2>Login</h2>
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+            <button onclick="login()">Login</button>
+            <p id="login-message"></p>
+        </div>
+
+        <div id="recommendations-section" style="display:none;">
+            <h2>Get Recommendations</h2>
+            <input type="text" id="book-title" placeholder="Enter a Book Title">
+            <button onclick="getRecommendations()">Get Recommendations</button>
+            <ul id="recommendations-list"></ul>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
