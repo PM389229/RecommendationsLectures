@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Chargement du fichier CSV
-data = pd.read_csv('data/final_dataset_clean.csv')
+data = pd.read_csv('StockDatas/final_dataset_clean.csv')
 
 def test_data_qualité():
     assert data['title'].notnull().all(), "Certaines entrées de titres sont nulles."
