@@ -13,7 +13,7 @@ stages:
 test_data:
   stage: test
   script:
-    - pip install -r requirements.txt
+    - pip install -r requirements_linux.txt # On utilise le fichier sans pywin32 biblio spécifique a windows et non compatible avec les environnements Linux par defaut ( ceux utilisés dans Gitlab CI/CD)
     - python tests/test_data_qualité.py  # Test de qualité des données
   artifacts:
     paths:
