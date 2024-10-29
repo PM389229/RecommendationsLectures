@@ -220,3 +220,14 @@ INFO:werkzeug:127.0.0.1 - - [25/Oct/2024 15:34:17] "POST /recommendations HTTP/1
 INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/recommendations
 INFO:werkzeug:127.0.0.1 - - [25/Oct/2024 15:39:02] "POST /recommendations HTTP/1.1" 200 -
 INFO:werkzeug: * Detected change in 'C:\\Users\\User\\Downloads\\CoursAlternance\\Chefoeuvre\\RecommendationsLectures\\RecommendationsLecturesAPI\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-342-546
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+INFO:werkzeug:127.0.0.1 - - [28/Oct/2024 09:56:27] "[31m[1mPOST /recommendations HTTP/1.1[0m" 401 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/login
+INFO:werkzeug:127.0.0.1 - - [28/Oct/2024 09:56:32] "POST /login HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+INFO:werkzeug:127.0.0.1 - - [28/Oct/2024 09:56:34] "POST /recommendations HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+INFO:werkzeug:127.0.0.1 - - [28/Oct/2024 09:56:40] "POST /recommendations HTTP/1.1" 200 -
