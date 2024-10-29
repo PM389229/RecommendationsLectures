@@ -1,5 +1,5 @@
 # Utilisation de Python 3.8 comme image Docker de base pour les étapes CI/CD
-image: python:3.8
+image: python:3.9
 
 # Définition des étapes du pipeline
 stages:
