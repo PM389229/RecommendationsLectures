@@ -4,7 +4,7 @@ global:
 scrape_configs:
   - job_name: "flask_app"
     static_configs:
-      - targets: ["host.docker.internal:8000"]  # Adresse de l'appli Flask
+      - targets: ["host.docker.internal:8001"]  # Adresse de l'appli Flask
 
 rule_files:
   - "alert.rules.yml"  # Inclure le fichier des règles d'alerte si nécessaire

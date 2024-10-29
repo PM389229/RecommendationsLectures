@@ -219,3 +219,4 @@ INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/recommendations
 INFO:werkzeug:127.0.0.1 - - [25/Oct/2024 15:34:17] "POST /recommendations HTTP/1.1" 200 -
 INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/recommendations
 INFO:werkzeug:127.0.0.1 - - [25/Oct/2024 15:39:02] "POST /recommendations HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\User\\Downloads\\CoursAlternance\\Chefoeuvre\\RecommendationsLectures\\RecommendationsLecturesAPI\\app.py', reloading

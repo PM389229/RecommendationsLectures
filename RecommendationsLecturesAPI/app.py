@@ -17,7 +17,7 @@ app = Flask(__name__)
 
 # Démarrage du serveur Prometheus sur le port 8000 qui est bien libre comme verifié
 
-start_http_server(8000) # Expose les métriques sur http://localhost:8000/metrics.
+start_http_server(8001) # Expose les métriques sur http://localhost:8001/metrics. 8000 est deja utilisé sur le projet Django d'alternance
 
 
 # Création des métriques Prometheus. similarity_mean_gauge, similarity_std_gauge, popularity_mean_gauge : collectent les metriques générées par le modele

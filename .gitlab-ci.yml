@@ -1,0 +1,63 @@
+# Utilisation de Python 3.8 comme image Docker de base pour les étapes CI/CD
+image: python:3.8
+
+# Définition des étapes du pipeline
+stages:
+  - test
+  - embeddings
+  - validate
+  - package
+  - deploy
+
+# Étape 1 : Test de qualité des données
+test_data:
+  stage: test
+  script:
+    - pip install -r requirements.txt
+    - python tests/test_data_quality.py  # Test de qualité des données
+  artifacts:
+    paths:
+      - StockDatas/final_dataset_clean.csv  # Sauvegarder le fichier de données pour les étapes suivantes
+
+# Étape 2 : Génération des embeddings
+generer_embeddings:
+  stage: embeddings
+  script:
+    - pip install -r requirements.txt
+    - python scripts/generer_embeddings.py  # Script de génération des embeddings
+  artifacts:
+    paths:
+      - embeddings/embeddings.npy  # Sauvegarder les embeddings pour les étapes suivantes
+  dependencies:
+    - test_data  # Dépend de l'étape test_data
+
+# Étape 3 : Validation des similarités cosinus
+valider_similarité:
+  stage: validate
+  script:
+    - pip install -r requirements.txt
+    - python tests/test_similarité.py  # Vérifier les similarités cosinus
+  dependencies:
+    - generer_embeddings  # Dépend des embeddings générés
+
+# Étape 4 : Packaging des embeddings pour déploiement
+package_embeddings:
+  stage: package
+  script:
+    - zip -r packages/embeddings_package.zip embeddings/embeddings.npy  # Créer un ZIP des embeddings
+  artifacts:
+    paths:
+      - packages/embeddings_package.zip  # Packagé pour l'étape de déploiement
+  dependencies:
+    - valider_similarité
+
+# Étape 5 : Déploiement de l’API
+deploiement_api:
+  stage: deploy
+  script:
+    - pip install -r requirements.txt
+    - python scripts/deploiement_api.py  # Déployer l'API Flask
+  dependencies:
+    - package_embeddings
+  only:
+    - main  # Déploiement uniquement sur la branche principale
