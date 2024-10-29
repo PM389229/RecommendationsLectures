@@ -23,7 +23,7 @@ test_data:
 generer_embeddings:
   stage: embeddings
   script:
-    - pip install -r requirements.txt
+    - pip install -r requirements_linux.txt
     - python scripts/generer_embeddings.py  # Script de génération des embeddings
   artifacts:
     paths:
@@ -35,7 +35,7 @@ generer_embeddings:
 valider_similarité:
   stage: validate
   script:
-    - pip install -r requirements.txt
+    - pip install -r requirements_linux.txt
     - python tests/test_similarité.py  # Vérifier les similarités cosinus
   dependencies:
     - generer_embeddings  # Dépend des embeddings générés
@@ -55,7 +55,7 @@ package_embeddings:
 deploiement_api:
   stage: deploy
   script:
-    - pip install -r requirements.txt
+    - pip install -r requirements_linux.txt
     - python scripts/deploiement_api.py  # Déployer l'API Flask
   dependencies:
     - package_embeddings
