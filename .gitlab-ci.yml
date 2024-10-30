@@ -24,6 +24,7 @@ generer_embeddings:
   stage: embeddings
   script:
     - pip install -r requirements_linux.txt
+    - mkdir -p embeddings  # Crée le dossier embeddings s'il n'existe pas
     - python scripts/generer_embeddings.py  # Script de génération des embeddings
   artifacts:
     paths:
