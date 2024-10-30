@@ -45,8 +45,8 @@ valider_similarité:
 package_embeddings:
   stage: package
   script:
-    - apt-get update && apt-get install -y zip  # Installe le zip au debut du job package embeddings
-    - zip -r packages/embeddings_package.zip embeddings/embeddings.npy  # Créer un ZIP des embeddings
+    - apt-get update && apt-get install -y zip  # Installer zip
+    - if [ -f embeddings/embeddings.npy ]; then zip -r packages/embeddings_package.zip embeddings/embeddings.npy; else echo "Erreur : le fichier embeddings.npy est manquant."; fi
   artifacts:
     paths:
       - packages/embeddings_package.zip  # Packagé pour l'étape de déploiement

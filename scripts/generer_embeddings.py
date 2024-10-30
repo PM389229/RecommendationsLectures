@@ -1,6 +1,10 @@
 from sentence_transformers import SentenceTransformer
 import numpy as np
 import pandas as pd
+import os
+
+# Cree le dossier pour stocker les embeddings 
+os.makedirs('embeddings', exist_ok=True) 
 
 # Charger les données et le modèle
 data = pd.read_csv('StockDatas/final_dataset_clean.csv')
