@@ -45,13 +45,15 @@ package_embeddings:
   stage: package
   script:
     - apt-get update
-    - apt-get install -y zip  # Installe le zip au début du job
-    - zip -r packages/embeddings_package.zip embeddings/embeddings.npy  # Créer un ZIP des embeddings
+    - apt-get install -y zip  # Installe l'utilitaire zip
+    - test -f embeddings/embeddings.npy && echo "File exists, proceeding to zip." || echo "File not found!"
+    - zip -r packages/embeddings_package.zip embeddings/embeddings.npy  # Crée un ZIP des embeddings
   artifacts:
     paths:
-      - packages/embeddings_package.zip  # Packagé pour l'étape de déploiement
+      - packages/embeddings_package.zip  # Fichier packagé pour l'étape de déploiement
   dependencies:
-    - valider_similarité
+    - generer_embeddings  # Dépendance directe à la génération des embeddings
+
 
 
 # Étape 5 : Déploiement de l’API
