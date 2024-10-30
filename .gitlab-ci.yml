@@ -45,6 +45,7 @@ valider_similarité:
 package_embeddings:
   stage: package
   script:
+    - apt-get update && apt-get install -y zip  # Installe le zip au debut du job package embeddings
     - zip -r packages/embeddings_package.zip embeddings/embeddings.npy  # Créer un ZIP des embeddings
   artifacts:
     paths:
