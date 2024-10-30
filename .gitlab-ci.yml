@@ -41,17 +41,18 @@ valider_similarité:
   dependencies:
     - generer_embeddings  # Dépend des embeddings générés
 
-# Étape 4 : Packaging des embeddings pour déploiement
 package_embeddings:
   stage: package
   script:
-    - apt-get update && apt-get install -y zip  # Installer zip
-    - if [ -f embeddings/embeddings.npy ]; then zip -r packages/embeddings_package.zip embeddings/embeddings.npy; else echo "Erreur : le fichier embeddings.npy est manquant."; fi
+    - apt-get update
+    - apt-get install -y zip  # Installe le zip au début du job
+    - zip -r packages/embeddings_package.zip embeddings/embeddings.npy  # Créer un ZIP des embeddings
   artifacts:
     paths:
       - packages/embeddings_package.zip  # Packagé pour l'étape de déploiement
   dependencies:
     - valider_similarité
+
 
 # Étape 5 : Déploiement de l’API
 deploiement_api:
