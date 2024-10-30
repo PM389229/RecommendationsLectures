@@ -46,6 +46,7 @@ package_embeddings:
   script:
     - apt-get update
     - apt-get install -y zip  # Installe l'utilitaire zip
+    - mkdir -p packages  # Crée le dossier 'packages' si nécessaire
     - test -f embeddings/embeddings.npy && echo "File exists, proceeding to zip." || echo "File not found!"
     - zip -r packages/embeddings_package.zip embeddings/embeddings.npy  # Crée un ZIP des embeddings
   artifacts:
@@ -53,6 +54,7 @@ package_embeddings:
       - packages/embeddings_package.zip  # Fichier packagé pour l'étape de déploiement
   dependencies:
     - generer_embeddings  # Dépendance directe à la génération des embeddings
+
 
 
 
