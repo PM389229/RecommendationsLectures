@@ -22,3 +22,16 @@ On peut faire des vidéos des manips pour montrer que ca marche au cas ou ca pla
 
 
 faire 'python app.py' plutot que de lire le script app.py pour lancer l'API ca a l'air de mieux marcher
+
+
+OVH codes secours:
+ECQ1-223B-9FKA-VJYX
+5ZAK-RSBF-5L51-C8Q6
+5DH7-I0R6-OPJG-WYBK
+X3LY-PJMB-F3AZ-85KP
+J283-TM02-010H-5LD5
+G4L2-XUKF-XWGR-HFP3
+N3MI-EEMJ-Y7E9-3YSD
+MBTK-UYQ8-JBP7-GIU4
+XSSK-632Q-D6V3-LGYW
+VZWP-WRLE-743T-QA31

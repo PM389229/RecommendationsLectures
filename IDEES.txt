@@ -1,0 +1,9 @@
+
+
+
+
+
+
+
+
+# Un utilisateur peut 'ajouter' des livres proposés par le systeme de recommendations , comme une fonction 'A lire plus tard' en gros comme des favoris
