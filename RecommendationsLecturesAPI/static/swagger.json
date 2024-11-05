@@ -164,6 +164,69 @@
           }
         }
       }
+    },
+    "/favorites": {
+      "post": {
+        "summary": "Ajouter un livre aux favoris",
+        "description": "Ajoute un livre aux favoris de l'utilisateur connecté.",
+        "security": [
+          {
+            "Bearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "book_title",
+            "in": "body",
+            "description": "Titre du livre à ajouter aux favoris",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "book_title": {
+                  "type": "string",
+                  "example": "The Epic of Gilgamesh"
+                }
+              },
+              "required": ["book_title"]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Livre ajouté aux favoris"
+          },
+          "400": {
+            "description": "Titre de livre manquant"
+          },
+          "500": {
+            "description": "Erreur interne du serveur"
+          }
+        }
+      },
+      "get": {
+        "summary": "Récupérer les favoris de l'utilisateur",
+        "description": "Retourne la liste des livres favoris de l'utilisateur connecté.",
+        "security": [
+          {
+            "Bearer": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Liste des livres favoris",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "500": {
+            "description": "Erreur interne du serveur"
+          }
+        }
+      }
     }
   }
 }

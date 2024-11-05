@@ -1,28 +1,56 @@
-# Installation des packages nécessaires (à commenter si déjà installés)
-# %pip install torch sentence-transformers pandas scikit-learn
-
-# 1. Chargement des bibliothèques
+import os
 import pandas as pd
 import torch
 from sentence_transformers import SentenceTransformer
 
-# 2. Fonction pour charger les données et les embeddings
+# Mettre à jour les chemins d'accès vers les fichiers existants
+EMBEDDINGS_FILE = 'C:\\Users\\pmgue\\Downloads\\ProjetChefDoeuvre\\RecommendationsLectures\\BlocCompétences2\\embeddings.pt'
+DATA_FILE = 'C:\\Users\\pmgue\\Downloads\\ProjetChefDoeuvre\\RecommendationsLectures\\final_dataset_clean.csv'
+SIMILARITY_FILE = 'C:\\Users\\pmgue\\Downloads\\ProjetChefDoeuvre\\RecommendationsLectures\\BlocCompétences2\\cosine_sim_embeddings.pt'
+
+# Fonction pour charger ou calculer les données et embeddings
 def charger_donnees_et_embeddings():
-    # Charger les données du fichier CSV
-    data = pd.read_csv('C:\\Users\\User\\Downloads\\CoursAlternance\\Chefoeuvre\\RecommendationsLectures\\final_dataset_clean.csv')
+    # Charger les données du fichier CSV si elles ne sont pas déjà enregistrées
+    if os.path.exists(DATA_FILE) and os.path.exists(EMBEDDINGS_FILE):
+        print("Chargement des données et des embeddings à partir des fichiers")
+        data = pd.read_csv(DATA_FILE)
+        embeddings = torch.load(EMBEDDINGS_FILE)
+    else:
+        print("Calcul des embeddings pour la première fois")
+        data = pd.read_csv('C:\\Users\\pmgue\\Downloads\\ProjetChefDoeuvre\\RecommendationsLectures\\final_dataset_clean.csv')
+        
+        # Charger le modèle SentenceTransformer
+        model = SentenceTransformer('all-MiniLM-L6-v2')
+        device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+        model.to(device)
+        
+        # Encoder les descriptions des livres en embeddings
+        model.max_seq_length = 512
+        embeddings = model.encode(data['description'].fillna(''), convert_to_tensor=True)
 
-    # Charger le modèle SentenceTransformer
-    model = SentenceTransformer('all-MiniLM-L6-v2')
-    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    model.to(device)
-
-    # Encoder les descriptions des livres en embeddings
-    model.max_seq_length = 512
-    embeddings = model.encode(data['description'].fillna(''), convert_to_tensor=True)
+        # Sauvegarder les données et embeddings pour les réutiliser plus tard
+        data.to_csv(DATA_FILE, index=False)
+        torch.save(embeddings, EMBEDDINGS_FILE)
+        print("Données et embeddings sauvegardés")
 
     return data, embeddings
 
-# 3. Fonction pour calculer la similarité cosinus
+# Fonction pour calculer ou charger les similarités cosinus
+def calculate_or_load_cosine_similarity(embeddings):
+    if os.path.exists(SIMILARITY_FILE):
+        print("Chargement des similarités cosinus à partir du fichier")
+        cosine_sim_embeddings = torch.load(SIMILARITY_FILE)
+    else:
+        print("Calcul des similarités cosinus pour la première fois")
+        cosine_sim_embeddings = calculate_cosine_similarity_in_batches(embeddings, batch_size=100)
+
+        # Sauvegarder les similarités pour les réutiliser plus tard
+        torch.save(cosine_sim_embeddings, SIMILARITY_FILE)
+        print("Similarités cosinus sauvegardées")
+
+    return cosine_sim_embeddings
+
+# Fonction pour calculer la similarité cosinus par lots
 def calculate_cosine_similarity_in_batches(embeddings, batch_size=100):
     cosine_sim_list = []
     for i in range(0, embeddings.shape[0], batch_size):
@@ -31,8 +59,10 @@ def calculate_cosine_similarity_in_batches(embeddings, batch_size=100):
         cosine_sim_list.append(batch_cosine_sim)
     return torch.cat(cosine_sim_list)
 
-# 4. Fonction pour recommander des livres
-def recommander_livres_sans_categorie(titre_livre, data, cosine_sim_embeddings):
+
+
+# Fonction pour recommander des livres
+def recommander_livres_sans_categorie(titre_livre, data, cosine_sim_embeddings, user_favorites):
     results = data[data['title'].str.contains(titre_livre, case=False, na=False)]
     
     if results.empty:
@@ -43,12 +73,25 @@ def recommander_livres_sans_categorie(titre_livre, data, cosine_sim_embeddings):
     sim_scores = sorted(sim_scores, key=lambda x: x[1], reverse=True)
 
     recommendations = []
-    for i, score in sim_scores[1:4]:
+    for i, score in sim_scores[1:]:
         livre_info = data.iloc[i]
-        recommendations.append({
-            'title': livre_info['title'],
-            'authors': livre_info['authors'],
-            'score': score.item()  # Convertir le score de similarité en format standard Python
-        })
-    
+        
+        # Exclure les livres déjà dans les favoris de l'utilisateur
+        if livre_info['title'] not in user_favorites:
+            recommendations.append({
+                'title': livre_info['title'],
+                'authors': livre_info['authors'],
+                'score': score.item()
+            })
+        
+        if len(recommendations) >= 3:  # Limite à 3 recommandations
+            break
+
     return recommendations
+
+
+# Exécution principale pour générer et sauvegarder les embeddings et similarités
+if __name__ == "__main__":
+    data, embeddings = charger_donnees_et_embeddings()
+    cosine_sim_embeddings = calculate_or_load_cosine_similarity(embeddings)
+    print("Embeddings et similarités chargés avec succès")

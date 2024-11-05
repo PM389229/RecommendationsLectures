@@ -231,3 +231,903 @@ INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/recommendations
 INFO:werkzeug:127.0.0.1 - - [28/Oct/2024 09:56:34] "POST /recommendations HTTP/1.1" 200 -
 INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/recommendations
 INFO:werkzeug:127.0.0.1 - - [28/Oct/2024 09:56:40] "POST /recommendations HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+2024-11-04 19:02:28,182 - INFO - Démarrage du serveur Prometheus sur le port 8001
+2024-11-04 19:02:29,039 - INFO - Chargement des données et des embeddings
+2024-11-04 19:02:29,134 - INFO - Use pytorch device_name: cpu
+2024-11-04 19:02:29,134 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-11-04 19:09:41,618 - INFO - Données et embeddings chargés avec succès
+2024-11-04 19:09:42,691 - INFO - Similarités cosinus calculées
+2024-11-04 19:09:42,755 - INFO - Démarrage de l'application Flask sur le port 5001
+2024-11-04 19:09:42,949 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-11-04 19:09:42,949 - INFO - [33mPress CTRL+C to quit[0m
+2024-11-04 19:09:42,964 - INFO -  * Restarting with stat
+2024-11-04 19:09:52,715 - INFO - Démarrage du serveur Prometheus sur le port 8001
+2024-11-04 19:09:53,568 - INFO - Chargement des données et des embeddings
+2024-11-04 19:09:53,660 - INFO - Use pytorch device_name: cpu
+2024-11-04 19:09:53,661 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-11-04 19:17:25,922 - INFO - Données et embeddings chargés avec succès
+2024-11-04 19:17:26,985 - INFO - Similarités cosinus calculées
+2024-11-04 19:17:27,127 - INFO - Démarrage de l'application Flask sur le port 5001
+2024-11-04 19:17:27,315 - WARNING -  * Debugger is active!
+2024-11-04 19:17:27,332 - INFO -  * Debugger PIN: 106-833-848
+2024-11-04 19:45:25,605 - INFO - Requête de 127.0.0.1: GET http://127.0.0.1:5001/docs/
+2024-11-04 19:45:26,075 - INFO - 127.0.0.1 - - [04/Nov/2024 19:45:26] "GET /docs/ HTTP/1.1" 200 -
+2024-11-04 19:45:26,483 - INFO - Requête de 127.0.0.1: GET http://127.0.0.1:5001/docs/index.css
+2024-11-04 19:45:26,604 - INFO - Requête de 127.0.0.1: GET http://127.0.0.1:5001/docs/swagger-ui.css
+2024-11-04 19:45:26,759 - INFO - 127.0.0.1 - - [04/Nov/2024 19:45:26] "GET /docs/index.css HTTP/1.1" 200 -
+2024-11-04 19:45:26,826 - INFO - Requête de 127.0.0.1: GET http://127.0.0.1:5001/docs/swagger-ui-bundle.js
+2024-11-04 19:45:27,094 - INFO - 127.0.0.1 - - [04/Nov/2024 19:45:27] "GET /docs/swagger-ui.css HTTP/1.1" 200 -
+2024-11-04 19:45:27,124 - INFO - Requête de 127.0.0.1: GET http://127.0.0.1:5001/docs/swagger-ui-standalone-preset.js
+2024-11-04 19:45:28,260 - INFO - Requête de 127.0.0.1: GET http://127.0.0.1:5001/docs/
+2024-11-04 19:45:28,261 - INFO - 127.0.0.1 - - [04/Nov/2024 19:45:28] "GET /docs/ HTTP/1.1" 200 -
+2024-11-04 19:45:29,250 - INFO - 127.0.0.1 - - [04/Nov/2024 19:45:29] "GET /docs/swagger-ui-standalone-preset.js HTTP/1.1" 200 -
+2024-11-04 19:45:29,361 - INFO - Requête de 127.0.0.1: GET http://127.0.0.1:5001/docs/swagger-ui-bundle.js
+2024-11-04 19:45:29,505 - INFO - Requête de 127.0.0.1: GET http://127.0.0.1:5001/docs/swagger-ui-standalone-preset.js
+2024-11-04 19:45:29,506 - INFO - 127.0.0.1 - - [04/Nov/2024 19:45:29] "GET /docs/swagger-ui-standalone-preset.js HTTP/1.1" 200 -
+2024-11-04 19:45:29,670 - INFO - Requête de 127.0.0.1: GET http://127.0.0.1:5001/docs/swagger-ui.css
+2024-11-04 19:45:29,673 - INFO - 127.0.0.1 - - [04/Nov/2024 19:45:29] "[35m[1mGET /docs/swagger-ui.css HTTP/1.1[0m" 206 -
+2024-11-04 19:45:29,913 - INFO - Requête de 127.0.0.1: GET http://127.0.0.1:5001/docs/index.css
+2024-11-04 19:45:29,914 - INFO - 127.0.0.1 - - [04/Nov/2024 19:45:29] "[36mGET /docs/index.css HTTP/1.1[0m" 304 -
+2024-11-04 19:45:30,013 - INFO - Requête de 127.0.0.1: GET http://127.0.0.1:5001/docs/swagger-ui.css
+2024-11-04 19:45:30,014 - INFO - 127.0.0.1 - - [04/Nov/2024 19:45:30] "[35m[1mGET /docs/swagger-ui.css HTTP/1.1[0m" 206 -
+2024-11-04 19:45:37,489 - INFO - 127.0.0.1 - - [04/Nov/2024 19:45:37] "GET /docs/swagger-ui-bundle.js HTTP/1.1" 200 -
+2024-11-04 19:45:37,501 - INFO - 127.0.0.1 - - [04/Nov/2024 19:45:37] "GET /docs/swagger-ui-bundle.js HTTP/1.1" 200 -
+2024-11-04 19:45:37,992 - INFO - Requête de 127.0.0.1: GET http://127.0.0.1:5001/static/swagger.json
+2024-11-04 19:45:38,008 - INFO - 127.0.0.1 - - [04/Nov/2024 19:45:38] "GET /static/swagger.json HTTP/1.1" 200 -
+2024-11-04 19:45:38,442 - INFO - Requête de 127.0.0.1: GET http://127.0.0.1:5001/docs/favicon-32x32.png
+2024-11-04 19:45:38,460 - INFO - 127.0.0.1 - - [04/Nov/2024 19:45:38] "GET /docs/favicon-32x32.png HTTP/1.1" 200 -
+2024-11-04 21:06:13,057 - INFO - Démarrage du serveur Prometheus sur le port 8001
+2024-11-04 21:06:14,987 - INFO - Chargement des données et des embeddings
+2024-11-04 21:06:15,065 - INFO - Use pytorch device_name: cpu
+2024-11-04 21:06:15,065 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-11-04 21:40:57,674 - INFO - Démarrage du serveur Prometheus sur le port 8001
+2024-11-04 21:40:58,550 - INFO - Chargement des données et des embeddings
+2024-11-04 21:40:58,649 - INFO - Use pytorch device_name: cpu
+2024-11-04 21:40:58,649 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-11-04 21:43:28,508 - INFO - Démarrage du serveur Prometheus sur le port 8001
+2024-11-04 21:43:29,856 - INFO - Chargement des données et des embeddings
+2024-11-04 21:43:30,127 - INFO - Use pytorch device_name: cpu
+2024-11-04 21:43:30,127 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-11-04 21:44:14,475 - INFO - Démarrage du serveur Prometheus sur le port 8001
+2024-11-04 21:44:15,346 - INFO - Chargement des données et des embeddings
+2024-11-04 21:44:15,448 - INFO - Use pytorch device_name: cpu
+2024-11-04 21:44:15,448 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-11-04 21:47:59,086 - INFO - Démarrage du serveur Prometheus sur le port 8001
+2024-11-04 21:47:59,955 - INFO - Chargement des données et des embeddings
+2024-11-04 21:48:01,383 - INFO - Données, embeddings et similarités cosinus chargés avec succès
+2024-11-04 21:48:01,441 - INFO - Démarrage de l'application Flask sur le port 5001
+2024-11-04 21:48:01,644 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-11-04 21:48:01,644 - INFO - [33mPress CTRL+C to quit[0m
+2024-11-04 21:48:01,653 - INFO -  * Restarting with stat
+2024-11-04 21:48:11,797 - INFO - Démarrage du serveur Prometheus sur le port 8001
+2024-11-04 21:48:12,664 - INFO - Chargement des données et des embeddings
+2024-11-04 21:48:13,919 - INFO - Données, embeddings et similarités cosinus chargés avec succès
+2024-11-04 21:48:13,936 - INFO - Démarrage de l'application Flask sur le port 5001
+2024-11-04 21:48:13,964 - WARNING -  * Debugger is active!
+2024-11-04 21:48:14,036 - INFO -  * Debugger PIN: 106-833-848
+2024-11-04 21:48:14,903 - INFO - Requête de 127.0.0.1: GET http://127.0.0.1:5001/docs/favicon-32x32.png
+2024-11-04 21:48:15,259 - INFO - 127.0.0.1 - - [04/Nov/2024 21:48:15] "[36mGET /docs/favicon-32x32.png HTTP/1.1[0m" 304 -
+2024-11-04 21:48:30,961 - INFO - Requête de 127.0.0.1: GET http://127.0.0.1:5001/docs/
+2024-11-04 21:48:30,967 - INFO - 127.0.0.1 - - [04/Nov/2024 21:48:30] "GET /docs/ HTTP/1.1" 200 -
+2024-11-04 21:48:31,030 - INFO - Requête de 127.0.0.1: GET http://127.0.0.1:5001/docs/index.css
+2024-11-04 21:48:31,033 - INFO - Requête de 127.0.0.1: GET http://127.0.0.1:5001/docs/swagger-ui.css
+2024-11-04 21:48:31,034 - INFO - 127.0.0.1 - - [04/Nov/2024 21:48:31] "[36mGET /docs/index.css HTTP/1.1[0m" 304 -
+2024-11-04 21:48:31,037 - INFO - 127.0.0.1 - - [04/Nov/2024 21:48:31] "[36mGET /docs/swagger-ui.css HTTP/1.1[0m" 304 -
+2024-11-04 21:48:31,043 - INFO - Requête de 127.0.0.1: GET http://127.0.0.1:5001/docs/swagger-ui-bundle.js
+2024-11-04 21:48:31,046 - INFO - 127.0.0.1 - - [04/Nov/2024 21:48:31] "[36mGET /docs/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2024-11-04 21:48:31,053 - INFO - Requête de 127.0.0.1: GET http://127.0.0.1:5001/docs/swagger-ui-standalone-preset.js
+2024-11-04 21:48:31,056 - INFO - 127.0.0.1 - - [04/Nov/2024 21:48:31] "[36mGET /docs/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2024-11-04 21:48:31,182 - INFO - Requête de 127.0.0.1: GET http://127.0.0.1:5001/static/swagger.json
+2024-11-04 21:48:31,190 - INFO - Requête de 127.0.0.1: GET http://127.0.0.1:5001/docs/favicon-32x32.png
+2024-11-04 21:48:31,190 - INFO - 127.0.0.1 - - [04/Nov/2024 21:48:31] "[36mGET /docs/favicon-32x32.png HTTP/1.1[0m" 304 -
+2024-11-04 21:48:31,190 - INFO - 127.0.0.1 - - [04/Nov/2024 21:48:31] "[36mGET /static/swagger.json HTTP/1.1[0m" 304 -
+2024-11-04 21:49:31,509 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/login
+2024-11-04 21:49:31,510 - INFO - Tentative de connexion
+2024-11-04 21:49:31,511 - INFO - Connexion réussie, token généré
+2024-11-04 21:49:31,511 - INFO - 127.0.0.1 - - [04/Nov/2024 21:49:31] "POST /login HTTP/1.1" 200 -
+2024-11-04 21:49:43,028 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+2024-11-04 21:49:43,028 - INFO - Demande de recommandation pour le livre : The Great Gatsby
+2024-11-04 21:49:43,509 - INFO - Recommandations générées avec succès
+2024-11-04 21:49:43,509 - INFO - Métriques de similarité : mean=0.6645023028055826, std=0.1959559998191433
+2024-11-04 21:49:43,509 - INFO - 127.0.0.1 - - [04/Nov/2024 21:49:43] "POST /recommendations HTTP/1.1" 200 -
+2024-11-04 21:49:53,675 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+2024-11-04 21:49:53,675 - INFO - Demande de recommandation pour le livre : Gilead
+2024-11-04 21:49:54,090 - INFO - Recommandations générées avec succès
+2024-11-04 21:49:54,090 - INFO - Métriques de similarité : mean=0.5034268697102865, std=0.0004774675978304148
+2024-11-04 21:49:54,090 - INFO - 127.0.0.1 - - [04/Nov/2024 21:49:54] "POST /recommendations HTTP/1.1" 200 -
+2024-11-05 12:58:04,800 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/login
+2024-11-05 12:58:04,816 - INFO - Tentative de connexion
+2024-11-05 12:58:04,832 - INFO - Connexion réussie, token généré
+2024-11-05 12:58:04,847 - INFO - 127.0.0.1 - - [05/Nov/2024 12:58:04] "POST /login HTTP/1.1" 200 -
+2024-11-05 12:58:19,495 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/login
+2024-11-05 12:58:19,496 - INFO - Tentative de connexion
+2024-11-05 12:58:19,498 - WARNING - Échec de connexion : mauvais nom d'utilisateur ou mot de passe
+2024-11-05 12:58:19,499 - INFO - 127.0.0.1 - - [05/Nov/2024 12:58:19] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+2024-11-05 13:00:08,037 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/login
+2024-11-05 13:00:08,037 - INFO - Tentative de connexion
+2024-11-05 13:00:08,037 - INFO - Connexion réussie, token généré
+2024-11-05 13:00:08,037 - INFO - 127.0.0.1 - - [05/Nov/2024 13:00:08] "POST /login HTTP/1.1" 200 -
+2024-11-05 14:21:06,982 - INFO -  * Detected change in 'c:\\Users\\pmgue\\Downloads\\ProjetChefDoeuvre\\RecommendationsLectures\\RecommendationsLecturesAPI\\ScriptCompétence8.py', reloading
+2024-11-05 14:21:11,195 - INFO -  * Restarting with stat
+2024-11-05 14:21:35,212 - INFO - Démarrage du serveur Prometheus sur le port 8001
+2024-11-05 14:21:36,077 - INFO - Chargement des données et des embeddings
+2024-11-05 14:21:37,328 - INFO - Données, embeddings et similarités cosinus chargés avec succès
+2024-11-05 14:21:37,336 - INFO - Démarrage de l'application Flask sur le port 5001
+2024-11-05 14:21:37,356 - WARNING -  * Debugger is active!
+2024-11-05 14:21:37,365 - INFO -  * Debugger PIN: 106-833-848
+2024-11-05 15:41:12,890 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+2024-11-05 15:41:12,915 - INFO - 127.0.0.1 - - [05/Nov/2024 15:41:12] "[31m[1mPOST /recommendations HTTP/1.1[0m" 401 -
+2024-11-05 15:41:19,711 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/login
+2024-11-05 15:41:19,721 - INFO - Tentative de connexion
+2024-11-05 15:41:19,721 - INFO - Connexion réussie, token généré
+2024-11-05 15:41:19,721 - INFO - 127.0.0.1 - - [05/Nov/2024 15:41:19] "POST /login HTTP/1.1" 200 -
+2024-11-05 15:41:23,745 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+2024-11-05 15:41:23,746 - INFO - Demande de recommandation pour le livre : Gilead
+2024-11-05 15:41:24,470 - INFO - Recommandations générées avec succès
+2024-11-05 15:41:24,485 - INFO - Métriques de similarité : mean=0.5034268697102865, std=0.0004774675978304148
+2024-11-05 15:41:24,485 - INFO - 127.0.0.1 - - [05/Nov/2024 15:41:24] "POST /recommendations HTTP/1.1" 200 -
+2024-11-05 15:41:37,181 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+2024-11-05 15:41:37,181 - INFO - Demande de recommandation pour le livre : The Great Gatsby
+2024-11-05 15:41:37,744 - INFO - Recommandations générées avec succès
+2024-11-05 15:41:37,744 - INFO - Métriques de similarité : mean=0.6645023028055826, std=0.1959559998191433
+2024-11-05 15:41:37,744 - INFO - 127.0.0.1 - - [05/Nov/2024 15:41:37] "POST /recommendations HTTP/1.1" 200 -
+2024-11-05 16:34:07,002 - INFO -  * Detected change in 'c:\\Users\\pmgue\\Downloads\\ProjetChefDoeuvre\\RecommendationsLectures\\RecommendationsLecturesAPI\\app.py', reloading
+2024-11-05 16:34:14,132 - INFO -  * Restarting with stat
+2024-11-05 16:34:28,225 - INFO - Démarrage du serveur Prometheus sur le port 8001
+2024-11-05 16:34:29,262 - INFO - Chargement des données et des embeddings
+2024-11-05 16:34:31,249 - INFO - Données, embeddings et similarités cosinus chargés avec succès
+2024-11-05 16:34:31,267 - INFO - Démarrage de l'application Flask sur le port 5001
+2024-11-05 16:34:31,327 - WARNING -  * Debugger is active!
+2024-11-05 16:34:31,338 - INFO -  * Debugger PIN: 106-833-848
+2024-11-05 16:36:31,263 - INFO -  * Detected change in 'c:\\Users\\pmgue\\Downloads\\ProjetChefDoeuvre\\RecommendationsLectures\\RecommendationsLecturesAPI\\app.py', reloading
+2024-11-05 16:36:33,583 - INFO -  * Restarting with stat
+2024-11-05 16:36:44,534 - INFO - Démarrage du serveur Prometheus sur le port 8001
+2024-11-05 16:36:45,385 - INFO - Chargement des données et des embeddings
+2024-11-05 16:36:45,842 - INFO - Données, embeddings et similarités cosinus chargés avec succès
+2024-11-05 16:36:45,842 - INFO - Démarrage de l'application Flask sur le port 5001
+2024-11-05 16:36:45,857 - WARNING -  * Debugger is active!
+2024-11-05 16:36:45,873 - INFO -  * Debugger PIN: 106-833-848
+2024-11-05 16:43:33,252 - INFO -  * Detected change in 'c:\\Users\\pmgue\\Downloads\\ProjetChefDoeuvre\\RecommendationsLectures\\RecommendationsLecturesAPI\\app.py', reloading
+2024-11-05 16:43:35,156 - INFO -  * Restarting with stat
+2024-11-05 16:43:45,131 - INFO - Démarrage du serveur Prometheus sur le port 8001
+2024-11-05 16:43:45,993 - INFO - Chargement des données et des embeddings
+2024-11-05 16:43:46,517 - INFO - Données, embeddings et similarités cosinus chargés avec succès
+2024-11-05 16:43:46,517 - INFO - Démarrage de l'application Flask sur le port 5001
+2024-11-05 16:43:46,533 - WARNING -  * Debugger is active!
+2024-11-05 16:43:46,533 - INFO -  * Debugger PIN: 106-833-848
+2024-11-05 16:44:15,961 - INFO -  * Detected change in 'c:\\Users\\pmgue\\Downloads\\ProjetChefDoeuvre\\RecommendationsLectures\\RecommendationsLecturesAPI\\app.py', reloading
+2024-11-05 16:44:18,594 - INFO -  * Restarting with stat
+2024-11-05 16:44:29,306 - INFO - Démarrage du serveur Prometheus sur le port 8001
+2024-11-05 16:44:30,157 - INFO - Chargement des données et des embeddings
+2024-11-05 16:44:30,479 - INFO - Données, embeddings et similarités cosinus chargés avec succès
+2024-11-05 16:44:30,499 - INFO - Démarrage de l'application Flask sur le port 5001
+2024-11-05 16:44:30,512 - WARNING -  * Debugger is active!
+2024-11-05 16:44:30,520 - INFO -  * Debugger PIN: 106-833-848
+2024-11-05 16:56:15,996 - INFO -  * Detected change in 'c:\\Users\\pmgue\\Downloads\\ProjetChefDoeuvre\\RecommendationsLectures\\RecommendationsLecturesAPI\\app.py', reloading
+2024-11-05 16:56:19,612 - INFO -  * Restarting with stat
+2024-11-05 16:56:36,549 - INFO - Démarrage du serveur Prometheus sur le port 8001
+2024-11-05 16:56:37,930 - INFO - Chargement des données et des embeddings
+2024-11-05 16:56:40,045 - INFO - Données, embeddings et similarités cosinus chargés avec succès
+2024-11-05 16:56:40,056 - INFO - Démarrage de l'application Flask sur le port 5001
+2024-11-05 16:56:40,074 - WARNING -  * Debugger is active!
+2024-11-05 16:56:40,087 - INFO -  * Debugger PIN: 106-833-848
+2024-11-05 16:56:42,454 - INFO -  * Detected change in 'c:\\Users\\pmgue\\Downloads\\ProjetChefDoeuvre\\RecommendationsLectures\\RecommendationsLecturesAPI\\ScriptCompétence8.py', reloading
+2024-11-05 16:56:44,198 - INFO -  * Restarting with stat
+2024-11-05 16:56:56,107 - INFO - Démarrage du serveur Prometheus sur le port 8001
+2024-11-05 16:56:57,025 - INFO - Chargement des données et des embeddings
+2024-11-05 16:56:57,664 - INFO - Données, embeddings et similarités cosinus chargés avec succès
+2024-11-05 16:56:57,710 - INFO - Démarrage de l'application Flask sur le port 5001
+2024-11-05 16:56:57,725 - WARNING -  * Debugger is active!
+2024-11-05 16:56:57,731 - INFO -  * Debugger PIN: 106-833-848
+2024-11-05 17:00:06,881 - INFO -  * Detected change in 'c:\\Users\\pmgue\\Downloads\\ProjetChefDoeuvre\\RecommendationsLectures\\RecommendationsLecturesAPI\\app.py', reloading
+2024-11-05 17:00:08,575 - INFO -  * Restarting with stat
+2024-11-05 17:00:20,147 - INFO - Démarrage du serveur Prometheus sur le port 8001
+2024-11-05 17:00:21,004 - INFO - Chargement des données et des embeddings
+2024-11-05 17:00:21,436 - INFO - Données, embeddings et similarités cosinus chargés avec succès
+2024-11-05 17:00:21,436 - INFO - Démarrage de l'application Flask sur le port 5001
+2024-11-05 17:00:21,461 - WARNING -  * Debugger is active!
+2024-11-05 17:00:21,467 - INFO -  * Debugger PIN: 106-833-848
+2024-11-05 17:00:21,816 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/login
+2024-11-05 17:00:21,818 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/login
+2024-11-05 17:00:21,823 - INFO - Tentative de connexion
+2024-11-05 17:00:21,824 - INFO - Connexion réussie, token généré
+2024-11-05 17:00:21,827 - INFO - 127.0.0.1 - - [05/Nov/2024 17:00:21] "POST /login HTTP/1.1" 200 -
+2024-11-05 17:00:21,830 - INFO - Tentative de connexion
+2024-11-05 17:00:21,830 - INFO - Connexion réussie, token généré
+2024-11-05 17:00:21,830 - INFO - 127.0.0.1 - - [05/Nov/2024 17:00:21] "POST /login HTTP/1.1" 200 -
+2024-11-05 17:00:32,456 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+2024-11-05 17:00:32,457 - INFO - Demande de recommandation pour le livre : The Great Gatsby
+2024-11-05 17:00:33,113 - INFO - Recommandations générées avec succès
+2024-11-05 17:00:33,113 - INFO - Métriques de similarité : mean=0.6645023028055826, std=0.1959559998191433
+2024-11-05 17:00:33,113 - INFO - Métrique de popularité moyenne : 0.0
+2024-11-05 17:00:33,113 - INFO - 127.0.0.1 - - [05/Nov/2024 17:00:33] "POST /recommendations HTTP/1.1" 200 -
+2024-11-05 17:00:35,625 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/favorites
+2024-11-05 17:00:35,625 - INFO - 127.0.0.1 - - [05/Nov/2024 17:00:35] "[31m[1mPOST /favorites HTTP/1.1[0m" 400 -
+2024-11-05 17:06:10,001 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/favorites
+2024-11-05 17:06:10,004 - INFO - 127.0.0.1 - - [05/Nov/2024 17:06:10] "[31m[1mPOST /favorites HTTP/1.1[0m" 400 -
+2024-11-05 17:06:12,517 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/favorites
+2024-11-05 17:06:12,517 - INFO - 127.0.0.1 - - [05/Nov/2024 17:06:12] "[31m[1mPOST /favorites HTTP/1.1[0m" 400 -
+2024-11-05 17:08:19,801 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/favorites
+2024-11-05 17:08:19,802 - INFO - 127.0.0.1 - - [05/Nov/2024 17:08:19] "[31m[1mPOST /favorites HTTP/1.1[0m" 400 -
+2024-11-05 17:08:49,168 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/login
+2024-11-05 17:08:49,169 - INFO - Tentative de connexion
+2024-11-05 17:08:49,169 - INFO - Connexion réussie, token généré
+2024-11-05 17:08:49,170 - INFO - 127.0.0.1 - - [05/Nov/2024 17:08:49] "POST /login HTTP/1.1" 200 -
+2024-11-05 17:08:56,683 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+2024-11-05 17:08:56,684 - INFO - Demande de recommandation pour le livre : The Great Gatsby
+2024-11-05 17:08:57,147 - INFO - Recommandations générées avec succès
+2024-11-05 17:08:57,147 - INFO - Métriques de similarité : mean=0.6645023028055826, std=0.1959559998191433
+2024-11-05 17:08:57,147 - INFO - Métrique de popularité moyenne : 0.0
+2024-11-05 17:08:57,147 - INFO - 127.0.0.1 - - [05/Nov/2024 17:08:57] "POST /recommendations HTTP/1.1" 200 -
+2024-11-05 17:08:57,970 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/favorites
+2024-11-05 17:08:57,971 - INFO - 127.0.0.1 - - [05/Nov/2024 17:08:57] "[31m[1mPOST /favorites HTTP/1.1[0m" 422 -
+2024-11-05 17:11:32,935 - INFO -  * Detected change in 'c:\\Users\\pmgue\\Downloads\\ProjetChefDoeuvre\\RecommendationsLectures\\RecommendationsLecturesAPI\\app.py', reloading
+2024-11-05 17:11:35,240 - INFO -  * Restarting with stat
+2024-11-05 17:11:49,990 - INFO - Connexion à MongoDB...
+2024-11-05 17:11:50,001 - INFO - Connexion à MongoDB réussie
+2024-11-05 17:11:50,001 - INFO - Démarrage de Prometheus sur le port 8001
+2024-11-05 17:11:50,875 - INFO - Chargement des données et des embeddings...
+2024-11-05 17:11:51,379 - INFO - Chargement des données et des embeddings réussi
+2024-11-05 17:12:25,762 - INFO - Connexion à MongoDB...
+2024-11-05 17:12:25,777 - INFO - Connexion à MongoDB réussie
+2024-11-05 17:12:25,777 - INFO - Démarrage de Prometheus sur le port 8001
+2024-11-05 17:12:26,642 - INFO - Chargement des données et des embeddings...
+2024-11-05 17:12:26,924 - INFO - Chargement des données et des embeddings réussi
+2024-11-05 17:13:48,184 - INFO - Démarrage du serveur Prometheus sur le port 8001
+2024-11-05 17:13:49,051 - INFO - Chargement des données et des embeddings
+2024-11-05 17:13:49,521 - INFO - Données, embeddings et similarités cosinus chargés avec succès
+2024-11-05 17:13:49,539 - INFO - Démarrage de l'application Flask sur le port 5001
+2024-11-05 17:13:49,561 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-11-05 17:13:49,561 - INFO - [33mPress CTRL+C to quit[0m
+2024-11-05 17:13:49,568 - INFO -  * Restarting with stat
+2024-11-05 17:14:00,291 - INFO - Démarrage du serveur Prometheus sur le port 8001
+2024-11-05 17:14:01,277 - INFO - Chargement des données et des embeddings
+2024-11-05 17:14:02,783 - INFO - Données, embeddings et similarités cosinus chargés avec succès
+2024-11-05 17:14:02,788 - INFO - Démarrage de l'application Flask sur le port 5001
+2024-11-05 17:14:02,806 - WARNING -  * Debugger is active!
+2024-11-05 17:14:02,815 - INFO -  * Debugger PIN: 106-833-848
+2024-11-05 17:15:10,316 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/login
+2024-11-05 17:15:10,317 - INFO - Tentative de connexion
+2024-11-05 17:15:10,320 - INFO - Connexion réussie, token généré
+2024-11-05 17:15:10,320 - INFO - 127.0.0.1 - - [05/Nov/2024 17:15:10] "POST /login HTTP/1.1" 200 -
+2024-11-05 17:15:15,079 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+2024-11-05 17:15:15,080 - INFO - Demande de recommandation pour le livre : Gilead
+2024-11-05 17:15:15,638 - INFO - Recommandations générées avec succès
+2024-11-05 17:15:15,638 - INFO - Métriques de similarité : mean=0.5034268697102865, std=0.0004774675978304148
+2024-11-05 17:15:15,638 - INFO - Métrique de popularité moyenne : 0.0
+2024-11-05 17:15:15,638 - INFO - 127.0.0.1 - - [05/Nov/2024 17:15:15] "POST /recommendations HTTP/1.1" 200 -
+2024-11-05 17:15:16,640 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/favorites
+2024-11-05 17:15:16,641 - INFO - 127.0.0.1 - - [05/Nov/2024 17:15:16] "[31m[1mPOST /favorites HTTP/1.1[0m" 422 -
+2024-11-05 17:16:29,764 - INFO -  * Detected change in 'C:\\Users\\pmgue\\Downloads\\ProjetChefDoeuvre\\RecommendationsLectures\\RecommendationsLecturesAPI\\app.py', reloading
+2024-11-05 17:16:31,577 - INFO -  * Restarting with stat
+2024-11-05 17:16:43,347 - INFO - Démarrage du serveur Prometheus sur le port 8001
+2024-11-05 17:16:44,206 - INFO - Chargement des données et des embeddings
+2024-11-05 17:16:44,640 - INFO - Données, embeddings et similarités cosinus chargés avec succès
+2024-11-05 17:16:44,640 - INFO - Démarrage de l'application Flask sur le port 5001
+2024-11-05 17:16:44,656 - WARNING -  * Debugger is active!
+2024-11-05 17:16:44,671 - INFO -  * Debugger PIN: 106-833-848
+2024-11-05 17:18:26,736 - INFO -  * Detected change in 'C:\\Users\\pmgue\\Downloads\\ProjetChefDoeuvre\\RecommendationsLectures\\RecommendationsLecturesAPI\\app.py', reloading
+2024-11-05 17:18:28,694 - INFO -  * Restarting with stat
+2024-11-05 17:18:42,055 - INFO - Démarrage du serveur Prometheus sur le port 8001
+2024-11-05 17:18:42,929 - INFO - Chargement des données et des embeddings
+2024-11-05 17:18:44,476 - INFO - Données, embeddings et similarités cosinus chargés avec succès
+2024-11-05 17:18:44,569 - INFO - Démarrage de l'application Flask sur le port 5001
+2024-11-05 17:18:44,609 - WARNING -  * Debugger is active!
+2024-11-05 17:18:44,625 - INFO -  * Debugger PIN: 106-833-848
+2024-11-05 17:28:37,893 - INFO -  * Detected change in 'C:\\Users\\pmgue\\Downloads\\ProjetChefDoeuvre\\RecommendationsLectures\\RecommendationsLecturesAPI\\app.py', reloading
+2024-11-05 17:28:41,896 - INFO -  * Restarting with stat
+2024-11-05 17:28:54,134 - INFO - Connexion à MongoDB...
+2024-11-05 17:28:54,150 - INFO - Connexion à MongoDB réussie.
+2024-11-05 17:28:54,150 - INFO - Démarrage du serveur Prometheus sur le port 8001
+2024-11-05 17:28:55,017 - INFO - Chargement des données et des embeddings
+2024-11-05 17:28:56,520 - INFO - Données, embeddings et similarités cosinus chargés avec succès
+2024-11-05 17:28:56,558 - INFO - Démarrage de l'application Flask sur le port 5001
+2024-11-05 17:28:56,592 - WARNING -  * Debugger is active!
+2024-11-05 17:28:56,599 - INFO -  * Debugger PIN: 106-833-848
+2024-11-05 17:30:36,701 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/favorites
+2024-11-05 17:30:36,702 - INFO - 127.0.0.1 - - [05/Nov/2024 17:30:36] "[31m[1mPOST /favorites HTTP/1.1[0m" 422 -
+2024-11-05 17:30:46,202 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/login
+2024-11-05 17:30:46,205 - INFO - Tentative de connexion
+2024-11-05 17:30:46,210 - INFO - Connexion réussie, token généré
+2024-11-05 17:30:46,210 - INFO - 127.0.0.1 - - [05/Nov/2024 17:30:46] "POST /login HTTP/1.1" 200 -
+2024-11-05 17:45:29,497 - INFO -  * Detected change in 'C:\\Users\\pmgue\\Downloads\\ProjetChefDoeuvre\\RecommendationsLectures\\RecommendationsLecturesAPI\\app.py', reloading
+2024-11-05 17:45:33,270 - INFO -  * Restarting with stat
+2024-11-05 17:45:45,976 - INFO - Connexion à MongoDB...
+2024-11-05 17:45:45,994 - INFO - Connexion à MongoDB réussie.
+2024-11-05 17:45:45,994 - INFO - Démarrage du serveur Prometheus sur le port 8001
+2024-11-05 17:45:46,857 - INFO - Chargement des données et des embeddings
+2024-11-05 17:45:48,295 - INFO - Données, embeddings et similarités cosinus chargés avec succès
+2024-11-05 17:45:48,355 - INFO - Démarrage de l'application Flask sur le port 5001
+2024-11-05 17:45:48,390 - WARNING -  * Debugger is active!
+2024-11-05 17:45:48,410 - INFO -  * Debugger PIN: 106-833-848
+2024-11-05 17:45:48,809 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+2024-11-05 17:45:48,813 - INFO - 127.0.0.1 - - [05/Nov/2024 17:45:48] "[31m[1mPOST /recommendations HTTP/1.1[0m" 401 -
+2024-11-05 17:45:48,813 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/login
+2024-11-05 17:45:48,826 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/login
+2024-11-05 17:45:48,826 - INFO - Tentative de connexion
+2024-11-05 17:45:48,826 - INFO - Tentative de connexion
+2024-11-05 17:45:48,827 - INFO - Connexion réussie, token généré
+2024-11-05 17:45:48,827 - INFO - Connexion réussie, token généré
+2024-11-05 17:45:48,828 - INFO - 127.0.0.1 - - [05/Nov/2024 17:45:48] "POST /login HTTP/1.1" 200 -
+2024-11-05 17:45:48,828 - INFO - 127.0.0.1 - - [05/Nov/2024 17:45:48] "POST /login HTTP/1.1" 200 -
+2024-11-05 17:45:53,697 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+2024-11-05 17:45:53,698 - INFO - Demande de recommandation pour le livre : Gilead par l'utilisateur admin
+2024-11-05 17:45:54,261 - INFO - Recommandations générées avec succès pour le livre Gilead
+2024-11-05 17:45:54,263 - INFO - Métriques de similarité : mean=0.5034268697102865, std=0.0004774675978304148
+2024-11-05 17:45:54,263 - INFO - Métrique de popularité moyenne : 0.0
+2024-11-05 17:45:54,264 - INFO - 127.0.0.1 - - [05/Nov/2024 17:45:54] "POST /recommendations HTTP/1.1" 200 -
+2024-11-05 17:45:54,939 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/favorites
+2024-11-05 17:45:54,940 - INFO - 127.0.0.1 - - [05/Nov/2024 17:45:54] "[31m[1mPOST /favorites HTTP/1.1[0m" 422 -
+2024-11-05 17:50:57,095 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/login
+2024-11-05 17:50:57,097 - INFO - Tentative de connexion
+2024-11-05 17:50:57,098 - INFO - Connexion réussie, token généré
+2024-11-05 17:50:57,098 - INFO - 127.0.0.1 - - [05/Nov/2024 17:50:57] "POST /login HTTP/1.1" 200 -
+2024-11-05 17:51:01,108 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+2024-11-05 17:51:01,108 - INFO - Demande de recommandation pour le livre : Gilead par l'utilisateur admin
+2024-11-05 17:51:01,511 - INFO - Recommandations générées avec succès pour le livre Gilead
+2024-11-05 17:51:01,511 - INFO - Métriques de similarité : mean=0.5034268697102865, std=0.0004774675978304148
+2024-11-05 17:51:01,511 - INFO - Métrique de popularité moyenne : 0.0
+2024-11-05 17:51:01,511 - INFO - 127.0.0.1 - - [05/Nov/2024 17:51:01] "POST /recommendations HTTP/1.1" 200 -
+2024-11-05 17:51:02,391 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/favorites
+2024-11-05 17:51:02,392 - INFO - 127.0.0.1 - - [05/Nov/2024 17:51:02] "[31m[1mPOST /favorites HTTP/1.1[0m" 422 -
+2024-11-05 17:55:26,574 - INFO -  * Detected change in 'C:\\Users\\pmgue\\Downloads\\ProjetChefDoeuvre\\RecommendationsLectures\\RecommendationsLecturesAPI\\app.py', reloading
+2024-11-05 17:55:29,412 - INFO -  * Restarting with stat
+2024-11-05 17:55:39,552 - INFO - Connexion à MongoDB...
+2024-11-05 17:55:39,562 - INFO - Connexion à MongoDB réussie.
+2024-11-05 17:55:39,562 - INFO - Démarrage du serveur Prometheus sur le port 8001
+2024-11-05 17:55:41,609 - INFO - Chargement des données et des embeddings
+2024-11-05 17:55:42,618 - INFO - Données, embeddings et similarités cosinus chargés avec succès
+2024-11-05 17:55:42,633 - INFO - Démarrage de l'application Flask sur le port 5001
+2024-11-05 17:55:42,652 - WARNING -  * Debugger is active!
+2024-11-05 17:55:42,660 - INFO -  * Debugger PIN: 106-833-848
+2024-11-05 17:55:43,867 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/login
+2024-11-05 17:55:43,927 - INFO - Tentative de connexion
+2024-11-05 17:55:43,930 - INFO - Connexion réussie, token généré
+2024-11-05 17:55:43,930 - INFO - 127.0.0.1 - - [05/Nov/2024 17:55:43] "POST /login HTTP/1.1" 200 -
+2024-11-05 17:55:57,283 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+2024-11-05 17:55:57,283 - INFO - Demande de recommandation pour le livre : Gilead par l'utilisateur admin
+2024-11-05 17:55:57,760 - INFO - Recommandations générées avec succès pour le livre Gilead
+2024-11-05 17:55:57,761 - INFO - Métriques de similarité : mean=0.5034268697102865, std=0.0004774675978304148
+2024-11-05 17:55:57,761 - INFO - Métrique de popularité moyenne : 0.0
+2024-11-05 17:55:57,761 - INFO - 127.0.0.1 - - [05/Nov/2024 17:55:57] "POST /recommendations HTTP/1.1" 200 -
+2024-11-05 17:56:01,267 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/favorites
+2024-11-05 17:56:01,267 - INFO - 127.0.0.1 - - [05/Nov/2024 17:56:01] "[31m[1mPOST /favorites HTTP/1.1[0m" 422 -
+2024-11-05 17:58:08,823 - INFO - Requête de 127.0.0.1: GET http://127.0.0.1:5001/docs/
+2024-11-05 17:58:09,049 - INFO - 127.0.0.1 - - [05/Nov/2024 17:58:09] "GET /docs/ HTTP/1.1" 200 -
+2024-11-05 17:58:09,097 - INFO - Requête de 127.0.0.1: GET http://127.0.0.1:5001/docs/swagger-ui-standalone-preset.js
+2024-11-05 17:58:09,103 - INFO - Requête de 127.0.0.1: GET http://127.0.0.1:5001/docs/swagger-ui-bundle.js
+2024-11-05 17:58:09,112 - INFO - Requête de 127.0.0.1: GET http://127.0.0.1:5001/docs/swagger-ui.css
+2024-11-05 17:58:09,127 - INFO - Requête de 127.0.0.1: GET http://127.0.0.1:5001/docs/index.css
+2024-11-05 17:58:09,380 - INFO - 127.0.0.1 - - [05/Nov/2024 17:58:09] "[36mGET /docs/swagger-ui.css HTTP/1.1[0m" 304 -
+2024-11-05 17:58:09,412 - INFO - 127.0.0.1 - - [05/Nov/2024 17:58:09] "[36mGET /docs/index.css HTTP/1.1[0m" 304 -
+2024-11-05 17:58:11,132 - INFO - 127.0.0.1 - - [05/Nov/2024 17:58:11] "[36mGET /docs/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2024-11-05 17:58:13,406 - INFO - 127.0.0.1 - - [05/Nov/2024 17:58:13] "[36mGET /docs/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2024-11-05 17:58:13,499 - INFO - Requête de 127.0.0.1: GET http://127.0.0.1:5001/static/swagger.json
+2024-11-05 17:58:13,511 - INFO - Requête de 127.0.0.1: GET http://127.0.0.1:5001/docs/favicon-32x32.png
+2024-11-05 17:58:13,511 - INFO - 127.0.0.1 - - [05/Nov/2024 17:58:13] "[36mGET /docs/favicon-32x32.png HTTP/1.1[0m" 304 -
+2024-11-05 17:58:13,522 - INFO - 127.0.0.1 - - [05/Nov/2024 17:58:13] "GET /static/swagger.json HTTP/1.1" 200 -
+2024-11-05 18:00:30,223 - INFO -  * Detected change in 'C:\\Users\\pmgue\\Downloads\\ProjetChefDoeuvre\\RecommendationsLectures\\RecommendationsLecturesAPI\\app.py', reloading
+2024-11-05 18:00:36,587 - INFO -  * Restarting with stat
+2024-11-05 18:00:47,788 - INFO - Connexion à MongoDB...
+2024-11-05 18:00:47,805 - INFO - Connexion à MongoDB réussie.
+2024-11-05 18:00:47,805 - INFO - Démarrage du serveur Prometheus sur le port 8001
+2024-11-05 18:00:48,674 - INFO - Chargement des données et des embeddings
+2024-11-05 18:00:49,573 - INFO - Données, embeddings et similarités cosinus chargés avec succès
+2024-11-05 18:00:49,628 - INFO - Démarrage de l'application Flask sur le port 5001
+2024-11-05 18:00:49,784 - WARNING -  * Debugger is active!
+2024-11-05 18:00:49,972 - INFO -  * Debugger PIN: 106-833-848
+2024-11-05 18:00:50,454 - INFO - Requête de 127.0.0.1: GET http://127.0.0.1:5001/docs/
+2024-11-05 18:00:50,472 - INFO - 127.0.0.1 - - [05/Nov/2024 18:00:50] "GET /docs/ HTTP/1.1" 200 -
+2024-11-05 18:00:50,617 - INFO - Requête de 127.0.0.1: GET http://127.0.0.1:5001/docs/swagger-ui.css
+2024-11-05 18:00:50,652 - INFO - Requête de 127.0.0.1: GET http://127.0.0.1:5001/docs/index.css
+2024-11-05 18:00:50,686 - INFO - Requête de 127.0.0.1: GET http://127.0.0.1:5001/docs/swagger-ui-standalone-preset.js
+2024-11-05 18:00:50,696 - INFO - 127.0.0.1 - - [05/Nov/2024 18:00:50] "[36mGET /docs/swagger-ui.css HTTP/1.1[0m" 304 -
+2024-11-05 18:00:50,761 - INFO - Requête de 127.0.0.1: GET http://127.0.0.1:5001/docs/swagger-ui-bundle.js
+2024-11-05 18:00:50,762 - INFO - 127.0.0.1 - - [05/Nov/2024 18:00:50] "[36mGET /docs/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2024-11-05 18:00:50,767 - INFO - 127.0.0.1 - - [05/Nov/2024 18:00:50] "[36mGET /docs/index.css HTTP/1.1[0m" 304 -
+2024-11-05 18:00:50,830 - INFO - 127.0.0.1 - - [05/Nov/2024 18:00:50] "[36mGET /docs/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2024-11-05 18:00:51,057 - INFO - Requête de 127.0.0.1: GET http://127.0.0.1:5001/static/swagger.json
+2024-11-05 18:00:51,058 - INFO - 127.0.0.1 - - [05/Nov/2024 18:00:51] "[36mGET /static/swagger.json HTTP/1.1[0m" 304 -
+2024-11-05 18:00:51,153 - INFO - Requête de 127.0.0.1: GET http://127.0.0.1:5001/docs/favicon-32x32.png
+2024-11-05 18:00:51,154 - INFO - 127.0.0.1 - - [05/Nov/2024 18:00:51] "[36mGET /docs/favicon-32x32.png HTTP/1.1[0m" 304 -
+2024-11-05 18:16:51,173 - INFO - Requête de 127.0.0.1: GET http://127.0.0.1:5001/docs/
+2024-11-05 18:16:51,182 - INFO - 127.0.0.1 - - [05/Nov/2024 18:16:51] "GET /docs/ HTTP/1.1" 200 -
+2024-11-05 18:16:51,262 - INFO - Requête de 127.0.0.1: GET http://127.0.0.1:5001/docs/swagger-ui-standalone-preset.js
+2024-11-05 18:16:51,265 - INFO - Requête de 127.0.0.1: GET http://127.0.0.1:5001/docs/swagger-ui-bundle.js
+2024-11-05 18:16:51,268 - INFO - 127.0.0.1 - - [05/Nov/2024 18:16:51] "[36mGET /docs/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2024-11-05 18:16:51,268 - INFO - 127.0.0.1 - - [05/Nov/2024 18:16:51] "[36mGET /docs/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2024-11-05 18:16:51,375 - INFO - Requête de 127.0.0.1: GET http://127.0.0.1:5001/docs/index.css
+2024-11-05 18:16:51,382 - INFO - 127.0.0.1 - - [05/Nov/2024 18:16:51] "[36mGET /docs/index.css HTTP/1.1[0m" 304 -
+2024-11-05 18:16:51,403 - INFO - Requête de 127.0.0.1: GET http://127.0.0.1:5001/docs/swagger-ui.css
+2024-11-05 18:16:51,404 - INFO - 127.0.0.1 - - [05/Nov/2024 18:16:51] "[36mGET /docs/swagger-ui.css HTTP/1.1[0m" 304 -
+2024-11-05 18:16:51,570 - INFO - Requête de 127.0.0.1: GET http://127.0.0.1:5001/static/swagger.json
+2024-11-05 18:16:51,575 - INFO - Requête de 127.0.0.1: GET http://127.0.0.1:5001/docs/favicon-32x32.png
+2024-11-05 18:16:51,583 - INFO - 127.0.0.1 - - [05/Nov/2024 18:16:51] "[36mGET /docs/favicon-32x32.png HTTP/1.1[0m" 304 -
+2024-11-05 18:16:51,624 - INFO - 127.0.0.1 - - [05/Nov/2024 18:16:51] "GET /static/swagger.json HTTP/1.1" 200 -
+2024-11-05 18:17:36,330 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+2024-11-05 18:17:36,420 - INFO - 127.0.0.1 - - [05/Nov/2024 18:17:36] "[31m[1mPOST /recommendations HTTP/1.1[0m" 401 -
+2024-11-05 18:17:42,084 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/login
+2024-11-05 18:17:42,097 - INFO - Tentative de connexion
+2024-11-05 18:17:42,103 - INFO - Connexion réussie, token généré
+2024-11-05 18:17:42,103 - INFO - 127.0.0.1 - - [05/Nov/2024 18:17:42] "POST /login HTTP/1.1" 200 -
+2024-11-05 18:17:46,400 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+2024-11-05 18:17:46,400 - INFO - Demande de recommandation pour le livre : Gilead par l'utilisateur admin
+2024-11-05 18:17:47,202 - INFO - Recommandations générées avec succès pour le livre Gilead
+2024-11-05 18:17:47,202 - INFO - Métriques de similarité : mean=0.5034268697102865, std=0.0004774675978304148
+2024-11-05 18:17:47,202 - INFO - Métrique de popularité moyenne : 0.0
+2024-11-05 18:17:47,213 - INFO - 127.0.0.1 - - [05/Nov/2024 18:17:47] "POST /recommendations HTTP/1.1" 200 -
+2024-11-05 18:17:48,104 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/favorites
+2024-11-05 18:17:48,105 - INFO - 127.0.0.1 - - [05/Nov/2024 18:17:48] "[31m[1mPOST /favorites HTTP/1.1[0m" 422 -
+2024-11-05 18:18:59,588 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/login
+2024-11-05 18:18:59,603 - INFO - Tentative de connexion
+2024-11-05 18:18:59,603 - WARNING - Échec de connexion : mauvais nom d'utilisateur ou mot de passe
+2024-11-05 18:18:59,603 - INFO - 127.0.0.1 - - [05/Nov/2024 18:18:59] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+2024-11-05 18:19:31,507 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/login
+2024-11-05 18:19:31,507 - INFO - Tentative de connexion
+2024-11-05 18:19:31,507 - WARNING - Échec de connexion : mauvais nom d'utilisateur ou mot de passe
+2024-11-05 18:19:31,507 - INFO - 127.0.0.1 - - [05/Nov/2024 18:19:31] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+2024-11-05 18:21:04,981 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/login
+2024-11-05 18:21:04,997 - INFO - Tentative de connexion
+2024-11-05 18:21:04,997 - INFO - Connexion réussie, token généré
+2024-11-05 18:21:04,997 - INFO - 127.0.0.1 - - [05/Nov/2024 18:21:04] "POST /login HTTP/1.1" 200 -
+2024-11-05 18:21:59,710 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/favorites
+2024-11-05 18:21:59,710 - INFO - 127.0.0.1 - - [05/Nov/2024 18:21:59] "[31m[1mPOST /favorites HTTP/1.1[0m" 401 -
+2024-11-05 18:24:20,261 - INFO - Requête de 127.0.0.1: GET http://127.0.0.1:5001/docs/
+2024-11-05 18:24:20,262 - INFO - 127.0.0.1 - - [05/Nov/2024 18:24:20] "GET /docs/ HTTP/1.1" 200 -
+2024-11-05 18:24:20,319 - INFO - Requête de 127.0.0.1: GET http://127.0.0.1:5001/docs/swagger-ui-standalone-preset.js
+2024-11-05 18:24:20,321 - INFO - Requête de 127.0.0.1: GET http://127.0.0.1:5001/docs/swagger-ui-bundle.js
+2024-11-05 18:24:20,321 - INFO - 127.0.0.1 - - [05/Nov/2024 18:24:20] "[36mGET /docs/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2024-11-05 18:24:20,324 - INFO - 127.0.0.1 - - [05/Nov/2024 18:24:20] "[36mGET /docs/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2024-11-05 18:24:20,337 - INFO - Requête de 127.0.0.1: GET http://127.0.0.1:5001/docs/swagger-ui.css
+2024-11-05 18:24:20,339 - INFO - 127.0.0.1 - - [05/Nov/2024 18:24:20] "[36mGET /docs/swagger-ui.css HTTP/1.1[0m" 304 -
+2024-11-05 18:24:20,393 - INFO - Requête de 127.0.0.1: GET http://127.0.0.1:5001/docs/index.css
+2024-11-05 18:24:20,396 - INFO - 127.0.0.1 - - [05/Nov/2024 18:24:20] "[36mGET /docs/index.css HTTP/1.1[0m" 304 -
+2024-11-05 18:24:20,675 - INFO - Requête de 127.0.0.1: GET http://127.0.0.1:5001/static/swagger.json
+2024-11-05 18:24:20,702 - INFO - 127.0.0.1 - - [05/Nov/2024 18:24:20] "[36mGET /static/swagger.json HTTP/1.1[0m" 304 -
+2024-11-05 18:24:20,770 - INFO - Requête de 127.0.0.1: GET http://127.0.0.1:5001/docs/favicon-32x32.png
+2024-11-05 18:24:20,771 - INFO - 127.0.0.1 - - [05/Nov/2024 18:24:20] "[36mGET /docs/favicon-32x32.png HTTP/1.1[0m" 304 -
+2024-11-05 18:24:30,783 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/favorites
+2024-11-05 18:24:30,783 - INFO - 127.0.0.1 - - [05/Nov/2024 18:24:30] "[31m[1mPOST /favorites HTTP/1.1[0m" 401 -
+2024-11-05 18:25:33,640 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/favorites
+2024-11-05 18:25:33,673 - INFO - Livre 'The Epic of Gilgamesh' ajouté comme premier favori pour l'utilisateur admin
+2024-11-05 18:25:33,673 - INFO - 127.0.0.1 - - [05/Nov/2024 18:25:33] "POST /favorites HTTP/1.1" 200 -
+2024-11-05 18:26:42,941 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/login
+2024-11-05 18:26:42,942 - INFO - Tentative de connexion
+2024-11-05 18:26:42,943 - INFO - Connexion réussie, token généré
+2024-11-05 18:26:42,943 - INFO - 127.0.0.1 - - [05/Nov/2024 18:26:42] "POST /login HTTP/1.1" 200 -
+2024-11-05 18:26:48,294 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+2024-11-05 18:26:48,295 - INFO - Demande de recommandation pour le livre : Gilead par l'utilisateur admin
+2024-11-05 18:26:48,911 - INFO - Recommandations générées avec succès pour le livre Gilead
+2024-11-05 18:26:48,914 - INFO - Métriques de similarité : mean=0.5024940570195516, std=0.0008417287605605683
+2024-11-05 18:26:48,914 - INFO - Métrique de popularité moyenne : 0.0
+2024-11-05 18:26:48,914 - INFO - 127.0.0.1 - - [05/Nov/2024 18:26:48] "POST /recommendations HTTP/1.1" 200 -
+2024-11-05 18:26:49,570 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/favorites
+2024-11-05 18:26:49,570 - INFO - 127.0.0.1 - - [05/Nov/2024 18:26:49] "[31m[1mPOST /favorites HTTP/1.1[0m" 422 -
+2024-11-05 18:31:50,347 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/login
+2024-11-05 18:31:50,348 - INFO - Tentative de connexion
+2024-11-05 18:31:50,348 - INFO - Connexion réussie, token généré
+2024-11-05 18:31:50,349 - INFO - 127.0.0.1 - - [05/Nov/2024 18:31:50] "POST /login HTTP/1.1" 200 -
+2024-11-05 18:31:54,377 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+2024-11-05 18:31:54,378 - INFO - 127.0.0.1 - - [05/Nov/2024 18:31:54] "[31m[1mPOST /recommendations HTTP/1.1[0m" 422 -
+2024-11-05 18:34:57,625 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/login
+2024-11-05 18:34:57,626 - INFO - Tentative de connexion
+2024-11-05 18:34:57,627 - INFO - Connexion réussie, token généré
+2024-11-05 18:34:57,627 - INFO - 127.0.0.1 - - [05/Nov/2024 18:34:57] "POST /login HTTP/1.1" 200 -
+2024-11-05 18:35:10,576 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/login
+2024-11-05 18:35:10,578 - INFO - Tentative de connexion
+2024-11-05 18:35:10,578 - INFO - Connexion réussie, token généré
+2024-11-05 18:35:10,579 - INFO - 127.0.0.1 - - [05/Nov/2024 18:35:10] "POST /login HTTP/1.1" 200 -
+2024-11-05 18:35:16,460 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+2024-11-05 18:35:16,460 - INFO - 127.0.0.1 - - [05/Nov/2024 18:35:16] "[31m[1mPOST /recommendations HTTP/1.1[0m" 422 -
+2024-11-05 18:35:44,938 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/login
+2024-11-05 18:35:44,939 - INFO - Tentative de connexion
+2024-11-05 18:35:44,940 - INFO - Connexion réussie, token généré
+2024-11-05 18:35:44,940 - INFO - 127.0.0.1 - - [05/Nov/2024 18:35:44] "POST /login HTTP/1.1" 200 -
+2024-11-05 18:35:48,800 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+2024-11-05 18:35:48,800 - INFO - Demande de recommandation pour le livre : Gilead par l'utilisateur admin
+2024-11-05 18:35:49,292 - INFO - Recommandations générées avec succès pour le livre Gilead
+2024-11-05 18:35:49,292 - INFO - Métriques de similarité : mean=0.5024940570195516, std=0.0008417287605605683
+2024-11-05 18:35:49,292 - INFO - Métrique de popularité moyenne : 0.0
+2024-11-05 18:35:49,292 - INFO - 127.0.0.1 - - [05/Nov/2024 18:35:49] "POST /recommendations HTTP/1.1" 200 -
+2024-11-05 18:35:51,526 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/favorites
+2024-11-05 18:35:51,527 - INFO - 127.0.0.1 - - [05/Nov/2024 18:35:51] "[31m[1mPOST /favorites HTTP/1.1[0m" 422 -
+2024-11-05 18:36:44,546 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/login
+2024-11-05 18:36:44,547 - INFO - Tentative de connexion
+2024-11-05 18:36:44,547 - INFO - Connexion réussie, token généré
+2024-11-05 18:36:44,548 - INFO - 127.0.0.1 - - [05/Nov/2024 18:36:44] "POST /login HTTP/1.1" 200 -
+2024-11-05 18:36:48,407 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+2024-11-05 18:36:48,408 - INFO - Demande de recommandation pour le livre : Gilead par l'utilisateur admin
+2024-11-05 18:36:48,956 - INFO - Recommandations générées avec succès pour le livre Gilead
+2024-11-05 18:36:48,956 - INFO - Métriques de similarité : mean=0.5024940570195516, std=0.0008417287605605683
+2024-11-05 18:36:48,956 - INFO - Métrique de popularité moyenne : 0.0
+2024-11-05 18:36:48,956 - INFO - 127.0.0.1 - - [05/Nov/2024 18:36:48] "POST /recommendations HTTP/1.1" 200 -
+2024-11-05 18:36:50,005 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/favorites
+2024-11-05 18:36:50,006 - INFO - 127.0.0.1 - - [05/Nov/2024 18:36:50] "[31m[1mPOST /favorites HTTP/1.1[0m" 422 -
+2024-11-05 20:08:53,036 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/login
+2024-11-05 20:08:53,041 - INFO - Tentative de connexion
+2024-11-05 20:08:53,048 - INFO - Connexion réussie, token généré
+2024-11-05 20:08:53,050 - INFO - 127.0.0.1 - - [05/Nov/2024 20:08:53] "POST /login HTTP/1.1" 200 -
+2024-11-05 20:08:56,703 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+2024-11-05 20:08:56,704 - INFO - Demande de recommandation pour le livre : Gilead par l'utilisateur admin
+2024-11-05 20:08:58,427 - INFO - Recommandations générées avec succès pour le livre Gilead
+2024-11-05 20:08:58,427 - INFO - Métriques de similarité : mean=0.5024940570195516, std=0.0008417287605605683
+2024-11-05 20:08:58,427 - INFO - Métrique de popularité moyenne : 0.0
+2024-11-05 20:08:58,427 - INFO - 127.0.0.1 - - [05/Nov/2024 20:08:58] "POST /recommendations HTTP/1.1" 200 -
+2024-11-05 20:08:59,822 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/favorites
+2024-11-05 20:08:59,822 - INFO - 127.0.0.1 - - [05/Nov/2024 20:08:59] "[31m[1mPOST /favorites HTTP/1.1[0m" 422 -
+2024-11-05 20:09:18,341 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/favorites
+2024-11-05 20:09:18,341 - INFO - 127.0.0.1 - - [05/Nov/2024 20:09:18] "[31m[1mPOST /favorites HTTP/1.1[0m" 422 -
+2024-11-05 20:16:22,420 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/login
+2024-11-05 20:16:22,429 - INFO - Tentative de connexion
+2024-11-05 20:16:22,436 - INFO - Connexion réussie, token généré
+2024-11-05 20:16:22,436 - INFO - 127.0.0.1 - - [05/Nov/2024 20:16:22] "POST /login HTTP/1.1" 200 -
+2024-11-05 20:16:26,538 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+2024-11-05 20:16:26,540 - INFO - Demande de recommandation pour le livre : Gilead par l'utilisateur admin
+2024-11-05 20:16:27,022 - INFO - Recommandations générées avec succès pour le livre Gilead
+2024-11-05 20:16:27,022 - INFO - Métriques de similarité : mean=0.5024940570195516, std=0.0008417287605605683
+2024-11-05 20:16:27,022 - INFO - Métrique de popularité moyenne : 0.0
+2024-11-05 20:16:27,022 - INFO - 127.0.0.1 - - [05/Nov/2024 20:16:27] "POST /recommendations HTTP/1.1" 200 -
+2024-11-05 20:16:27,811 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/favorites
+2024-11-05 20:16:27,812 - INFO - 127.0.0.1 - - [05/Nov/2024 20:16:27] "[31m[1mPOST /favorites HTTP/1.1[0m" 422 -
+2024-11-05 20:20:50,769 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/login
+2024-11-05 20:20:50,797 - INFO - Tentative de connexion
+2024-11-05 20:20:50,797 - INFO - Connexion réussie, token généré
+2024-11-05 20:20:50,797 - INFO - 127.0.0.1 - - [05/Nov/2024 20:20:50] "POST /login HTTP/1.1" 200 -
+2024-11-05 20:20:56,449 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+2024-11-05 20:20:56,450 - INFO - Demande de recommandation pour le livre : Gilead par l'utilisateur admin
+2024-11-05 20:20:56,885 - INFO - Recommandations générées avec succès pour le livre Gilead
+2024-11-05 20:20:56,885 - INFO - Métriques de similarité : mean=0.5024940570195516, std=0.0008417287605605683
+2024-11-05 20:20:56,885 - INFO - Métrique de popularité moyenne : 0.0
+2024-11-05 20:20:56,885 - INFO - 127.0.0.1 - - [05/Nov/2024 20:20:56] "POST /recommendations HTTP/1.1" 200 -
+2024-11-05 20:20:57,995 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/favorites
+2024-11-05 20:20:57,996 - INFO - 127.0.0.1 - - [05/Nov/2024 20:20:57] "[31m[1mPOST /favorites HTTP/1.1[0m" 422 -
+2024-11-05 20:24:04,882 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/login
+2024-11-05 20:24:04,883 - INFO - Tentative de connexion
+2024-11-05 20:24:04,883 - INFO - Connexion réussie, token généré
+2024-11-05 20:24:04,884 - INFO - 127.0.0.1 - - [05/Nov/2024 20:24:04] "POST /login HTTP/1.1" 200 -
+2024-11-05 20:24:08,528 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+2024-11-05 20:24:08,529 - INFO - 127.0.0.1 - - [05/Nov/2024 20:24:08] "[31m[1mPOST /recommendations HTTP/1.1[0m" 422 -
+2024-11-05 20:24:25,201 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+2024-11-05 20:24:25,201 - INFO - 127.0.0.1 - - [05/Nov/2024 20:24:25] "[31m[1mPOST /recommendations HTTP/1.1[0m" 422 -
+2024-11-05 20:29:16,237 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+2024-11-05 20:29:16,237 - INFO - 127.0.0.1 - - [05/Nov/2024 20:29:16] "[31m[1mPOST /recommendations HTTP/1.1[0m" 422 -
+2024-11-05 20:29:18,965 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/login
+2024-11-05 20:29:18,970 - INFO - Tentative de connexion
+2024-11-05 20:29:18,971 - INFO - Connexion réussie, token généré
+2024-11-05 20:29:18,971 - INFO - 127.0.0.1 - - [05/Nov/2024 20:29:18] "POST /login HTTP/1.1" 200 -
+2024-11-05 20:29:24,050 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+2024-11-05 20:29:24,051 - INFO - Demande de recommandation pour le livre : Gilead par l'utilisateur admin
+2024-11-05 20:29:24,596 - INFO - Recommandations générées avec succès pour le livre Gilead
+2024-11-05 20:29:24,596 - INFO - Métriques de similarité : mean=0.5024940570195516, std=0.0008417287605605683
+2024-11-05 20:29:24,596 - INFO - Métrique de popularité moyenne : 0.0
+2024-11-05 20:29:24,596 - INFO - 127.0.0.1 - - [05/Nov/2024 20:29:24] "POST /recommendations HTTP/1.1" 200 -
+2024-11-05 20:29:25,372 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/favorites
+2024-11-05 20:29:25,374 - INFO - 127.0.0.1 - - [05/Nov/2024 20:29:25] "[31m[1mPOST /favorites HTTP/1.1[0m" 422 -
+2024-11-05 20:32:15,608 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/favorites
+2024-11-05 20:32:15,609 - INFO - 127.0.0.1 - - [05/Nov/2024 20:32:15] "[31m[1mPOST /favorites HTTP/1.1[0m" 422 -
+2024-11-05 20:39:13,034 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/login
+2024-11-05 20:39:13,038 - INFO - Tentative de connexion
+2024-11-05 20:39:13,039 - INFO - Connexion réussie, token généré
+2024-11-05 20:39:13,039 - INFO - 127.0.0.1 - - [05/Nov/2024 20:39:13] "POST /login HTTP/1.1" 200 -
+2024-11-05 20:39:16,746 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+2024-11-05 20:39:16,747 - INFO - Demande de recommandation pour le livre : Gilead par l'utilisateur admin
+2024-11-05 20:39:17,174 - INFO - Recommandations générées avec succès pour le livre Gilead
+2024-11-05 20:39:17,174 - INFO - Métriques de similarité : mean=0.5024940570195516, std=0.0008417287605605683
+2024-11-05 20:39:17,174 - INFO - Métrique de popularité moyenne : 0.0
+2024-11-05 20:39:17,174 - INFO - 127.0.0.1 - - [05/Nov/2024 20:39:17] "POST /recommendations HTTP/1.1" 200 -
+2024-11-05 20:44:44,691 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+2024-11-05 20:44:44,707 - INFO - Demande de recommandation pour le livre : The Great Gatsby par l'utilisateur admin
+2024-11-05 20:44:45,304 - INFO - Recommandations générées avec succès pour le livre The Great Gatsby
+2024-11-05 20:44:45,304 - INFO - Métriques de similarité : mean=0.6645023028055826, std=0.1959559998191433
+2024-11-05 20:44:45,304 - INFO - Métrique de popularité moyenne : 0.0
+2024-11-05 20:44:45,307 - INFO - 127.0.0.1 - - [05/Nov/2024 20:44:45] "POST /recommendations HTTP/1.1" 200 -
+2024-11-05 20:45:23,111 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/login
+2024-11-05 20:45:23,113 - INFO - Tentative de connexion
+2024-11-05 20:45:23,115 - INFO - Connexion réussie, token généré
+2024-11-05 20:45:23,115 - INFO - 127.0.0.1 - - [05/Nov/2024 20:45:23] "POST /login HTTP/1.1" 200 -
+2024-11-05 20:45:26,589 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+2024-11-05 20:45:26,589 - INFO - Demande de recommandation pour le livre : Gilead par l'utilisateur admin
+2024-11-05 20:45:27,119 - INFO - Recommandations générées avec succès pour le livre Gilead
+2024-11-05 20:45:27,119 - INFO - Métriques de similarité : mean=0.49139562249183655, std=0.005443236768030894
+2024-11-05 20:45:27,119 - INFO - Métrique de popularité moyenne : 0.0
+2024-11-05 20:45:27,119 - INFO - 127.0.0.1 - - [05/Nov/2024 20:45:27] "POST /recommendations HTTP/1.1" 200 -
+2024-11-05 20:47:27,033 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/login
+2024-11-05 20:47:27,034 - INFO - Tentative de connexion
+2024-11-05 20:47:27,034 - INFO - Connexion réussie, token généré
+2024-11-05 20:47:27,034 - INFO - 127.0.0.1 - - [05/Nov/2024 20:47:27] "POST /login HTTP/1.1" 200 -
+2024-11-05 20:47:34,765 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+2024-11-05 20:47:34,765 - INFO - Demande de recommandation pour le livre : The Great Gatsby par l'utilisateur admin
+2024-11-05 20:47:35,184 - INFO - Recommandations générées avec succès pour le livre The Great Gatsby
+2024-11-05 20:47:35,184 - INFO - Métriques de similarité : mean=0.6645023028055826, std=0.1959559998191433
+2024-11-05 20:47:35,184 - INFO - Métrique de popularité moyenne : 0.0
+2024-11-05 20:47:35,199 - INFO - 127.0.0.1 - - [05/Nov/2024 20:47:35] "POST /recommendations HTTP/1.1" 200 -
+2024-11-05 20:48:05,532 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/login
+2024-11-05 20:48:05,534 - INFO - Tentative de connexion
+2024-11-05 20:48:05,534 - INFO - Connexion réussie, token généré
+2024-11-05 20:48:05,534 - INFO - 127.0.0.1 - - [05/Nov/2024 20:48:05] "POST /login HTTP/1.1" 200 -
+2024-11-05 20:48:15,346 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+2024-11-05 20:48:15,347 - INFO - Demande de recommandation pour le livre : Gilead par l'utilisateur admin
+2024-11-05 20:48:15,940 - INFO - Recommandations générées avec succès pour le livre Gilead
+2024-11-05 20:48:15,940 - INFO - Métriques de similarité : mean=0.4884505371252696, std=0.008107812657518445
+2024-11-05 20:48:15,940 - INFO - Métrique de popularité moyenne : 0.0
+2024-11-05 20:48:15,940 - INFO - 127.0.0.1 - - [05/Nov/2024 20:48:15] "POST /recommendations HTTP/1.1" 200 -
+2024-11-05 20:50:48,261 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/login
+2024-11-05 20:50:48,875 - INFO - Tentative de connexion
+2024-11-05 20:50:48,876 - INFO - Connexion réussie, token généré
+2024-11-05 20:50:48,878 - INFO - 127.0.0.1 - - [05/Nov/2024 20:50:48] "POST /login HTTP/1.1" 200 -
+2024-11-05 20:50:52,532 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+2024-11-05 20:50:52,554 - INFO - Demande de recommandation pour le livre : Gilead par l'utilisateur admin
+2024-11-05 20:50:57,802 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+2024-11-05 20:50:57,803 - INFO - Demande de recommandation pour le livre : Gilead par l'utilisateur admin
+2024-11-05 20:50:59,231 - INFO - Recommandations générées avec succès pour le livre Gilead
+2024-11-05 20:50:59,232 - INFO - Métriques de similarité : mean=0.4884505371252696, std=0.008107812657518445
+2024-11-05 20:50:59,233 - INFO - Métrique de popularité moyenne : 0.0
+2024-11-05 20:50:59,236 - INFO - 127.0.0.1 - - [05/Nov/2024 20:50:59] "POST /recommendations HTTP/1.1" 200 -
+2024-11-05 20:50:59,256 - INFO - Recommandations générées avec succès pour le livre Gilead
+2024-11-05 20:50:59,257 - INFO - Métriques de similarité : mean=0.4884505371252696, std=0.008107812657518445
+2024-11-05 20:50:59,257 - INFO - Métrique de popularité moyenne : 0.0
+2024-11-05 20:50:59,257 - INFO - 127.0.0.1 - - [05/Nov/2024 20:50:59] "POST /recommendations HTTP/1.1" 200 -
+2024-11-05 20:58:12,694 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/login
+2024-11-05 20:58:12,702 - INFO - Tentative de connexion
+2024-11-05 20:58:12,709 - INFO - Connexion réussie, token généré
+2024-11-05 20:58:12,712 - INFO - 127.0.0.1 - - [05/Nov/2024 20:58:12] "POST /login HTTP/1.1" 200 -
+2024-11-05 20:58:19,407 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+2024-11-05 20:58:19,407 - INFO - Demande de recommandation pour le livre : The Great Gatsby par l'utilisateur admin
+2024-11-05 20:58:19,976 - INFO - Recommandations générées avec succès pour le livre The Great Gatsby
+2024-11-05 20:58:19,976 - INFO - Métriques de similarité : mean=0.6645023028055826, std=0.1959559998191433
+2024-11-05 20:58:19,976 - INFO - Métrique de popularité moyenne : 0.0
+2024-11-05 20:58:19,976 - INFO - 127.0.0.1 - - [05/Nov/2024 20:58:19] "POST /recommendations HTTP/1.1" 200 -
+2024-11-05 21:02:44,433 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/login
+2024-11-05 21:02:44,436 - INFO - Tentative de connexion
+2024-11-05 21:02:44,437 - INFO - Connexion réussie, token généré
+2024-11-05 21:02:44,437 - INFO - 127.0.0.1 - - [05/Nov/2024 21:02:44] "POST /login HTTP/1.1" 200 -
+2024-11-05 21:02:48,487 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+2024-11-05 21:02:48,488 - INFO - Demande de recommandation pour le livre : Gilead par l'utilisateur admin
+2024-11-05 21:02:48,940 - INFO - Recommandations générées avec succès pour le livre Gilead
+2024-11-05 21:02:48,940 - INFO - Métriques de similarité : mean=0.4884505371252696, std=0.008107812657518445
+2024-11-05 21:02:48,940 - INFO - Métrique de popularité moyenne : 0.0
+2024-11-05 21:02:48,940 - INFO - 127.0.0.1 - - [05/Nov/2024 21:02:48] "POST /recommendations HTTP/1.1" 200 -
+2024-11-05 21:04:32,872 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+2024-11-05 21:04:32,873 - INFO - Demande de recommandation pour le livre : The Great Gatsby par l'utilisateur admin
+2024-11-05 21:04:32,931 - INFO - 127.0.0.1 - - [05/Nov/2024 21:04:32] "[35m[1mPOST /recommendations HTTP/1.1[0m" 500 -
+2024-11-05 21:04:36,894 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/login
+2024-11-05 21:04:36,897 - INFO - Tentative de connexion
+2024-11-05 21:04:36,900 - INFO - Connexion réussie, token généré
+2024-11-05 21:04:36,900 - INFO - 127.0.0.1 - - [05/Nov/2024 21:04:36] "POST /login HTTP/1.1" 200 -
+2024-11-05 21:04:39,275 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+2024-11-05 21:04:39,276 - INFO - Demande de recommandation pour le livre : The Great Gatsby par l'utilisateur admin
+2024-11-05 21:04:39,287 - INFO - 127.0.0.1 - - [05/Nov/2024 21:04:39] "[35m[1mPOST /recommendations HTTP/1.1[0m" 500 -
+2024-11-05 21:04:45,054 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+2024-11-05 21:04:45,055 - INFO - Demande de recommandation pour le livre : Gilead par l'utilisateur admin
+2024-11-05 21:04:45,067 - INFO - 127.0.0.1 - - [05/Nov/2024 21:04:45] "[35m[1mPOST /recommendations HTTP/1.1[0m" 500 -
+2024-11-05 21:04:46,246 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+2024-11-05 21:04:46,249 - INFO - Demande de recommandation pour le livre : Gilead par l'utilisateur admin
+2024-11-05 21:04:46,259 - INFO - 127.0.0.1 - - [05/Nov/2024 21:04:46] "[35m[1mPOST /recommendations HTTP/1.1[0m" 500 -
+2024-11-05 21:05:57,322 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/login
+2024-11-05 21:05:57,323 - INFO - Tentative de connexion
+2024-11-05 21:05:57,324 - INFO - Connexion réussie, token généré
+2024-11-05 21:05:57,324 - INFO - 127.0.0.1 - - [05/Nov/2024 21:05:57] "POST /login HTTP/1.1" 200 -
+2024-11-05 21:05:59,513 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+2024-11-05 21:05:59,513 - INFO - Demande de recommandation pour le livre : Gilead par l'utilisateur admin
+2024-11-05 21:05:59,522 - INFO - 127.0.0.1 - - [05/Nov/2024 21:05:59] "[35m[1mPOST /recommendations HTTP/1.1[0m" 500 -
+2024-11-05 21:06:33,819 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/login
+2024-11-05 21:06:33,821 - INFO - Tentative de connexion
+2024-11-05 21:06:33,822 - INFO - Connexion réussie, token généré
+2024-11-05 21:06:33,822 - INFO - 127.0.0.1 - - [05/Nov/2024 21:06:33] "POST /login HTTP/1.1" 200 -
+2024-11-05 21:07:14,086 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/login
+2024-11-05 21:07:14,087 - INFO - Tentative de connexion
+2024-11-05 21:07:14,087 - INFO - Connexion réussie, token généré
+2024-11-05 21:07:14,088 - INFO - 127.0.0.1 - - [05/Nov/2024 21:07:14] "POST /login HTTP/1.1" 200 -
+2024-11-05 21:07:16,142 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+2024-11-05 21:07:16,142 - INFO - Demande de recommandation pour le livre : The Great Gatsby par l'utilisateur admin
+2024-11-05 21:07:16,154 - INFO - 127.0.0.1 - - [05/Nov/2024 21:07:16] "[35m[1mPOST /recommendations HTTP/1.1[0m" 500 -
+2024-11-05 21:07:20,537 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+2024-11-05 21:07:20,537 - INFO - Demande de recommandation pour le livre : The Great Gatsby par l'utilisateur admin
+2024-11-05 21:07:20,546 - INFO - 127.0.0.1 - - [05/Nov/2024 21:07:20] "[35m[1mPOST /recommendations HTTP/1.1[0m" 500 -
+2024-11-05 21:07:53,805 - INFO - Requête de 127.0.0.1: GET http://127.0.0.1:5001/docs/
+2024-11-05 21:07:53,822 - INFO - 127.0.0.1 - - [05/Nov/2024 21:07:53] "GET /docs/ HTTP/1.1" 200 -
+2024-11-05 21:07:53,893 - INFO - Requête de 127.0.0.1: GET http://127.0.0.1:5001/docs/index.css
+2024-11-05 21:07:53,902 - INFO - Requête de 127.0.0.1: GET http://127.0.0.1:5001/docs/swagger-ui-bundle.js
+2024-11-05 21:07:53,907 - INFO - 127.0.0.1 - - [05/Nov/2024 21:07:53] "[36mGET /docs/index.css HTTP/1.1[0m" 304 -
+2024-11-05 21:07:53,909 - INFO - Requête de 127.0.0.1: GET http://127.0.0.1:5001/docs/swagger-ui.css
+2024-11-05 21:07:53,919 - INFO - 127.0.0.1 - - [05/Nov/2024 21:07:53] "[36mGET /docs/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2024-11-05 21:07:53,920 - INFO - 127.0.0.1 - - [05/Nov/2024 21:07:53] "[36mGET /docs/swagger-ui.css HTTP/1.1[0m" 304 -
+2024-11-05 21:07:53,938 - INFO - Requête de 127.0.0.1: GET http://127.0.0.1:5001/docs/swagger-ui-standalone-preset.js
+2024-11-05 21:07:53,939 - INFO - 127.0.0.1 - - [05/Nov/2024 21:07:53] "[36mGET /docs/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2024-11-05 21:07:54,368 - INFO - Requête de 127.0.0.1: GET http://127.0.0.1:5001/static/swagger.json
+2024-11-05 21:07:54,370 - INFO - 127.0.0.1 - - [05/Nov/2024 21:07:54] "[36mGET /static/swagger.json HTTP/1.1[0m" 304 -
+2024-11-05 21:07:54,519 - INFO - Requête de 127.0.0.1: GET http://127.0.0.1:5001/docs/favicon-32x32.png
+2024-11-05 21:07:54,520 - INFO - 127.0.0.1 - - [05/Nov/2024 21:07:54] "[36mGET /docs/favicon-32x32.png HTTP/1.1[0m" 304 -
+2024-11-05 21:07:58,079 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/login
+2024-11-05 21:07:58,081 - INFO - Tentative de connexion
+2024-11-05 21:07:58,082 - INFO - Connexion réussie, token généré
+2024-11-05 21:07:58,082 - INFO - 127.0.0.1 - - [05/Nov/2024 21:07:58] "POST /login HTTP/1.1" 200 -
+2024-11-05 21:08:01,347 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+2024-11-05 21:08:01,347 - INFO - Demande de recommandation pour le livre : Gilead par l'utilisateur admin
+2024-11-05 21:08:01,361 - INFO - 127.0.0.1 - - [05/Nov/2024 21:08:01] "[35m[1mPOST /recommendations HTTP/1.1[0m" 500 -
+2024-11-05 21:08:27,724 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/login
+2024-11-05 21:08:27,724 - INFO - Tentative de connexion
+2024-11-05 21:08:27,724 - INFO - Connexion réussie, token généré
+2024-11-05 21:08:27,724 - INFO - 127.0.0.1 - - [05/Nov/2024 21:08:27] "POST /login HTTP/1.1" 200 -
+2024-11-05 21:08:29,919 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+2024-11-05 21:08:29,919 - INFO - Demande de recommandation pour le livre : The Great Gatsby par l'utilisateur admin
+2024-11-05 21:08:29,929 - INFO - 127.0.0.1 - - [05/Nov/2024 21:08:29] "[35m[1mPOST /recommendations HTTP/1.1[0m" 500 -
+2024-11-05 21:09:23,449 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+2024-11-05 21:09:23,449 - INFO - Demande de recommandation pour le livre : Tooth and Claw par l'utilisateur admin
+2024-11-05 21:09:23,460 - INFO - 127.0.0.1 - - [05/Nov/2024 21:09:23] "[35m[1mPOST /recommendations HTTP/1.1[0m" 500 -
+2024-11-05 21:09:25,280 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+2024-11-05 21:09:25,280 - INFO - Demande de recommandation pour le livre : Tooth and Claw par l'utilisateur admin
+2024-11-05 21:09:25,320 - INFO - 127.0.0.1 - - [05/Nov/2024 21:09:25] "[35m[1mPOST /recommendations HTTP/1.1[0m" 500 -
+2024-11-05 21:09:25,335 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+2024-11-05 21:09:25,335 - INFO - Demande de recommandation pour le livre : Tooth and Claw par l'utilisateur admin
+2024-11-05 21:09:25,377 - INFO - 127.0.0.1 - - [05/Nov/2024 21:09:25] "[35m[1mPOST /recommendations HTTP/1.1[0m" 500 -
+2024-11-05 21:11:34,762 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/login
+2024-11-05 21:11:34,787 - INFO - Tentative de connexion
+2024-11-05 21:11:34,787 - INFO - Connexion réussie, token généré
+2024-11-05 21:11:34,787 - INFO - 127.0.0.1 - - [05/Nov/2024 21:11:34] "POST /login HTTP/1.1" 200 -
+2024-11-05 21:11:36,878 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+2024-11-05 21:11:36,879 - INFO - Demande de recommandation pour le livre : Gilead par l'utilisateur admin
+2024-11-05 21:11:36,893 - INFO - 127.0.0.1 - - [05/Nov/2024 21:11:36] "[35m[1mPOST /recommendations HTTP/1.1[0m" 500 -
+2024-11-05 21:13:47,746 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/login
+2024-11-05 21:13:47,747 - INFO - Tentative de connexion
+2024-11-05 21:13:47,748 - INFO - Connexion réussie, token généré
+2024-11-05 21:13:47,748 - INFO - 127.0.0.1 - - [05/Nov/2024 21:13:47] "POST /login HTTP/1.1" 200 -
+2024-11-05 21:13:50,538 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+2024-11-05 21:13:50,539 - INFO - Demande de recommandation pour le livre : The Great Gatsby par l'utilisateur admin
+2024-11-05 21:13:50,547 - INFO - 127.0.0.1 - - [05/Nov/2024 21:13:50] "[35m[1mPOST /recommendations HTTP/1.1[0m" 500 -
+2024-11-05 21:20:16,931 - INFO -  * Detected change in 'C:\\Users\\pmgue\\Downloads\\ProjetChefDoeuvre\\RecommendationsLectures\\RecommendationsLecturesAPI\\app.py', reloading
+2024-11-05 21:20:24,880 - INFO -  * Restarting with stat
+2024-11-05 21:20:47,204 - INFO - Connexion à MongoDB...
+2024-11-05 21:20:47,251 - INFO - Connexion à MongoDB réussie.
+2024-11-05 21:20:47,251 - INFO - Démarrage du serveur Prometheus sur le port 8001
+2024-11-05 21:20:48,130 - INFO - Chargement des données et des embeddings
+2024-11-05 21:20:49,524 - INFO - Données, embeddings et similarités cosinus chargés avec succès
+2024-11-05 21:20:49,531 - INFO - Démarrage de l'application Flask sur le port 5001
+2024-11-05 21:20:49,554 - WARNING -  * Debugger is active!
+2024-11-05 21:20:49,567 - INFO -  * Debugger PIN: 106-833-848
+2024-11-05 21:21:33,808 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/login
+2024-11-05 21:21:33,810 - INFO - Tentative de connexion
+2024-11-05 21:21:33,813 - INFO - Connexion réussie, token généré
+2024-11-05 21:21:33,813 - INFO - 127.0.0.1 - - [05/Nov/2024 21:21:33] "POST /login HTTP/1.1" 200 -
+2024-11-05 21:21:35,651 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+2024-11-05 21:21:35,652 - INFO - Demande de recommandation pour le livre : Gilead par l'utilisateur admin
+2024-11-05 21:21:35,748 - INFO - 127.0.0.1 - - [05/Nov/2024 21:21:35] "[35m[1mPOST /recommendations HTTP/1.1[0m" 500 -
+2024-11-05 21:21:55,965 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/login
+2024-11-05 21:21:55,966 - INFO - Tentative de connexion
+2024-11-05 21:21:55,967 - INFO - Connexion réussie, token généré
+2024-11-05 21:21:55,967 - INFO - 127.0.0.1 - - [05/Nov/2024 21:21:55] "POST /login HTTP/1.1" 200 -
+2024-11-05 21:21:57,791 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+2024-11-05 21:21:57,791 - INFO - Demande de recommandation pour le livre : Gilead par l'utilisateur admin
+2024-11-05 21:21:57,799 - INFO - 127.0.0.1 - - [05/Nov/2024 21:21:57] "[35m[1mPOST /recommendations HTTP/1.1[0m" 500 -
+2024-11-05 21:22:19,310 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/login
+2024-11-05 21:22:19,311 - INFO - Tentative de connexion
+2024-11-05 21:22:19,312 - INFO - Connexion réussie, token généré
+2024-11-05 21:22:19,312 - INFO - 127.0.0.1 - - [05/Nov/2024 21:22:19] "POST /login HTTP/1.1" 200 -
+2024-11-05 21:22:21,161 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+2024-11-05 21:22:21,162 - INFO - Demande de recommandation pour le livre : Gilead par l'utilisateur admin
+2024-11-05 21:22:21,170 - INFO - 127.0.0.1 - - [05/Nov/2024 21:22:21] "[35m[1mPOST /recommendations HTTP/1.1[0m" 500 -
+2024-11-05 21:24:46,625 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/login
+2024-11-05 21:24:46,626 - INFO - Tentative de connexion
+2024-11-05 21:24:46,627 - INFO - Connexion réussie, token généré
+2024-11-05 21:24:46,627 - INFO - 127.0.0.1 - - [05/Nov/2024 21:24:46] "POST /login HTTP/1.1" 200 -
+2024-11-05 21:24:48,606 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+2024-11-05 21:24:48,606 - INFO - Demande de recommandation pour le livre : Gilead par l'utilisateur admin
+2024-11-05 21:24:48,615 - INFO - 127.0.0.1 - - [05/Nov/2024 21:24:48] "[35m[1mPOST /recommendations HTTP/1.1[0m" 500 -
+2024-11-05 21:28:37,333 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/login
+2024-11-05 21:28:37,351 - INFO - Tentative de connexion
+2024-11-05 21:28:37,353 - INFO - Connexion réussie, token généré
+2024-11-05 21:28:37,354 - INFO - 127.0.0.1 - - [05/Nov/2024 21:28:37] "POST /login HTTP/1.1" 200 -
+2024-11-05 21:29:18,773 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/login
+2024-11-05 21:29:18,774 - INFO - Tentative de connexion
+2024-11-05 21:29:18,775 - INFO - Connexion réussie, token généré
+2024-11-05 21:29:18,776 - INFO - 127.0.0.1 - - [05/Nov/2024 21:29:18] "POST /login HTTP/1.1" 200 -
+2024-11-05 21:30:01,273 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/login
+2024-11-05 21:30:01,282 - INFO - Tentative de connexion
+2024-11-05 21:30:01,282 - INFO - Connexion réussie, token généré
+2024-11-05 21:30:01,283 - INFO - 127.0.0.1 - - [05/Nov/2024 21:30:01] "POST /login HTTP/1.1" 200 -
+2024-11-05 21:30:03,341 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+2024-11-05 21:30:03,348 - INFO - 127.0.0.1 - - [05/Nov/2024 21:30:03] "[31m[1mPOST /recommendations HTTP/1.1[0m" 422 -
+2024-11-05 21:31:47,398 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/login
+2024-11-05 21:31:47,400 - INFO - Tentative de connexion
+2024-11-05 21:31:47,400 - INFO - Connexion réussie, token généré
+2024-11-05 21:31:47,401 - INFO - 127.0.0.1 - - [05/Nov/2024 21:31:47] "POST /login HTTP/1.1" 200 -
+2024-11-05 21:31:49,069 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+2024-11-05 21:31:49,069 - INFO - 127.0.0.1 - - [05/Nov/2024 21:31:49] "[31m[1mPOST /recommendations HTTP/1.1[0m" 422 -
+2024-11-05 21:32:26,954 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+2024-11-05 21:32:26,954 - INFO - 127.0.0.1 - - [05/Nov/2024 21:32:26] "[31m[1mPOST /recommendations HTTP/1.1[0m" 401 -
+2024-11-05 21:32:59,080 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/login
+2024-11-05 21:32:59,081 - INFO - Tentative de connexion
+2024-11-05 21:32:59,081 - INFO - Connexion réussie, token généré
+2024-11-05 21:32:59,081 - INFO - 127.0.0.1 - - [05/Nov/2024 21:32:59] "POST /login HTTP/1.1" 200 -
+2024-11-05 21:33:19,111 - INFO - Requête de 127.0.0.1: POST http://127.0.0.1:5001/recommendations
+2024-11-05 21:33:19,124 - INFO - Demande de recommandation pour le livre : The Great Gatsby par l'utilisateur admin
+2024-11-05 21:33:19,178 - INFO - 127.0.0.1 - - [05/Nov/2024 21:33:19] "[35m[1mPOST /recommendations HTTP/1.1[0m" 500 -
+2024-11-05 21:40:20,365 - INFO -  * Detected change in 'C:\\Users\\pmgue\\Downloads\\ProjetChefDoeuvre\\RecommendationsLectures\\RecommendationsLecturesAPI\\app.py', reloading
+2024-11-05 21:40:25,608 - INFO -  * Restarting with stat
+2024-11-05 21:40:54,691 - INFO - Connexion à MongoDB...
+2024-11-05 21:40:54,707 - INFO - Connexion à MongoDB réussie.
+2024-11-05 21:40:54,707 - INFO - Démarrage du serveur Prometheus sur le port 8001
+2024-11-05 21:40:55,608 - INFO - Chargement des données et des embeddings
+2024-11-05 21:40:57,606 - INFO - Données, embeddings et similarités cosinus chargés avec succès
+2024-11-05 21:40:57,636 - INFO - Démarrage de l'application Flask sur le port 5001
+2024-11-05 21:40:57,664 - WARNING -  * Debugger is active!
+2024-11-05 21:40:57,676 - INFO -  * Debugger PIN: 106-833-848
+2024-11-05 21:41:53,049 - INFO -  * Detected change in 'C:\\Users\\pmgue\\Downloads\\ProjetChefDoeuvre\\RecommendationsLectures\\RecommendationsLecturesAPI\\app.py', reloading
+2024-11-05 21:41:55,902 - INFO -  * Restarting with stat
+2024-11-05 21:42:10,826 - INFO - Connexion à MongoDB...
+2024-11-05 21:42:10,887 - INFO - Connexion à MongoDB réussie.
+2024-11-05 21:42:10,887 - INFO - Démarrage du serveur Prometheus sur le port 8001
+2024-11-05 21:42:11,816 - INFO - Chargement des données et des embeddings
+2024-11-05 21:42:13,594 - INFO - Données, embeddings et similarités cosinus chargés avec succès
+2024-11-05 21:48:01,375 - INFO - Connexion à MongoDB...
+2024-11-05 21:48:01,407 - INFO - Connexion à MongoDB réussie.
+2024-11-05 21:48:01,407 - INFO - Démarrage du serveur Prometheus sur le port 8001
+2024-11-05 21:48:02,271 - INFO - Chargement des données et des embeddings
+2024-11-05 21:48:03,829 - INFO - Données, embeddings et similarités cosinus chargés avec succès
+2024-11-05 21:52:19,378 - INFO - Connexion à MongoDB...
+2024-11-05 21:52:19,405 - INFO - Connexion à MongoDB réussie.
+2024-11-05 21:52:19,405 - INFO - Démarrage du serveur Prometheus sur le port 8001
+2024-11-05 21:52:20,276 - INFO - Chargement des données et des embeddings
+2024-11-05 21:52:22,217 - INFO - Données, embeddings et similarités cosinus chargés avec succès
+2024-11-05 21:52:22,288 - INFO - Démarrage de l'application Flask sur le port 5001
+2024-11-05 21:52:22,340 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-11-05 21:52:22,340 - INFO - [33mPress CTRL+C to quit[0m
+2024-11-05 21:52:22,340 - INFO -  * Restarting with stat
+2024-11-05 21:52:37,253 - INFO - Connexion à MongoDB...
+2024-11-05 21:52:37,268 - INFO - Connexion à MongoDB réussie.
+2024-11-05 21:52:37,268 - INFO - Démarrage du serveur Prometheus sur le port 8001
+2024-11-05 21:52:38,115 - INFO - Chargement des données et des embeddings
+2024-11-05 21:52:38,977 - INFO - Données, embeddings et similarités cosinus chargés avec succès
+2024-11-05 21:52:39,105 - INFO - Démarrage de l'application Flask sur le port 5001
+2024-11-05 21:52:39,116 - WARNING -  * Debugger is active!
+2024-11-05 21:52:39,131 - INFO -  * Debugger PIN: 106-833-848
+2024-11-05 21:52:39,597 - INFO - Requête de 127.0.0.1: OPTIONS http://127.0.0.1:5001/login
+2024-11-05 21:52:39,598 - INFO - 127.0.0.1 - - [05/Nov/2024 21:52:39] "OPTIONS /login HTTP/1.1" 200 -
+2024-11-05 21:58:53,550 - INFO -  * Detected change in 'C:\\Users\\pmgue\\Downloads\\ProjetChefDoeuvre\\RecommendationsLectures\\RecommendationsLecturesAPI\\app.py', reloading
+2024-11-05 21:58:56,660 - INFO -  * Restarting with stat
+2024-11-05 21:59:14,679 - INFO - Connexion à MongoDB...
+2024-11-05 21:59:14,704 - INFO - Connexion à MongoDB réussie.
+2024-11-05 21:59:14,704 - INFO - Démarrage du serveur Prometheus sur le port 8001
+2024-11-05 21:59:15,566 - INFO - Chargement des données et des embeddings
+2024-11-05 21:59:16,072 - INFO - Données, embeddings et similarités cosinus chargés avec succès
+2024-11-05 21:59:16,086 - INFO - Démarrage de l'application Flask sur le port 5001
+2024-11-05 21:59:16,086 - WARNING -  * Debugger is active!
+2024-11-05 21:59:16,105 - INFO -  * Debugger PIN: 106-833-848
+2024-11-05 21:59:16,369 - INFO - Requête de 127.0.0.1: OPTIONS http://127.0.0.1:5001/login
+2024-11-05 21:59:16,369 - INFO - 127.0.0.1 - - [05/Nov/2024 21:59:16] "OPTIONS /login HTTP/1.1" 200 -
+2024-11-05 22:07:58,664 - INFO -  * Detected change in 'C:\\Users\\pmgue\\Downloads\\ProjetChefDoeuvre\\RecommendationsLectures\\RecommendationsLecturesAPI\\app.py', reloading
+2024-11-05 22:08:04,493 - INFO -  * Restarting with stat
+2024-11-05 22:08:23,162 - WARNING -  * Debugger is active!
+2024-11-05 22:08:23,170 - INFO -  * Debugger PIN: 106-833-848
+2024-11-05 22:08:23,499 - INFO - 127.0.0.1 - - [05/Nov/2024 22:08:23] "OPTIONS /login HTTP/1.1" 200 -
+2024-11-05 22:11:46,196 - INFO -  * Detected change in 'C:\\Users\\pmgue\\Downloads\\ProjetChefDoeuvre\\RecommendationsLectures\\RecommendationsLecturesAPI\\app.py', reloading
+2024-11-05 22:11:56,860 - INFO -  * Restarting with stat
+2024-11-05 22:12:14,770 - WARNING -  * Debugger is active!
+2024-11-05 22:12:14,779 - INFO -  * Debugger PIN: 106-833-848
+2024-11-05 22:14:53,069 - INFO - 127.0.0.1 - - [05/Nov/2024 22:14:53] "OPTIONS /login HTTP/1.1" 200 -
+2024-11-05 22:14:53,116 - INFO - 127.0.0.1 - - [05/Nov/2024 22:14:53] "POST /login HTTP/1.1" 200 -
+2024-11-05 22:14:58,541 - INFO - 127.0.0.1 - - [05/Nov/2024 22:14:58] "OPTIONS /recommendations HTTP/1.1" 200 -
+2024-11-05 22:14:58,852 - INFO - 127.0.0.1 - - [05/Nov/2024 22:14:58] "[35m[1mPOST /recommendations HTTP/1.1[0m" 500 -
+2024-11-05 22:21:39,886 - INFO - 127.0.0.1 - - [05/Nov/2024 22:21:39] "OPTIONS /login HTTP/1.1" 200 -
+2024-11-05 22:21:39,929 - INFO - 127.0.0.1 - - [05/Nov/2024 22:21:39] "POST /login HTTP/1.1" 200 -
+2024-11-05 22:21:42,234 - INFO - 127.0.0.1 - - [05/Nov/2024 22:21:42] "OPTIONS /recommendations HTTP/1.1" 200 -
+2024-11-05 22:21:43,039 - INFO - 127.0.0.1 - - [05/Nov/2024 22:21:43] "POST /recommendations HTTP/1.1" 200 -
+2024-11-05 22:21:47,800 - INFO - 127.0.0.1 - - [05/Nov/2024 22:21:47] "OPTIONS /favorites HTTP/1.1" 200 -
+2024-11-05 22:21:47,885 - INFO - 127.0.0.1 - - [05/Nov/2024 22:21:47] "POST /favorites HTTP/1.1" 200 -
+2024-11-05 22:22:03,494 - INFO - 127.0.0.1 - - [05/Nov/2024 22:22:03] "OPTIONS /favorites HTTP/1.1" 200 -
+2024-11-05 22:22:03,520 - INFO - 127.0.0.1 - - [05/Nov/2024 22:22:03] "GET /favorites HTTP/1.1" 200 -
+2024-11-05 22:26:51,702 - INFO - 127.0.0.1 - - [05/Nov/2024 22:26:51] "OPTIONS /login HTTP/1.1" 200 -
+2024-11-05 22:26:51,710 - INFO - 127.0.0.1 - - [05/Nov/2024 22:26:51] "POST /login HTTP/1.1" 200 -
+2024-11-05 22:26:53,773 - INFO - 127.0.0.1 - - [05/Nov/2024 22:26:53] "OPTIONS /recommendations HTTP/1.1" 200 -
+2024-11-05 22:26:54,248 - INFO - 127.0.0.1 - - [05/Nov/2024 22:26:54] "POST /recommendations HTTP/1.1" 200 -
+2024-11-05 22:26:56,070 - INFO - 127.0.0.1 - - [05/Nov/2024 22:26:56] "OPTIONS /favorites HTTP/1.1" 200 -
+2024-11-05 22:26:56,108 - INFO - 127.0.0.1 - - [05/Nov/2024 22:26:56] "POST /favorites HTTP/1.1" 200 -
+2024-11-05 22:26:57,998 - INFO - 127.0.0.1 - - [05/Nov/2024 22:26:57] "GET /favorites HTTP/1.1" 200 -

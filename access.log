@@ -347,3 +347,23 @@ INFO:root:Request from 127.0.0.1: POST http://127.0.0.1:5001/recommendations
 INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 12:16:53] "POST /recommendations HTTP/1.1" 200 -
 INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/books/title/The%20Great%20Gatsby
 INFO:werkzeug:127.0.0.1 - - [24/Oct/2024 12:17:10] "GET /books/title/The%20Great%20Gatsby HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 142-542-683
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/docs/
+INFO:werkzeug:127.0.0.1 - - [01/Nov/2024 13:52:39] "GET /docs/ HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/docs/index.css
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/docs/swagger-ui.css
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/docs/swagger-ui-bundle.js
+INFO:werkzeug:127.0.0.1 - - [01/Nov/2024 13:52:39] "GET /docs/index.css HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/docs/swagger-ui-standalone-preset.js
+INFO:werkzeug:127.0.0.1 - - [01/Nov/2024 13:52:40] "GET /docs/swagger-ui.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Nov/2024 13:52:41] "GET /docs/swagger-ui-standalone-preset.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Nov/2024 13:52:43] "GET /docs/swagger-ui-bundle.js HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/static/swagger.json
+INFO:werkzeug:127.0.0.1 - - [01/Nov/2024 13:52:43] "GET /static/swagger.json HTTP/1.1" 200 -
+INFO:root:Request from 127.0.0.1: GET http://127.0.0.1:5001/docs/favicon-32x32.png
+INFO:werkzeug:127.0.0.1 - - [01/Nov/2024 13:52:44] "GET /docs/favicon-32x32.png HTTP/1.1" 200 -

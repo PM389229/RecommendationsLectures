@@ -3,25 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recommendation App</title>
+    <title>Book Recommendation App</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
     <div class="container">
         <h1>Book Recommendation App</h1>
+        
+        <!-- Section de connexion -->
         <div id="login-section">
             <h2>Login</h2>
-            <input type="text" id="username" placeholder="Username">
-            <input type="password" id="password" placeholder="Password">
+            <input type="text" id="username" placeholder="Username" autocomplete="username">
+            <input type="password" id="password" placeholder="Password" autocomplete="current-password">        
             <button onclick="login()">Login</button>
             <p id="login-message"></p>
         </div>
 
+        <!-- Section des recommandations -->
         <div id="recommendations-section" style="display:none;">
-            <h2>Get Recommendations</h2>
+          
             <input type="text" id="book-title" placeholder="Enter a Book Title">
             <button onclick="getRecommendations()">Get Recommendations</button>
+            <button onclick="showFavorites()">Mes Favoris</button> <!-- Bouton pour afficher les favoris -->
             <ul id="recommendations-list"></ul>
+        </div>
+
+        <!-- Section des favoris -->
+        <div id="favorites-section" style="display:none;">
+            <h2>Mes Favoris</h2>
+            <button onclick="showRecommendations()">Retour aux Recommandations</button> <!-- Bouton pour revenir aux recommandations -->
+            <ul id="favorites-list"></ul> <!-- Liste des favoris -->
         </div>
     </div>
 

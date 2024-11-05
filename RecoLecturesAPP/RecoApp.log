@@ -1,0 +1,743 @@
+2024-11-04 21:07:43,289 - INFO - Démarrage de RecoApp sur le port 5002
+2024-11-04 21:07:43,343 - WARNING -  * Debugger is active!
+2024-11-04 21:07:43,343 - INFO -  * Debugger PIN: 106-833-848
+2024-11-04 21:48:40,548 - INFO - Démarrage de RecoApp sur le port 5002
+2024-11-04 21:48:40,640 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5002
+2024-11-04 21:48:40,640 - INFO - [33mPress CTRL+C to quit[0m
+2024-11-04 21:48:40,645 - INFO -  * Restarting with stat
+2024-11-04 21:48:41,405 - INFO - Démarrage de RecoApp sur le port 5002
+2024-11-04 21:48:41,446 - WARNING -  * Debugger is active!
+2024-11-04 21:48:41,457 - INFO -  * Debugger PIN: 106-833-848
+2024-11-04 21:49:19,734 - INFO - Route d'accueil accédée
+2024-11-04 21:49:19,750 - INFO - 127.0.0.1 - - [04/Nov/2024 21:49:19] "GET / HTTP/1.1" 200 -
+2024-11-04 21:49:19,849 - INFO - 127.0.0.1 - - [04/Nov/2024 21:49:19] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-11-04 21:49:19,874 - INFO - 127.0.0.1 - - [04/Nov/2024 21:49:19] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2024-11-04 21:49:31,499 - INFO - Tentative de connexion pour l'utilisateur : admin
+2024-11-04 21:49:31,512 - INFO - Réponse de l'API /login : 200 - {
+  "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMDc1MzM3MSwianRpIjoiN2MzZTRlMGQtZGQ2NS00NTJhLWI3YTktZGUzZDVkMTg0OWE0IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFkbWluIiwibmJmIjoxNzMwNzUzMzcxLCJjc3JmIjoiYzFlNzc4NWMtNDU4ZC00YjE5LWIxM2UtOTI1ZTUwMTVmYmEyIiwiZXhwIjoxNzMwNzU0MjcxfQ.TPD3Xs1QOHL0z4nHEOnAGpZ8PsZdO8Zbn6iD2GCoVc8"
+}
+
+2024-11-04 21:49:31,513 - INFO - 127.0.0.1 - - [04/Nov/2024 21:49:31] "POST /login HTTP/1.1" 200 -
+2024-11-04 21:49:43,024 - INFO - Requête de recommandations pour le livre : The Great Gatsby
+2024-11-04 21:49:43,509 - INFO - Réponse de l'API /recommendations : 200 - [
+  {
+    "authors": "F. Scott Fitzgerald",
+    "score": 0.9413511157035828,
+    "title": "The Great Gatsby"
+  },
+  {
+    "authors": "Anne Tyler",
+    "score": 0.5367634892463684,
+    "title": "A Patchwork Planet"
+  },
+  {
+    "authors": "Betty Smith",
+    "score": 0.5153923034667969,
+    "title": "Joy in the Morning"
+  }
+]
+
+2024-11-04 21:49:43,509 - INFO - 127.0.0.1 - - [04/Nov/2024 21:49:43] "POST /recommendations HTTP/1.1" 200 -
+2024-11-04 21:49:53,669 - INFO - Requête de recommandations pour le livre : Gilead
+2024-11-04 21:49:54,090 - INFO - Réponse de l'API /recommendations : 200 - [
+  {
+    "authors": "Maureen Gallery Kovacs",
+    "score": 0.5041021108627319,
+    "title": "The Epic of Gilgamesh"
+  },
+  {
+    "authors": "Ta-Nehisi Coates",
+    "score": 0.5030892491340637,
+    "title": "The Water Dancer"
+  },
+  {
+    "authors": "Ta-Nehisi Coates",
+    "score": 0.5030892491340637,
+    "title": "The Water Dancer"
+  }
+]
+
+2024-11-04 21:49:54,090 - INFO - 127.0.0.1 - - [04/Nov/2024 21:49:54] "POST /recommendations HTTP/1.1" 200 -
+2024-11-05 12:58:03,127 - INFO - Route d'accueil accédée
+2024-11-05 12:58:03,156 - INFO - 127.0.0.1 - - [05/Nov/2024 12:58:03] "GET / HTTP/1.1" 200 -
+2024-11-05 12:58:03,225 - INFO - 127.0.0.1 - - [05/Nov/2024 12:58:03] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-11-05 12:58:03,312 - INFO - 127.0.0.1 - - [05/Nov/2024 12:58:03] "GET /static/js/app.js HTTP/1.1" 200 -
+2024-11-05 12:58:04,681 - INFO - Tentative de connexion pour l'utilisateur : admin
+2024-11-05 12:58:04,847 - INFO - Réponse de l'API /login : 200 - {
+  "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMDgwNzg4NCwianRpIjoiNmQwMmE5NTEtYzQ0NC00YTAzLTk0OGYtZTQ3YTllMTZmMTc4IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFkbWluIiwibmJmIjoxNzMwODA3ODg0LCJjc3JmIjoiMzc3N2RiYjgtOWExYy00MzAzLWJiNjYtNmU5NTQ2YjA5YjZhIiwiZXhwIjoxNzMwODA4Nzg0fQ.EyRuOCVDejaLjI2h8ehTeLqkRhPkVUjucUbW6muMULA"
+}
+
+2024-11-05 12:58:04,847 - INFO - 127.0.0.1 - - [05/Nov/2024 12:58:04] "POST /login HTTP/1.1" 200 -
+2024-11-05 12:58:09,691 - INFO - Route d'accueil accédée
+2024-11-05 12:58:09,691 - INFO - 127.0.0.1 - - [05/Nov/2024 12:58:09] "GET / HTTP/1.1" 200 -
+2024-11-05 12:58:09,722 - INFO - 127.0.0.1 - - [05/Nov/2024 12:58:09] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-11-05 12:58:09,749 - INFO - 127.0.0.1 - - [05/Nov/2024 12:58:09] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2024-11-05 12:58:19,483 - INFO - Tentative de connexion pour l'utilisateur : admin
+2024-11-05 12:58:19,500 - INFO - Réponse de l'API /login : 401 - {
+  "msg": "Bad username or password"
+}
+
+2024-11-05 12:58:19,501 - INFO - 127.0.0.1 - - [05/Nov/2024 12:58:19] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+2024-11-05 13:00:08,029 - INFO - Tentative de connexion pour l'utilisateur : admin
+2024-11-05 13:00:08,037 - INFO - Réponse de l'API /login : 200 - {
+  "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMDgwODAwOCwianRpIjoiZmQ2NTcwZTUtOTg0ZC00Nzk5LWFiY2UtZjc3MGRhMjBiNGY0IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFkbWluIiwibmJmIjoxNzMwODA4MDA4LCJjc3JmIjoiZDhkMjgxMTQtM2E2Zi00NmYyLWFhYTItMjU4ODYyN2RjMzg2IiwiZXhwIjoxNzMwODA4OTA4fQ.mSIIIC7sHbiNiGV19jNTD88zr365VIyFOlkVzuxuQwM"
+}
+
+2024-11-05 13:00:08,037 - INFO - 127.0.0.1 - - [05/Nov/2024 13:00:08] "POST /login HTTP/1.1" 200 -
+2024-11-05 15:41:12,648 - INFO - Requête de recommandations pour le livre : The Great Gatsby
+2024-11-05 15:41:12,931 - INFO - Réponse de l'API /recommendations : 401 - {
+  "msg": "Token has expired"
+}
+
+2024-11-05 15:41:12,931 - INFO - 127.0.0.1 - - [05/Nov/2024 15:41:12] "[31m[1mPOST /recommendations HTTP/1.1[0m" 400 -
+2024-11-05 15:41:17,892 - INFO - Route d'accueil accédée
+2024-11-05 15:41:17,909 - INFO - 127.0.0.1 - - [05/Nov/2024 15:41:17] "GET / HTTP/1.1" 200 -
+2024-11-05 15:41:17,965 - INFO - 127.0.0.1 - - [05/Nov/2024 15:41:17] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-11-05 15:41:17,976 - INFO - 127.0.0.1 - - [05/Nov/2024 15:41:17] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2024-11-05 15:41:19,697 - INFO - Tentative de connexion pour l'utilisateur : admin
+2024-11-05 15:41:19,721 - INFO - Réponse de l'API /login : 200 - {
+  "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMDgxNzY3OSwianRpIjoiMDc4Y2Q5NzItZjkxYi00ZDI3LWI1NTYtYzM0Nzg1MmU4NDk3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFkbWluIiwibmJmIjoxNzMwODE3Njc5LCJjc3JmIjoiNzYyMzU5ZjItMjcxNy00YTQyLThlNTAtMmE4MjZhZjFjM2IxIiwiZXhwIjoxNzMwODE4NTc5fQ.LGCK0pRZ9Yua4tqvRGd6DsdSNUsqSjNDOoaKAZGZpPg"
+}
+
+2024-11-05 15:41:19,721 - INFO - 127.0.0.1 - - [05/Nov/2024 15:41:19] "POST /login HTTP/1.1" 200 -
+2024-11-05 15:41:23,740 - INFO - Requête de recommandations pour le livre : Gilead
+2024-11-05 15:41:24,485 - INFO - Réponse de l'API /recommendations : 200 - [
+  {
+    "authors": "Maureen Gallery Kovacs",
+    "score": 0.5041021108627319,
+    "title": "The Epic of Gilgamesh"
+  },
+  {
+    "authors": "Ta-Nehisi Coates",
+    "score": 0.5030892491340637,
+    "title": "The Water Dancer"
+  },
+  {
+    "authors": "Ta-Nehisi Coates",
+    "score": 0.5030892491340637,
+    "title": "The Water Dancer"
+  }
+]
+
+2024-11-05 15:41:24,485 - INFO - 127.0.0.1 - - [05/Nov/2024 15:41:24] "POST /recommendations HTTP/1.1" 200 -
+2024-11-05 15:41:37,172 - INFO - Requête de recommandations pour le livre : The Great Gatsby
+2024-11-05 15:41:37,744 - INFO - Réponse de l'API /recommendations : 200 - [
+  {
+    "authors": "F. Scott Fitzgerald",
+    "score": 0.9413511157035828,
+    "title": "The Great Gatsby"
+  },
+  {
+    "authors": "Anne Tyler",
+    "score": 0.5367634892463684,
+    "title": "A Patchwork Planet"
+  },
+  {
+    "authors": "Betty Smith",
+    "score": 0.5153923034667969,
+    "title": "Joy in the Morning"
+  }
+]
+
+2024-11-05 15:41:37,744 - INFO - 127.0.0.1 - - [05/Nov/2024 15:41:37] "POST /recommendations HTTP/1.1" 200 -
+2024-11-05 16:52:57,371 - INFO -  * Detected change in 'C:\\Users\\pmgue\\Downloads\\ProjetChefDoeuvre\\RecommendationsLectures\\RecoLecturesAPP\\RecoApp.py', reloading
+2024-11-05 16:52:57,807 - INFO -  * Restarting with stat
+2024-11-05 16:52:59,128 - INFO - Démarrage de RecoApp sur le port 5002
+2024-11-05 16:52:59,160 - WARNING -  * Debugger is active!
+2024-11-05 16:52:59,160 - INFO -  * Debugger PIN: 106-833-848
+2024-11-05 16:53:01,576 - INFO -  * Detected change in 'C:\\Users\\pmgue\\Downloads\\ProjetChefDoeuvre\\RecommendationsLectures\\RecoLecturesAPP\\RecoApp.py', reloading
+2024-11-05 16:53:01,708 - INFO -  * Restarting with stat
+2024-11-05 16:53:02,912 - INFO - Démarrage de RecoApp sur le port 5002
+2024-11-05 16:53:02,971 - WARNING -  * Debugger is active!
+2024-11-05 16:53:02,980 - INFO -  * Debugger PIN: 106-833-848
+2024-11-05 17:00:15,822 - INFO - Route d'accueil accédée
+2024-11-05 17:00:15,949 - INFO - 127.0.0.1 - - [05/Nov/2024 17:00:15] "GET / HTTP/1.1" 200 -
+2024-11-05 17:00:16,249 - INFO - 127.0.0.1 - - [05/Nov/2024 17:00:16] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-11-05 17:00:16,310 - INFO - 127.0.0.1 - - [05/Nov/2024 17:00:16] "GET /static/js/app.js HTTP/1.1" 200 -
+2024-11-05 17:00:17,787 - INFO - Tentative de connexion pour l'utilisateur : admin
+2024-11-05 17:00:20,001 - INFO - Tentative de connexion pour l'utilisateur : admin
+2024-11-05 17:00:21,827 - INFO - Réponse de l'API /login : 200 - {
+  "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMDgyMjQyMSwianRpIjoiODk2NGVjZDktMTRiMi00NTM3LTgxMTUtNDZiNTNlMmM5ZWExIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFkbWluIiwibmJmIjoxNzMwODIyNDIxLCJjc3JmIjoiN2Y5NmNmNzMtMmQ0Yi00MjNmLTg5OWQtODNjOWFiMDRkODc2IiwiZXhwIjoxNzMwODIzMzIxfQ.HJObWfvvihL9_5_sjuYzzn61aGf2HMKpwrhWj-KuNwA"
+}
+
+2024-11-05 17:00:21,830 - INFO - 127.0.0.1 - - [05/Nov/2024 17:00:21] "POST /login HTTP/1.1" 200 -
+2024-11-05 17:00:21,841 - INFO - Réponse de l'API /login : 200 - {
+  "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMDgyMjQyMSwianRpIjoiYTk4MzVmMzEtYTMwMy00Nzg5LTkxODctZjhmMjNiMTkzNGFjIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFkbWluIiwibmJmIjoxNzMwODIyNDIxLCJjc3JmIjoiYTY5YTVlYzEtNmJhNC00YzEyLTkxOWQtNGZmMzYyMjE4NGNiIiwiZXhwIjoxNzMwODIzMzIxfQ.-8_GkyYALOP2NdUhazeIpFZENtHoS8ZVS3h97C4BLS8"
+}
+
+2024-11-05 17:00:21,842 - INFO - 127.0.0.1 - - [05/Nov/2024 17:00:21] "POST /login HTTP/1.1" 200 -
+2024-11-05 17:00:32,452 - INFO - Requête de recommandations pour le livre : The Great Gatsby
+2024-11-05 17:00:33,113 - INFO - Réponse de l'API /recommendations : 200 - [
+  {
+    "authors": "F. Scott Fitzgerald",
+    "score": 0.9413511157035828,
+    "title": "The Great Gatsby"
+  },
+  {
+    "authors": "Anne Tyler",
+    "score": 0.5367634892463684,
+    "title": "A Patchwork Planet"
+  },
+  {
+    "authors": "Betty Smith",
+    "score": 0.5153923034667969,
+    "title": "Joy in the Morning"
+  }
+]
+
+2024-11-05 17:00:33,113 - INFO - 127.0.0.1 - - [05/Nov/2024 17:00:33] "POST /recommendations HTTP/1.1" 200 -
+2024-11-05 17:00:35,626 - INFO - Réponse de l'API /favorites (ajout) : 400 - {
+  "msg": "Titre de livre manquant"
+}
+
+2024-11-05 17:00:35,627 - INFO - 127.0.0.1 - - [05/Nov/2024 17:00:35] "[31m[1mPOST /favorites HTTP/1.1[0m" 400 -
+2024-11-05 17:06:10,005 - INFO - Réponse de l'API /favorites (ajout) : 400 - {
+  "msg": "Titre de livre manquant"
+}
+
+2024-11-05 17:06:10,005 - INFO - 127.0.0.1 - - [05/Nov/2024 17:06:10] "[31m[1mPOST /favorites HTTP/1.1[0m" 400 -
+2024-11-05 17:06:12,518 - INFO - Réponse de l'API /favorites (ajout) : 400 - {
+  "msg": "Titre de livre manquant"
+}
+
+2024-11-05 17:06:12,518 - INFO - 127.0.0.1 - - [05/Nov/2024 17:06:12] "[31m[1mPOST /favorites HTTP/1.1[0m" 400 -
+2024-11-05 17:08:19,803 - INFO - Réponse de l'API /favorites (ajout) : 400 - {
+  "msg": "Titre de livre manquant"
+}
+
+2024-11-05 17:08:19,804 - INFO - 127.0.0.1 - - [05/Nov/2024 17:08:19] "[31m[1mPOST /favorites HTTP/1.1[0m" 400 -
+2024-11-05 17:08:47,116 - INFO - Route d'accueil accédée
+2024-11-05 17:08:47,207 - INFO - 127.0.0.1 - - [05/Nov/2024 17:08:47] "GET / HTTP/1.1" 200 -
+2024-11-05 17:08:47,272 - INFO - 127.0.0.1 - - [05/Nov/2024 17:08:47] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-11-05 17:08:47,360 - INFO - 127.0.0.1 - - [05/Nov/2024 17:08:47] "GET /static/js/app.js HTTP/1.1" 200 -
+2024-11-05 17:08:49,163 - INFO - Tentative de connexion pour l'utilisateur : admin
+2024-11-05 17:08:49,170 - INFO - Réponse de l'API /login : 200 - {
+  "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMDgyMjkyOSwianRpIjoiZWJjYjEzNDgtYjI1OS00NmI5LWJiNDQtMmVhNjU0MGE2ZjU1IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFkbWluIiwibmJmIjoxNzMwODIyOTI5LCJjc3JmIjoiY2VlMjU2MTAtZTcxYS00NTUxLTkwYjEtNzUzMjE4OWZlMjE1IiwiZXhwIjoxNzMwODIzODI5fQ.ESbL1xMbnao2Tp15EqUuNMGS2AvI8X6HCtfMdkmX_Sw"
+}
+
+2024-11-05 17:08:49,171 - INFO - 127.0.0.1 - - [05/Nov/2024 17:08:49] "POST /login HTTP/1.1" 200 -
+2024-11-05 17:08:56,678 - INFO - Requête de recommandations pour le livre : The Great Gatsby
+2024-11-05 17:08:57,155 - INFO - Réponse de l'API /recommendations : 200 - [
+  {
+    "authors": "F. Scott Fitzgerald",
+    "score": 0.9413511157035828,
+    "title": "The Great Gatsby"
+  },
+  {
+    "authors": "Anne Tyler",
+    "score": 0.5367634892463684,
+    "title": "A Patchwork Planet"
+  },
+  {
+    "authors": "Betty Smith",
+    "score": 0.5153923034667969,
+    "title": "Joy in the Morning"
+  }
+]
+
+2024-11-05 17:08:57,155 - INFO - 127.0.0.1 - - [05/Nov/2024 17:08:57] "POST /recommendations HTTP/1.1" 200 -
+2024-11-05 17:08:57,971 - INFO - Réponse de l'API /favorites (ajout) : 422 - {
+  "msg": "Not enough segments"
+}
+
+2024-11-05 17:08:57,972 - INFO - 127.0.0.1 - - [05/Nov/2024 17:08:57] "[31m[1mPOST /favorites HTTP/1.1[0m" 400 -
+2024-11-05 17:11:40,294 - INFO -  * Detected change in 'C:\\Users\\pmgue\\Downloads\\ProjetChefDoeuvre\\RecommendationsLectures\\RecoLecturesAPP\\RecoApp.py', reloading
+2024-11-05 17:11:40,551 - INFO -  * Restarting with stat
+2024-11-05 17:15:05,080 - INFO - Démarrage de RecoApp sur le port 5002
+2024-11-05 17:15:05,149 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5002
+2024-11-05 17:15:05,149 - INFO - [33mPress CTRL+C to quit[0m
+2024-11-05 17:15:05,149 - INFO -  * Restarting with stat
+2024-11-05 17:15:05,912 - INFO - Démarrage de RecoApp sur le port 5002
+2024-11-05 17:15:05,994 - WARNING -  * Debugger is active!
+2024-11-05 17:15:05,994 - INFO -  * Debugger PIN: 106-833-848
+2024-11-05 17:15:08,330 - INFO - Route d'accueil accédée
+2024-11-05 17:15:08,342 - INFO - 127.0.0.1 - - [05/Nov/2024 17:15:08] "GET / HTTP/1.1" 200 -
+2024-11-05 17:15:08,677 - INFO - 127.0.0.1 - - [05/Nov/2024 17:15:08] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2024-11-05 17:15:08,705 - INFO - 127.0.0.1 - - [05/Nov/2024 17:15:08] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-11-05 17:15:10,308 - INFO - Tentative de connexion pour l'utilisateur : admin
+2024-11-05 17:15:10,321 - INFO - Réponse de l'API /login : 200 - {
+  "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMDgyMzMxMCwianRpIjoiY2ZlZTk4ZDItNTM2ZS00MTg0LWJlZDAtNWIzZWNlMzY1NmEyIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFkbWluIiwibmJmIjoxNzMwODIzMzEwLCJjc3JmIjoiZmM4YmU1YjQtYWU2Yi00ZjY2LTgyNzMtZGMwM2Y4MGQ1MWE2IiwiZXhwIjoxNzMwODI0MjEwfQ.5MEao9uV0qOVF0NcJJqMaPK72XGrYMdci9p86yx-nfI"
+}
+
+2024-11-05 17:15:10,322 - INFO - 127.0.0.1 - - [05/Nov/2024 17:15:10] "POST /login HTTP/1.1" 200 -
+2024-11-05 17:15:15,075 - INFO - Requête de recommandations pour le livre : Gilead
+2024-11-05 17:15:15,638 - INFO - Réponse de l'API /recommendations : 200 - [
+  {
+    "authors": "Maureen Gallery Kovacs",
+    "score": 0.5041021108627319,
+    "title": "The Epic of Gilgamesh"
+  },
+  {
+    "authors": "Ta-Nehisi Coates",
+    "score": 0.5030892491340637,
+    "title": "The Water Dancer"
+  },
+  {
+    "authors": "Ta-Nehisi Coates",
+    "score": 0.5030892491340637,
+    "title": "The Water Dancer"
+  }
+]
+
+2024-11-05 17:15:15,638 - INFO - 127.0.0.1 - - [05/Nov/2024 17:15:15] "POST /recommendations HTTP/1.1" 200 -
+2024-11-05 17:15:16,642 - INFO - Réponse de l'API /favorites (ajout) : 422 - {
+  "msg": "Not enough segments"
+}
+
+2024-11-05 17:15:16,642 - INFO - 127.0.0.1 - - [05/Nov/2024 17:15:16] "[31m[1mPOST /favorites HTTP/1.1[0m" 400 -
+2024-11-05 17:18:13,565 - INFO -  * Detected change in 'C:\\Users\\pmgue\\Downloads\\ProjetChefDoeuvre\\RecommendationsLectures\\RecoLecturesAPP\\RecoApp.py', reloading
+2024-11-05 17:18:13,633 - INFO -  * Restarting with stat
+2024-11-05 17:18:14,389 - INFO - Démarrage de RecoApp sur le port 5002
+2024-11-05 17:18:14,421 - WARNING -  * Debugger is active!
+2024-11-05 17:18:14,421 - INFO -  * Debugger PIN: 106-833-848
+2024-11-05 17:30:30,320 - INFO -  * Detected change in 'C:\\Users\\pmgue\\Downloads\\ProjetChefDoeuvre\\RecommendationsLectures\\RecoLecturesAPP\\RecoApp.py', reloading
+2024-11-05 17:30:30,491 - INFO -  * Restarting with stat
+2024-11-05 17:30:31,678 - INFO - Démarrage de RecoApp sur le port 5002
+2024-11-05 17:30:31,729 - WARNING -  * Debugger is active!
+2024-11-05 17:30:31,744 - INFO -  * Debugger PIN: 106-833-848
+2024-11-05 17:30:36,691 - INFO - Tentative d'ajout du livre 'The Epic of Gilgamesh' aux favoris
+2024-11-05 17:30:36,703 - INFO - Réponse de l'API /favorites (ajout) : Status Code 422 - {
+  "msg": "Not enough segments"
+}
+
+2024-11-05 17:30:36,703 - WARNING - Échec de l'ajout du livre aux favoris
+2024-11-05 17:30:36,704 - INFO - 127.0.0.1 - - [05/Nov/2024 17:30:36] "[31m[1mPOST /favorites HTTP/1.1[0m" 400 -
+2024-11-05 17:30:44,499 - INFO - Route d'accueil accédée
+2024-11-05 17:30:44,507 - INFO - 127.0.0.1 - - [05/Nov/2024 17:30:44] "GET / HTTP/1.1" 200 -
+2024-11-05 17:30:44,704 - INFO - 127.0.0.1 - - [05/Nov/2024 17:30:44] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2024-11-05 17:30:44,735 - INFO - 127.0.0.1 - - [05/Nov/2024 17:30:44] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-11-05 17:30:46,115 - INFO - Tentative de connexion pour l'utilisateur : admin
+2024-11-05 17:30:46,210 - INFO - Réponse de l'API /login : Status Code 200 - {
+  "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMDgyNDI0NiwianRpIjoiNjIwMmE4YWQtMWU0Ny00OWVmLTljNTItNWQ2MGM4ZjQyMWE5IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFkbWluIiwibmJmIjoxNzMwODI0MjQ2LCJjc3JmIjoiN2UzOTMzMTItZTAyZS00OWZmLTgwYjItYWJlZjVkZjdhNDZlIiwiZXhwIjoxNzMwODI1MTQ2fQ.3y1SvBD88kyKNsOnnHM_6b1LKo1iIT3U4TgbD-0hfrE"
+}
+
+2024-11-05 17:30:46,210 - INFO - Connexion réussie, token reçu
+2024-11-05 17:30:46,210 - INFO - 127.0.0.1 - - [05/Nov/2024 17:30:46] "POST /login HTTP/1.1" 200 -
+2024-11-05 17:45:35,071 - INFO - Requête de recommandations pour le livre : Gilead
+2024-11-05 17:45:37,987 - INFO - Route d'accueil accédée
+2024-11-05 17:45:37,998 - INFO - 127.0.0.1 - - [05/Nov/2024 17:45:37] "GET / HTTP/1.1" 200 -
+2024-11-05 17:45:38,081 - INFO - 127.0.0.1 - - [05/Nov/2024 17:45:38] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2024-11-05 17:45:38,092 - INFO - 127.0.0.1 - - [05/Nov/2024 17:45:38] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-11-05 17:45:39,200 - INFO - Tentative de connexion pour l'utilisateur : admin
+2024-11-05 17:45:44,683 - INFO - Tentative de connexion pour l'utilisateur : admin
+2024-11-05 17:45:48,813 - INFO - Réponse de l'API /recommendations : Status Code 401 - {
+  "msg": "Token has expired"
+}
+
+2024-11-05 17:45:48,813 - WARNING - Erreur lors de la récupération des recommandations
+2024-11-05 17:45:48,813 - INFO - 127.0.0.1 - - [05/Nov/2024 17:45:48] "[31m[1mPOST /recommendations HTTP/1.1[0m" 400 -
+2024-11-05 17:45:48,828 - INFO - Réponse de l'API /login : Status Code 200 - {
+  "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMDgyNTE0OCwianRpIjoiMTIyZTdlZWMtMWYzZC00OGRmLTk3MzEtZWJhZGJmNzNiMzJjIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFkbWluIiwibmJmIjoxNzMwODI1MTQ4LCJjc3JmIjoiOTM3ZGRmMzYtMzA5MC00NjZhLWE4ZDAtZjM2Mjg2MzJlNzYzIiwiZXhwIjoxNzMwODI2MDQ4fQ.3fI9g2NHFTfdX3-JsPflhiKHl0NiCXfXSfbyY7fOJXg"
+}
+
+2024-11-05 17:45:48,828 - INFO - Connexion réussie, token reçu
+2024-11-05 17:45:48,828 - INFO - 127.0.0.1 - - [05/Nov/2024 17:45:48] "POST /login HTTP/1.1" 200 -
+2024-11-05 17:45:48,828 - INFO - Réponse de l'API /login : Status Code 200 - {
+  "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMDgyNTE0OCwianRpIjoiNDBlNDk0MjMtMzk0MC00MDBhLWI3OWYtMTY5MjJiNzliY2RhIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFkbWluIiwibmJmIjoxNzMwODI1MTQ4LCJjc3JmIjoiZTU4MGY2YjUtMmMyMi00MmI2LTk0YzAtNzE3MGZiNDM2ZDZlIiwiZXhwIjoxNzMwODI2MDQ4fQ.BmR-KC15j5w5PXG6ZXz61PPwOUdBnFYVs-7yysibZco"
+}
+
+2024-11-05 17:45:48,828 - INFO - Connexion réussie, token reçu
+2024-11-05 17:45:48,828 - INFO - 127.0.0.1 - - [05/Nov/2024 17:45:48] "POST /login HTTP/1.1" 200 -
+2024-11-05 17:45:53,693 - INFO - Requête de recommandations pour le livre : Gilead
+2024-11-05 17:45:54,265 - INFO - Réponse de l'API /recommendations : Status Code 200 - [
+  {
+    "authors": "Maureen Gallery Kovacs",
+    "score": 0.5041021108627319,
+    "title": "The Epic of Gilgamesh"
+  },
+  {
+    "authors": "Ta-Nehisi Coates",
+    "score": 0.5030892491340637,
+    "title": "The Water Dancer"
+  },
+  {
+    "authors": "Ta-Nehisi Coates",
+    "score": 0.5030892491340637,
+    "title": "The Water Dancer"
+  }
+]
+
+2024-11-05 17:45:54,265 - INFO - Recommandations récupérées avec succès
+2024-11-05 17:45:54,265 - INFO - 127.0.0.1 - - [05/Nov/2024 17:45:54] "POST /recommendations HTTP/1.1" 200 -
+2024-11-05 17:45:54,934 - INFO - Tentative d'ajout du livre 'The Epic of Gilgamesh' aux favoris
+2024-11-05 17:45:54,941 - INFO - Réponse de l'API /favorites (ajout) : Status Code 422 - {
+  "msg": "Not enough segments"
+}
+
+2024-11-05 17:45:54,941 - WARNING - Échec de l'ajout du livre aux favoris
+2024-11-05 17:45:54,942 - INFO - 127.0.0.1 - - [05/Nov/2024 17:45:54] "[31m[1mPOST /favorites HTTP/1.1[0m" 400 -
+2024-11-05 17:50:55,758 - INFO - Route d'accueil accédée
+2024-11-05 17:50:55,773 - INFO - 127.0.0.1 - - [05/Nov/2024 17:50:55] "GET / HTTP/1.1" 200 -
+2024-11-05 17:50:55,827 - INFO - 127.0.0.1 - - [05/Nov/2024 17:50:55] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-11-05 17:50:56,058 - INFO - 127.0.0.1 - - [05/Nov/2024 17:50:56] "GET /static/js/app.js HTTP/1.1" 200 -
+2024-11-05 17:50:57,090 - INFO - Tentative de connexion pour l'utilisateur : admin
+2024-11-05 17:50:57,099 - INFO - Réponse de l'API /login : Status Code 200 - {
+  "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMDgyNTQ1NywianRpIjoiZGFiNWZkNjktZjg1NC00NjVjLWFjNDYtMWRiMTc0MjM2ZjUyIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFkbWluIiwibmJmIjoxNzMwODI1NDU3LCJjc3JmIjoiN2ZlM2Y0ODUtNTdhZS00MTNmLTk0YjYtNzRkNDk3NTMxMDVmIiwiZXhwIjoxNzMwODI2MzU3fQ.aWdiCQ_HjxdfN-x0LOU5byVPhmBQHigszqiUY2V1jHA"
+}
+
+2024-11-05 17:50:57,099 - INFO - Connexion réussie, token reçu
+2024-11-05 17:50:57,100 - INFO - 127.0.0.1 - - [05/Nov/2024 17:50:57] "POST /login HTTP/1.1" 200 -
+2024-11-05 17:51:01,104 - INFO - Requête de recommandations pour le livre : Gilead
+2024-11-05 17:51:01,516 - INFO - Réponse de l'API /recommendations : Status Code 200 - [
+  {
+    "authors": "Maureen Gallery Kovacs",
+    "score": 0.5041021108627319,
+    "title": "The Epic of Gilgamesh"
+  },
+  {
+    "authors": "Ta-Nehisi Coates",
+    "score": 0.5030892491340637,
+    "title": "The Water Dancer"
+  },
+  {
+    "authors": "Ta-Nehisi Coates",
+    "score": 0.5030892491340637,
+    "title": "The Water Dancer"
+  }
+]
+
+2024-11-05 17:51:01,516 - INFO - Recommandations récupérées avec succès
+2024-11-05 17:51:01,517 - INFO - 127.0.0.1 - - [05/Nov/2024 17:51:01] "POST /recommendations HTTP/1.1" 200 -
+2024-11-05 17:51:02,386 - INFO - Tentative d'ajout du livre 'The Epic of Gilgamesh' aux favoris
+2024-11-05 17:51:02,393 - INFO - Réponse de l'API /favorites (ajout) : Status Code 422 - {
+  "msg": "Not enough segments"
+}
+
+2024-11-05 17:51:02,393 - WARNING - Échec de l'ajout du livre aux favoris
+2024-11-05 17:51:02,393 - INFO - 127.0.0.1 - - [05/Nov/2024 17:51:02] "[31m[1mPOST /favorites HTTP/1.1[0m" 400 -
+2024-11-05 17:53:16,547 - INFO - 127.0.0.1 - - [05/Nov/2024 17:53:16] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-11-05 17:53:28,120 - INFO - 127.0.0.1 - - [05/Nov/2024 17:53:28] "[35m[1mGET /favorites HTTP/1.1[0m" 500 -
+2024-11-05 17:53:28,369 - INFO - 127.0.0.1 - - [05/Nov/2024 17:53:28] "GET /favorites?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-11-05 17:53:28,388 - INFO - 127.0.0.1 - - [05/Nov/2024 17:53:28] "GET /favorites?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2024-11-05 17:53:28,513 - INFO - 127.0.0.1 - - [05/Nov/2024 17:53:28] "GET /favorites?__debugger__=yes&cmd=resource&f=console.png&s=Foor3mhL0Ma7JpXNGNvb HTTP/1.1" 200 -
+2024-11-05 17:53:28,531 - INFO - 127.0.0.1 - - [05/Nov/2024 17:53:28] "GET /favorites?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2024-11-05 17:55:31,170 - INFO - Route d'accueil accédée
+2024-11-05 17:55:31,171 - INFO - 127.0.0.1 - - [05/Nov/2024 17:55:31] "GET / HTTP/1.1" 200 -
+2024-11-05 17:55:31,299 - INFO - 127.0.0.1 - - [05/Nov/2024 17:55:31] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2024-11-05 17:55:31,395 - INFO - 127.0.0.1 - - [05/Nov/2024 17:55:31] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-11-05 17:55:33,584 - INFO - Tentative de connexion pour l'utilisateur : admin
+2024-11-05 17:55:43,931 - INFO - Réponse de l'API /login : Status Code 200 - {
+  "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMDgyNTc0MywianRpIjoiNjY3YmYzOTQtYjM0Yi00NTQ0LTg4YjYtZjJkNjcxY2M0OWM2IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFkbWluIiwibmJmIjoxNzMwODI1NzQzLCJjc3JmIjoiNWExMmFlYTMtNTZjNy00Y2MzLWE2MjItNDVlNDhkYWFhNTUxIiwiZXhwIjoxNzMwODI2NjQzfQ.2kxf5cCTtdj2jLVh0F-e271wQWjbFcy_EVOkOtvyFO0"
+}
+
+2024-11-05 17:55:43,931 - INFO - Connexion réussie, token reçu
+2024-11-05 17:55:43,931 - INFO - 127.0.0.1 - - [05/Nov/2024 17:55:43] "POST /login HTTP/1.1" 200 -
+2024-11-05 17:55:57,279 - INFO - Requête de recommandations pour le livre : Gilead
+2024-11-05 17:55:57,762 - INFO - Réponse de l'API /recommendations : Status Code 200 - [
+  {
+    "authors": "Maureen Gallery Kovacs",
+    "score": 0.5041021108627319,
+    "title": "The Epic of Gilgamesh"
+  },
+  {
+    "authors": "Ta-Nehisi Coates",
+    "score": 0.5030892491340637,
+    "title": "The Water Dancer"
+  },
+  {
+    "authors": "Ta-Nehisi Coates",
+    "score": 0.5030892491340637,
+    "title": "The Water Dancer"
+  }
+]
+
+2024-11-05 17:55:57,762 - INFO - Recommandations récupérées avec succès
+2024-11-05 17:55:57,762 - INFO - 127.0.0.1 - - [05/Nov/2024 17:55:57] "POST /recommendations HTTP/1.1" 200 -
+2024-11-05 17:56:01,263 - INFO - Tentative d'ajout du livre 'The Epic of Gilgamesh' aux favoris
+2024-11-05 17:56:01,268 - INFO - Réponse de l'API /favorites (ajout) : Status Code 422 - {
+  "msg": "Not enough segments"
+}
+
+2024-11-05 17:56:01,268 - WARNING - Échec de l'ajout du livre aux favoris
+2024-11-05 17:56:01,268 - INFO - 127.0.0.1 - - [05/Nov/2024 17:56:01] "[31m[1mPOST /favorites HTTP/1.1[0m" 400 -
+2024-11-05 18:17:36,306 - INFO - Requête de recommandations pour le livre : Gilead
+2024-11-05 18:17:36,420 - INFO - Réponse de l'API /recommendations : Status Code 401 - {
+  "msg": "Token has expired"
+}
+
+2024-11-05 18:17:36,420 - WARNING - Erreur lors de la récupération des recommandations
+2024-11-05 18:17:36,430 - INFO - 127.0.0.1 - - [05/Nov/2024 18:17:36] "[31m[1mPOST /recommendations HTTP/1.1[0m" 400 -
+2024-11-05 18:17:40,157 - INFO - Route d'accueil accédée
+2024-11-05 18:17:40,158 - INFO - 127.0.0.1 - - [05/Nov/2024 18:17:40] "GET / HTTP/1.1" 200 -
+2024-11-05 18:17:40,924 - INFO - 127.0.0.1 - - [05/Nov/2024 18:17:40] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-11-05 18:17:40,971 - INFO - 127.0.0.1 - - [05/Nov/2024 18:17:40] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2024-11-05 18:17:42,079 - INFO - Tentative de connexion pour l'utilisateur : admin
+2024-11-05 18:17:42,104 - INFO - Réponse de l'API /login : Status Code 200 - {
+  "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMDgyNzA2MiwianRpIjoiZTIxODI1ZmItNjUyZS00Y2JlLThkMzgtYmVmNmUxNWFkMGZmIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFkbWluIiwibmJmIjoxNzMwODI3MDYyLCJjc3JmIjoiODUwYzYzOTUtNjBlNS00N2IxLWE4ZDYtMmU0ZjY2YWZkM2RkIiwiZXhwIjoxNzMwODI3OTYyfQ.qkr3fdvjbj3xek_4VQqez8RgqdQk1OiLr5kiLW2Gr3Y"
+}
+
+2024-11-05 18:17:42,104 - INFO - Connexion réussie, token reçu
+2024-11-05 18:17:42,105 - INFO - 127.0.0.1 - - [05/Nov/2024 18:17:42] "POST /login HTTP/1.1" 200 -
+2024-11-05 18:17:46,314 - INFO - Requête de recommandations pour le livre : Gilead
+2024-11-05 18:17:47,213 - INFO - Réponse de l'API /recommendations : Status Code 200 - [
+  {
+    "authors": "Maureen Gallery Kovacs",
+    "score": 0.5041021108627319,
+    "title": "The Epic of Gilgamesh"
+  },
+  {
+    "authors": "Ta-Nehisi Coates",
+    "score": 0.5030892491340637,
+    "title": "The Water Dancer"
+  },
+  {
+    "authors": "Ta-Nehisi Coates",
+    "score": 0.5030892491340637,
+    "title": "The Water Dancer"
+  }
+]
+
+2024-11-05 18:17:47,213 - INFO - Recommandations récupérées avec succès
+2024-11-05 18:17:47,213 - INFO - 127.0.0.1 - - [05/Nov/2024 18:17:47] "POST /recommendations HTTP/1.1" 200 -
+2024-11-05 18:17:48,101 - INFO - Tentative d'ajout du livre 'The Epic of Gilgamesh' aux favoris
+2024-11-05 18:17:48,105 - INFO - Réponse de l'API /favorites (ajout) : Status Code 422 - {
+  "msg": "Not enough segments"
+}
+
+2024-11-05 18:17:48,105 - WARNING - Échec de l'ajout du livre aux favoris
+2024-11-05 18:17:48,106 - INFO - 127.0.0.1 - - [05/Nov/2024 18:17:48] "[31m[1mPOST /favorites HTTP/1.1[0m" 400 -
+2024-11-05 18:26:41,274 - INFO - Route d'accueil accédée
+2024-11-05 18:26:41,275 - INFO - 127.0.0.1 - - [05/Nov/2024 18:26:41] "GET / HTTP/1.1" 200 -
+2024-11-05 18:26:41,509 - INFO - 127.0.0.1 - - [05/Nov/2024 18:26:41] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-11-05 18:26:41,554 - INFO - 127.0.0.1 - - [05/Nov/2024 18:26:41] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2024-11-05 18:26:42,937 - INFO - Tentative de connexion pour l'utilisateur : admin
+2024-11-05 18:26:42,944 - INFO - Réponse de l'API /login : Status Code 200 - {
+  "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMDgyNzYwMiwianRpIjoiNTc1YTMyM2EtYTMxZC00M2JkLTgxYzItZGM3ZDNiMWIzMzkyIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFkbWluIiwibmJmIjoxNzMwODI3NjAyLCJjc3JmIjoiYjE3N2E0ZGQtM2Y0My00Y2UyLWIyMmEtNDFlZjc3NmVkNDY1IiwiZXhwIjoxNzMwODI4NTAyfQ.IHcp2uDqLfJnYVbyINdQwqbb2oLLNmEhsZV_DlRyjyM"
+}
+
+2024-11-05 18:26:42,945 - INFO - Connexion réussie, token reçu
+2024-11-05 18:26:42,945 - INFO - 127.0.0.1 - - [05/Nov/2024 18:26:42] "POST /login HTTP/1.1" 200 -
+2024-11-05 18:26:48,289 - INFO - Requête de recommandations pour le livre : Gilead
+2024-11-05 18:26:48,914 - INFO - Réponse de l'API /recommendations : Status Code 200 - [
+  {
+    "authors": "Ta-Nehisi Coates",
+    "score": 0.5030892491340637,
+    "title": "The Water Dancer"
+  },
+  {
+    "authors": "Ta-Nehisi Coates",
+    "score": 0.5030892491340637,
+    "title": "The Water Dancer"
+  },
+  {
+    "authors": "Evelyn Waugh",
+    "score": 0.5013036727905273,
+    "title": "The Complete Stories of Evelyn Waugh"
+  }
+]
+
+2024-11-05 18:26:48,914 - INFO - Recommandations récupérées avec succès
+2024-11-05 18:26:48,914 - INFO - 127.0.0.1 - - [05/Nov/2024 18:26:48] "POST /recommendations HTTP/1.1" 200 -
+2024-11-05 18:26:49,566 - INFO - Tentative d'ajout du livre 'The Water Dancer' aux favoris
+2024-11-05 18:26:49,571 - INFO - Réponse de l'API /favorites (ajout) : Status Code 422 - {
+  "msg": "Not enough segments"
+}
+
+2024-11-05 18:26:49,571 - WARNING - Échec de l'ajout du livre aux favoris
+2024-11-05 18:26:49,574 - INFO - 127.0.0.1 - - [05/Nov/2024 18:26:49] "[31m[1mPOST /favorites HTTP/1.1[0m" 400 -
+2024-11-05 18:31:48,712 - INFO - Route d'accueil accédée
+2024-11-05 18:31:48,712 - INFO - 127.0.0.1 - - [05/Nov/2024 18:31:48] "GET / HTTP/1.1" 200 -
+2024-11-05 18:31:48,819 - INFO - 127.0.0.1 - - [05/Nov/2024 18:31:48] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-11-05 18:31:49,085 - INFO - 127.0.0.1 - - [05/Nov/2024 18:31:49] "GET /static/js/app.js HTTP/1.1" 200 -
+2024-11-05 18:31:50,343 - INFO - Tentative de connexion pour l'utilisateur : admin
+2024-11-05 18:31:50,349 - INFO - Réponse de l'API /login : Status Code 200 - {
+  "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMDgyNzkxMCwianRpIjoiMjVkMDBmNTMtYjE2Ny00MjJhLWJiNzYtNDM3MzZlZjBlMGEzIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFkbWluIiwibmJmIjoxNzMwODI3OTEwLCJjc3JmIjoiNDdjMWY5ZjYtZTU5Yy00MDkwLWE3ODYtZWU2ZTczMTVhNjRlIiwiZXhwIjoxNzMwODI4ODEwfQ.OPfveV19TP9cWMvS8_DPDLuFj2FO1OoNQpigWpv7tiU"
+}
+
+2024-11-05 18:31:50,350 - INFO - Connexion réussie, token reçu
+2024-11-05 18:31:50,350 - INFO - 127.0.0.1 - - [05/Nov/2024 18:31:50] "POST /login HTTP/1.1" 200 -
+2024-11-05 18:31:54,374 - INFO - Requête de recommandations pour le livre : Gilead
+2024-11-05 18:31:54,378 - INFO - Réponse de l'API /recommendations : Status Code 422 - {
+  "msg": "Not enough segments"
+}
+
+2024-11-05 18:31:54,379 - WARNING - Erreur lors de la récupération des recommandations
+2024-11-05 18:31:54,379 - INFO - 127.0.0.1 - - [05/Nov/2024 18:31:54] "[31m[1mPOST /recommendations HTTP/1.1[0m" 400 -
+2024-11-05 18:34:57,621 - INFO - Tentative de connexion pour l'utilisateur : admin
+2024-11-05 18:34:57,628 - INFO - Réponse de l'API /login : Status Code 200 - {
+  "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMDgyODA5NywianRpIjoiY2U1OGNkYzktZWRlNS00YTcwLTk2OTctYTZjODhiYjBlYzg2IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFkbWluIiwibmJmIjoxNzMwODI4MDk3LCJjc3JmIjoiMWNkZTg4MWItNmI3ZC00ZDk2LWI4Y2EtMzI0Y2QwZjA1ZjhjIiwiZXhwIjoxNzMwODI4OTk3fQ.KfBrTD5gkI0y5846L9-66Ht-STahwpwud0Cc7k2SGGA"
+}
+
+2024-11-05 18:34:57,628 - INFO - Connexion réussie, token reçu
+2024-11-05 18:34:57,628 - INFO - 127.0.0.1 - - [05/Nov/2024 18:34:57] "POST /login HTTP/1.1" 200 -
+2024-11-05 18:35:08,832 - INFO - Route d'accueil accédée
+2024-11-05 18:35:08,837 - INFO - 127.0.0.1 - - [05/Nov/2024 18:35:08] "GET / HTTP/1.1" 200 -
+2024-11-05 18:35:09,005 - INFO - 127.0.0.1 - - [05/Nov/2024 18:35:09] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-11-05 18:35:09,049 - INFO - 127.0.0.1 - - [05/Nov/2024 18:35:09] "GET /static/js/app.js HTTP/1.1" 200 -
+2024-11-05 18:35:10,573 - INFO - Tentative de connexion pour l'utilisateur : admin
+2024-11-05 18:35:10,580 - INFO - Réponse de l'API /login : Status Code 200 - {
+  "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMDgyODExMCwianRpIjoiZjU5N2FmYjAtMmNlZC00ZjIzLTlmY2UtN2JjMjQyY2RlNmViIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFkbWluIiwibmJmIjoxNzMwODI4MTEwLCJjc3JmIjoiMDg0ZTBjODQtYzUwYi00MTJiLThjNzUtMmIxMWQ4N2U5MjZjIiwiZXhwIjoxNzMwODI5MDEwfQ.cY7xDiqqgckjqqUqimnWm0kFqzGEb_i3s7v6w1jsLQE"
+}
+
+2024-11-05 18:35:10,580 - INFO - Connexion réussie, token reçu
+2024-11-05 18:35:10,580 - INFO - 127.0.0.1 - - [05/Nov/2024 18:35:10] "POST /login HTTP/1.1" 200 -
+2024-11-05 18:35:16,455 - INFO - Requête de recommandations pour le livre : Gilead
+2024-11-05 18:35:16,461 - INFO - Réponse de l'API /recommendations : Status Code 422 - {
+  "msg": "Not enough segments"
+}
+
+2024-11-05 18:35:16,461 - WARNING - Erreur lors de la récupération des recommandations
+2024-11-05 18:35:16,462 - INFO - 127.0.0.1 - - [05/Nov/2024 18:35:16] "[31m[1mPOST /recommendations HTTP/1.1[0m" 400 -
+2024-11-05 18:35:42,801 - INFO - Route d'accueil accédée
+2024-11-05 18:35:42,807 - INFO - 127.0.0.1 - - [05/Nov/2024 18:35:42] "GET / HTTP/1.1" 200 -
+2024-11-05 18:35:42,977 - INFO - 127.0.0.1 - - [05/Nov/2024 18:35:42] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-11-05 18:35:42,979 - INFO - 127.0.0.1 - - [05/Nov/2024 18:35:42] "GET /static/js/app.js HTTP/1.1" 200 -
+2024-11-05 18:35:44,935 - INFO - Tentative de connexion pour l'utilisateur : admin
+2024-11-05 18:35:44,941 - INFO - Réponse de l'API /login : Status Code 200 - {
+  "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMDgyODE0NCwianRpIjoiNTgyYTVmNzAtZDgwZi00YzQ5LWIyMGMtODhiY2I0MzY2Y2ZhIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFkbWluIiwibmJmIjoxNzMwODI4MTQ0LCJjc3JmIjoiNDdmZGVmNjEtZWE0OS00OWNiLTk1MDEtOTNiNTYwNGEwZWRhIiwiZXhwIjoxNzMwODI5MDQ0fQ.ZnP6f88bwqcqPl8elywInNw-jYnQOG0Qxdb4MFfuRFY"
+}
+
+2024-11-05 18:35:44,941 - INFO - Connexion réussie, token reçu
+2024-11-05 18:35:44,942 - INFO - 127.0.0.1 - - [05/Nov/2024 18:35:44] "POST /login HTTP/1.1" 200 -
+2024-11-05 18:35:48,797 - INFO - Requête de recommandations pour le livre : Gilead
+2024-11-05 18:35:49,292 - INFO - Réponse de l'API /recommendations : Status Code 200 - [
+  {
+    "authors": "Ta-Nehisi Coates",
+    "score": 0.5030892491340637,
+    "title": "The Water Dancer"
+  },
+  {
+    "authors": "Ta-Nehisi Coates",
+    "score": 0.5030892491340637,
+    "title": "The Water Dancer"
+  },
+  {
+    "authors": "Evelyn Waugh",
+    "score": 0.5013036727905273,
+    "title": "The Complete Stories of Evelyn Waugh"
+  }
+]
+
+2024-11-05 18:35:49,292 - INFO - Recommandations récupérées avec succès
+2024-11-05 18:35:49,292 - INFO - 127.0.0.1 - - [05/Nov/2024 18:35:49] "POST /recommendations HTTP/1.1" 200 -
+2024-11-05 18:35:51,522 - INFO - Tentative d'ajout du livre 'The Water Dancer' aux favoris
+2024-11-05 18:35:51,527 - INFO - Réponse de l'API /favorites (ajout) : Status Code 422 - {
+  "msg": "Not enough segments"
+}
+
+2024-11-05 18:35:51,528 - WARNING - Échec de l'ajout du livre aux favoris
+2024-11-05 18:35:51,528 - INFO - 127.0.0.1 - - [05/Nov/2024 18:35:51] "[31m[1mPOST /favorites HTTP/1.1[0m" 400 -
+2024-11-05 18:36:42,776 - INFO - Route d'accueil accédée
+2024-11-05 18:36:42,777 - INFO - 127.0.0.1 - - [05/Nov/2024 18:36:42] "GET / HTTP/1.1" 200 -
+2024-11-05 18:36:42,887 - INFO - 127.0.0.1 - - [05/Nov/2024 18:36:42] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-11-05 18:36:42,981 - INFO - 127.0.0.1 - - [05/Nov/2024 18:36:42] "GET /static/js/app.js HTTP/1.1" 200 -
+2024-11-05 18:36:44,542 - INFO - Tentative de connexion pour l'utilisateur : admin
+2024-11-05 18:36:44,549 - INFO - Réponse de l'API /login : Status Code 200 - {
+  "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMDgyODIwNCwianRpIjoiY2ExNWRiYTAtZjliNy00N2QwLTlkNmMtOWU0ODlmZDUzYjQxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFkbWluIiwibmJmIjoxNzMwODI4MjA0LCJjc3JmIjoiYjgxZWY3MWItYzMzNi00ZTBlLTg0MGMtMGM2ZjhiNjhkZDMyIiwiZXhwIjoxNzMwODI5MTA0fQ.ykj3CQm2J1kyIDHFcwKy5wyiT8AkwlZunaUrDwGbS3c"
+}
+
+2024-11-05 18:36:44,549 - INFO - Connexion réussie, token reçu
+2024-11-05 18:36:44,549 - INFO - 127.0.0.1 - - [05/Nov/2024 18:36:44] "POST /login HTTP/1.1" 200 -
+2024-11-05 18:36:48,404 - INFO - Requête de recommandations pour le livre : Gilead
+2024-11-05 18:36:48,971 - INFO - Réponse de l'API /recommendations : Status Code 200 - [
+  {
+    "authors": "Ta-Nehisi Coates",
+    "score": 0.5030892491340637,
+    "title": "The Water Dancer"
+  },
+  {
+    "authors": "Ta-Nehisi Coates",
+    "score": 0.5030892491340637,
+    "title": "The Water Dancer"
+  },
+  {
+    "authors": "Evelyn Waugh",
+    "score": 0.5013036727905273,
+    "title": "The Complete Stories of Evelyn Waugh"
+  }
+]
+
+2024-11-05 18:36:48,971 - INFO - Recommandations récupérées avec succès
+2024-11-05 18:36:48,971 - INFO - 127.0.0.1 - - [05/Nov/2024 18:36:48] "POST /recommendations HTTP/1.1" 200 -
+2024-11-05 18:36:50,001 - INFO - Tentative d'ajout du livre 'The Water Dancer' aux favoris
+2024-11-05 18:36:50,007 - INFO - Réponse de l'API /favorites (ajout) : Status Code 422 - {
+  "msg": "Not enough segments"
+}
+
+2024-11-05 18:36:50,007 - WARNING - Échec de l'ajout du livre aux favoris
+2024-11-05 18:36:50,007 - INFO - 127.0.0.1 - - [05/Nov/2024 18:36:50] "[31m[1mPOST /favorites HTTP/1.1[0m" 400 -
+2024-11-05 20:08:51,418 - INFO - Route d'accueil accédée
+2024-11-05 20:08:51,645 - INFO - 127.0.0.1 - - [05/Nov/2024 20:08:51] "GET / HTTP/1.1" 200 -
+2024-11-05 20:08:51,846 - INFO - 127.0.0.1 - - [05/Nov/2024 20:08:51] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-11-05 20:08:52,003 - INFO - 127.0.0.1 - - [05/Nov/2024 20:08:52] "GET /static/js/app.js HTTP/1.1" 200 -
+2024-11-05 20:08:52,985 - INFO - Tentative de connexion pour l'utilisateur : admin
+2024-11-05 20:08:53,051 - INFO - Réponse de l'API /login : Status Code 200 - {
+  "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMDgzMzczMywianRpIjoiNTI5YWE1OGQtNjllOS00ZjY2LThhMmEtMzY5OGVjNWRhZmEzIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFkbWluIiwibmJmIjoxNzMwODMzNzMzLCJjc3JmIjoiM2E1N2Q2YTctY2Y0OS00OTNhLThhZjQtMTY3ZWViODM5ZGNhIiwiZXhwIjoxNzMwODM0NjMzfQ.uiMtSdqTxaVBdKIGe-iNQlmc1yWb4EC5laUm7l9478s"
+}
+
+2024-11-05 20:08:53,051 - INFO - Connexion réussie, token reçu
+2024-11-05 20:08:53,052 - INFO - 127.0.0.1 - - [05/Nov/2024 20:08:53] "POST /login HTTP/1.1" 200 -
+2024-11-05 20:08:56,691 - INFO - Requête de recommandations pour le livre : Gilead
+2024-11-05 20:08:58,427 - INFO - Réponse de l'API /recommendations : Status Code 200 - [
+  {
+    "authors": "Ta-Nehisi Coates",
+    "score": 0.5030892491340637,
+    "title": "The Water Dancer"
+  },
+  {
+    "authors": "Ta-Nehisi Coates",
+    "score": 0.5030892491340637,
+    "title": "The Water Dancer"
+  },
+  {
+    "authors": "Evelyn Waugh",
+    "score": 0.5013036727905273,
+    "title": "The Complete Stories of Evelyn Waugh"
+  }
+]
+
+2024-11-05 20:08:58,427 - INFO - Recommandations récupérées avec succès
+2024-11-05 20:08:58,427 - INFO - 127.0.0.1 - - [05/Nov/2024 20:08:58] "POST /recommendations HTTP/1.1" 200 -
+2024-11-05 20:08:59,818 - INFO - Tentative d'ajout du livre 'The Water Dancer' aux favoris
+2024-11-05 20:08:59,823 - INFO - Réponse de l'API /favorites (ajout) : Status Code 422 - {
+  "msg": "Not enough segments"
+}
+
+2024-11-05 20:08:59,823 - WARNING - Échec de l'ajout du livre aux favoris
+2024-11-05 20:08:59,824 - INFO - 127.0.0.1 - - [05/Nov/2024 20:08:59] "[31m[1mPOST /favorites HTTP/1.1[0m" 400 -
+2024-11-05 20:09:18,337 - INFO - Tentative d'ajout du livre 'The Water Dancer' aux favoris
+2024-11-05 20:09:18,342 - INFO - Réponse de l'API /favorites (ajout) : Status Code 422 - {
+  "msg": "Not enough segments"
+}
+
+2024-11-05 20:09:18,343 - WARNING - Échec de l'ajout du livre aux favoris
+2024-11-05 20:09:18,343 - INFO - 127.0.0.1 - - [05/Nov/2024 20:09:18] "[31m[1mPOST /favorites HTTP/1.1[0m" 400 -
+2024-11-05 20:12:42,330 - INFO -  * Detected change in 'C:\\Users\\pmgue\\Downloads\\ProjetChefDoeuvre\\RecommendationsLectures\\RecoLecturesAPP\\RecoApp.py', reloading
+2024-11-05 20:12:43,015 - INFO -  * Restarting with stat
+2024-11-05 20:12:44,293 - INFO - Démarrage de RecoApp sur le port 5002
+2024-11-05 20:12:44,355 - WARNING -  * Debugger is active!
+2024-11-05 20:12:44,360 - INFO -  * Debugger PIN: 106-833-848
+2024-11-05 20:16:02,891 - INFO -  * Detected change in 'C:\\Users\\pmgue\\Downloads\\ProjetChefDoeuvre\\RecommendationsLectures\\RecoLecturesAPP\\RecoApp.py', reloading
+2024-11-05 20:16:02,994 - INFO -  * Restarting with stat
+2024-11-05 20:16:04,854 - INFO - Démarrage de RecoApp sur le port 5002
+2024-11-05 20:16:04,884 - WARNING -  * Debugger is active!
+2024-11-05 20:16:04,890 - INFO -  * Debugger PIN: 106-833-848
+2024-11-05 20:16:18,740 - INFO -  * Detected change in 'C:\\Users\\pmgue\\Downloads\\ProjetChefDoeuvre\\RecommendationsLectures\\RecoLecturesAPP\\RecoApp.py', reloading
+2024-11-05 20:16:18,906 - INFO -  * Restarting with stat
+2024-11-05 20:20:35,673 - INFO -  * Restarting with stat
+2024-11-05 20:36:39,645 - INFO -  * Restarting with stat
+2024-11-05 20:38:57,927 - INFO -  * Restarting with stat
+2024-11-05 20:44:22,595 - INFO -  * Restarting with stat
+2024-11-05 20:45:00,330 - INFO -  * Restarting with stat
+2024-11-05 20:45:12,227 - INFO -  * Restarting with stat
+2024-11-05 20:46:35,575 - INFO -  * Restarting with stat
+2024-11-05 20:48:01,459 - INFO -  * Restarting with stat
+2024-11-05 20:57:42,974 - INFO -  * Restarting with stat
+2024-11-05 21:01:53,336 - INFO -  * Restarting with stat
+2024-11-05 21:02:20,119 - INFO -  * Restarting with stat
+2024-11-05 21:07:11,387 - INFO -  * Restarting with stat
+2024-11-05 21:08:24,602 - INFO -  * Restarting with stat
+2024-11-05 21:11:25,069 - INFO -  * Restarting with stat
+2024-11-05 21:21:52,998 - INFO -  * Restarting with stat
+2024-11-05 21:24:17,356 - INFO -  * Restarting with stat
+2024-11-05 21:28:21,112 - INFO -  * Restarting with stat
+2024-11-05 21:29:14,085 - INFO -  * Restarting with stat
+2024-11-05 21:31:28,185 - INFO -  * Restarting with stat
+2024-11-05 21:42:00,837 - INFO -  * Restarting with stat
+2024-11-05 21:44:49,726 - INFO -  * Restarting with stat
+2024-11-05 21:45:54,746 - INFO -  * Restarting with stat
+2024-11-05 21:57:11,082 - INFO -  * Restarting with stat
+2024-11-05 21:59:07,307 - INFO -  * Restarting with stat
+2024-11-05 22:08:13,428 - INFO -  * Restarting with stat
