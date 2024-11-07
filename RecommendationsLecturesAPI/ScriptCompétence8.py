@@ -60,8 +60,8 @@ def calculate_cosine_similarity_in_batches(embeddings, batch_size=100):
     return torch.cat(cosine_sim_list)
 
 
+
 def recommander_livres_sans_categorie(titre_livre, data, cosine_sim_embeddings, user_favorite_titles):
-    # Trouver l'index du livre demandé
     results = data[data['title'].str.contains(titre_livre, case=False, na=False)]
     if results.empty:
         return []  # Aucun résultat pour le titre donné
@@ -80,13 +80,18 @@ def recommander_livres_sans_categorie(titre_livre, data, cosine_sim_embeddings, 
                 'title': livre_info['title'],
                 'authors': livre_info['authors'],
                 'score': score.item(),
-                'thumbnail': livre_info.get('thumbnail')  # Ajout de la vignette
+                'thumbnail': livre_info.get('thumbnail'),
+                'description': livre_info.get('description', 'No description available.'),
+                'published_year': livre_info.get('published_year', 'Unknown'),
+                'average_rating': livre_info.get('average_rating', 'Not rated'),
+                'categories': livre_info.get('categories', 'Not categorized')
             })
         
-        if len(recommendations) >= 3:  # Limite à 3 recommandations
+        if len(recommendations) >= 3:
             break
 
     return recommendations
+
 
 
 # Exécution principale pour générer et sauvegarder les embeddings et similarités

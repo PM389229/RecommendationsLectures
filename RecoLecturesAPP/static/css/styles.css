@@ -96,3 +96,20 @@ button:hover {
 #recommendations-list li button:hover, #favorites-list li button:hover {
     background-color: #45a049;
 }
+
+
+
+/* Styles pour le contenu de la modale */
+.modal-content {
+    padding: 20px;
+}
+
+.modal-body img {
+    max-width: 100%;
+    height: auto;
+}
+
+#book-description {
+    font-size: 0.9em;
+    color: #555;
+}

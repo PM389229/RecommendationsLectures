@@ -1337,3 +1337,20 @@ INFO:werkzeug: * Restarting with stat
 2024-11-07 16:31:12,317 - INFO - 127.0.0.1 - - [07/Nov/2024 16:31:12] "GET /favorites HTTP/1.1" 200 -
 2024-11-07 16:31:33,198 - INFO - 127.0.0.1 - - [07/Nov/2024 16:31:33] "OPTIONS /favorites HTTP/1.1" 200 -
 2024-11-07 16:31:33,225 - INFO - 127.0.0.1 - - [07/Nov/2024 16:31:33] "GET /favorites HTTP/1.1" 200 -
+2024-11-07 17:17:21,315 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-11-07 17:17:21,315 - INFO - [33mPress CTRL+C to quit[0m
+2024-11-07 17:17:21,315 - INFO -  * Restarting with stat
+2024-11-07 17:17:34,586 - WARNING -  * Debugger is active!
+2024-11-07 17:17:34,602 - INFO -  * Debugger PIN: 106-833-848
+2024-11-07 17:17:43,431 - INFO - 127.0.0.1 - - [07/Nov/2024 17:17:43] "OPTIONS /login HTTP/1.1" 200 -
+2024-11-07 17:17:43,446 - INFO - 127.0.0.1 - - [07/Nov/2024 17:17:43] "POST /login HTTP/1.1" 200 -
+2024-11-07 17:17:45,714 - INFO - 127.0.0.1 - - [07/Nov/2024 17:17:45] "OPTIONS /recommendations HTTP/1.1" 200 -
+2024-11-07 17:17:46,497 - INFO - 127.0.0.1 - - [07/Nov/2024 17:17:46] "POST /recommendations HTTP/1.1" 200 -
+2024-11-07 17:19:24,583 - INFO - 127.0.0.1 - - [07/Nov/2024 17:19:24] "OPTIONS /favorites HTTP/1.1" 200 -
+2024-11-07 17:19:24,602 - INFO - 127.0.0.1 - - [07/Nov/2024 17:19:24] "GET /favorites HTTP/1.1" 200 -
+2024-11-07 17:40:51,204 - INFO -  * Detected change in 'C:\\Users\\pmgue\\Downloads\\ProjetChefDoeuvre\\RecommendationsLectures\\RecommendationsLecturesAPI\\app.py', reloading
+2024-11-07 17:40:57,775 - INFO -  * Restarting with stat
+2024-11-07 17:41:26,812 - WARNING -  * Debugger is active!
+2024-11-07 17:41:26,818 - INFO -  * Debugger PIN: 106-833-848
+2024-11-07 17:41:32,388 - INFO -  * Detected change in 'C:\\Users\\pmgue\\Downloads\\ProjetChefDoeuvre\\RecommendationsLectures\\RecommendationsLecturesAPI\\ScriptCompétence8.py', reloading

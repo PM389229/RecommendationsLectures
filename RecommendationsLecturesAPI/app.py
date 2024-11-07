@@ -55,22 +55,28 @@ def login():
 
 
 
-
 @app.route('/recommendations', methods=['POST'])
 @jwt_required()
 def get_recommendations():
     book_title = request.json.get('book_title')
     user_id = get_jwt_identity()
-    
+
     # Récupération des favoris de l'utilisateur
     user_favorites_doc = favorites_collection.find_one({"user_id": user_id})
-    # Extraire seulement les titres des livres favoris
     user_favorite_titles = [fav['title'] for fav in user_favorites_doc["favorite_books"]] if user_favorites_doc else []
-    
     
     if book_title:
         recommendations = recommander_livres_sans_categorie(book_title, data, cosine_sim_embeddings, user_favorite_titles)
-        
+
+        # Ajout de détails supplémentaires pour chaque recommandation
+        for rec in recommendations:
+            livre_info = data.loc[data['title'] == rec['title']].iloc[0]
+            rec['description'] = livre_info.get('description', 'No description available.')
+            rec['published_year'] = livre_info.get('published_year', 'Unknown')
+            rec['average_rating'] = livre_info.get('average_rating', 'Not rated')
+            rec['categories'] = livre_info.get('categories', 'Not categorized')
+            rec['thumbnail'] = livre_info.get('thumbnail', '')
+
         # Calcul des métriques
         similarity_scores = [rec['score'] for rec in recommendations]
         similarity_mean = np.mean(similarity_scores)

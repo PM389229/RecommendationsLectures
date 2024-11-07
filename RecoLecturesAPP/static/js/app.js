@@ -26,6 +26,12 @@ function login() {
     })
     .catch(error => console.error('Erreur:', error));
 }
+
+
+
+
+
+// Fonction pour récupérer les recommandations de livres
 function getRecommendations() {
     if (!token) {
         alert("Token is missing. Please log in again.");
@@ -50,11 +56,12 @@ function getRecommendations() {
         if (Array.isArray(data)) {
             data.forEach(book => {
                 const li = document.createElement('li');
-                li.className = "card my-3 p-3";  // Utiliser les classes de Bootstrap pour la carte
+                li.className = "card my-3 p-3";
 
+                // Contenu de l'élément avec vignette cliquable
                 li.innerHTML = `
                     <div class="media">
-                        <img src="${book.thumbnail}" alt="${book.title} cover" class="mr-3 thumbnail rounded">
+                        <img src="${book.thumbnail}" alt="${book.title} cover" class="mr-3 thumbnail rounded" onclick="showBookDetails(${JSON.stringify(book).replace(/"/g, '&quot;')})">
                         <div class="media-body">
                             <h5 class="mt-0">${book.title}</h5>
                             <p class="text-muted">by ${book.authors}</p>
@@ -63,6 +70,7 @@ function getRecommendations() {
                     </div>
                 `;
 
+                // Bouton pour ajouter aux favoris
                 const favButton = document.createElement('button');
                 favButton.className = "btn btn-outline-success mt-3";
                 favButton.textContent = "Add to Favorites";
@@ -172,4 +180,33 @@ function showFavorites() {
 function showRecommendations() {
     document.getElementById('favorites-section').style.display = 'none';
     document.getElementById('recommendations-section').style.display = 'block';
+}
+
+
+
+
+function showBookDetails(book) {
+    document.getElementById('book-title').innerText = book.title;
+    document.getElementById('book-authors').innerText = `by ${book.authors}`;
+    document.getElementById('book-published-year').innerText = `Published Year: ${book.published_year}`;
+    document.getElementById('book-average-rating').innerText = `Rating: ${book.average_rating}`;
+    document.getElementById('book-categories').innerText = `Categories: ${book.categories}`;
+    document.getElementById('book-thumbnail').src = book.thumbnail;
+    document.getElementById('book-description').innerText = book.description;
+
+    $('#bookModal').modal('show');
+}
+
+
+// Fonction pour basculer l'affichage de la description dans la modale
+function toggleDescription() {
+    const descriptionElement = document.getElementById('book-description');
+    const toggleButton = document.getElementById('description-toggle');
+    if (descriptionElement.style.display === 'none') {
+        descriptionElement.style.display = 'block';
+        toggleButton.innerText = 'Hide Description';
+    } else {
+        descriptionElement.style.display = 'none';
+        toggleButton.innerText = 'Show Description';
+    }
 }
