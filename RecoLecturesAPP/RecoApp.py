@@ -30,7 +30,9 @@ def add_to_favorites():
     token = request.headers.get('Authorization')
     book_title = request.json.get('book_title')
     book_author = request.json.get('book_author')
-    response = requests.post(f"{BASE_URL}/favorites", headers={'Authorization': token}, json={"book_title": book_title, "book_author": book_author})
+    book_thumbnail = request.json.get('book_thumbnail')  # Ajouter ce champ
+
+    response = requests.post(f"{BASE_URL}/favorites", headers={'Authorization': token}, json={"book_title": book_title, "book_author": book_author,"book_thumbnail": book_thumbnail})
     return jsonify(response.json()), response.status_code
 
 @app.route('/favorites', methods=['GET'])

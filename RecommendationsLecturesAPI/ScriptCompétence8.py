@@ -5,7 +5,7 @@ from sentence_transformers import SentenceTransformer
 
 # Mettre à jour les chemins d'accès vers les fichiers existants
 EMBEDDINGS_FILE = 'C:\\Users\\pmgue\\Downloads\\ProjetChefDoeuvre\\RecommendationsLectures\\BlocCompétences2\\embeddings.pt'
-DATA_FILE = 'C:\\Users\\pmgue\\Downloads\\ProjetChefDoeuvre\\RecommendationsLectures\\final_dataset_clean.csv'
+DATA_FILE = 'C:\\Users\\pmgue\\Downloads\\ProjetChefDoeuvre\\RecommendationsLectures\\StockDatas\\final_dataset_clean_THUMBNAILS_with_images_updated.csv'
 SIMILARITY_FILE = 'C:\\Users\\pmgue\\Downloads\\ProjetChefDoeuvre\\RecommendationsLectures\\BlocCompétences2\\cosine_sim_embeddings.pt'
 
 # Fonction pour charger ou calculer les données et embeddings
@@ -17,7 +17,7 @@ def charger_donnees_et_embeddings():
         embeddings = torch.load(EMBEDDINGS_FILE)
     else:
         print("Calcul des embeddings pour la première fois")
-        data = pd.read_csv('C:\\Users\\pmgue\\Downloads\\ProjetChefDoeuvre\\RecommendationsLectures\\final_dataset_clean.csv')
+        data = pd.read_csv('C:\\Users\\pmgue\\Downloads\\ProjetChefDoeuvre\\RecommendationsLectures\\StockDatas\\final_dataset_clean_THUMBNAILS_with_images_updated.csv')
         
         # Charger le modèle SentenceTransformer
         model = SentenceTransformer('all-MiniLM-L6-v2')
@@ -60,28 +60,27 @@ def calculate_cosine_similarity_in_batches(embeddings, batch_size=100):
     return torch.cat(cosine_sim_list)
 
 
-
-# Fonction pour recommander des livres
-def recommander_livres_sans_categorie(titre_livre, data, cosine_sim_embeddings, user_favorites):
+def recommander_livres_sans_categorie(titre_livre, data, cosine_sim_embeddings, user_favorite_titles):
+    # Trouver l'index du livre demandé
     results = data[data['title'].str.contains(titre_livre, case=False, na=False)]
-    
     if results.empty:
-        return []
+        return []  # Aucun résultat pour le titre donné
 
     idx = results.index[0]
     sim_scores = list(enumerate(cosine_sim_embeddings[idx]))
     sim_scores = sorted(sim_scores, key=lambda x: x[1], reverse=True)
 
     recommendations = []
-    for i, score in sim_scores[1:]:
+    for i, score in sim_scores[1:]:  # Commence après l'index 0 (le livre lui-même)
         livre_info = data.iloc[i]
         
         # Exclure les livres déjà dans les favoris de l'utilisateur
-        if livre_info['title'] not in user_favorites:
+        if livre_info['title'] not in user_favorite_titles:
             recommendations.append({
                 'title': livre_info['title'],
                 'authors': livre_info['authors'],
-                'score': score.item()
+                'score': score.item(),
+                'thumbnail': livre_info.get('thumbnail')  # Ajout de la vignette
             })
         
         if len(recommendations) >= 3:  # Limite à 3 recommandations

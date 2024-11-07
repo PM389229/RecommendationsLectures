@@ -26,8 +26,6 @@ function login() {
     })
     .catch(error => console.error('Erreur:', error));
 }
-
-// Fonction pour obtenir des recommandations
 function getRecommendations() {
     if (!token) {
         alert("Token is missing. Please log in again.");
@@ -35,28 +33,38 @@ function getRecommendations() {
     }
 
     const bookTitle = document.getElementById('book-title').value;
-    console.log("Token:", token, "Book Title:", bookTitle);  // Debug
 
-    fetch(`${BASE_URL}/recommendations`, {  // Utilisation de BASE_URL pour les recommandations
+    fetch(`${BASE_URL}/recommendations`, {
         method: 'POST',
         headers: {
-            'Authorization': `Bearer ${token}`,  // Passe le token JWT dans l'en-tête
+            'Authorization': `Bearer ${token}`,
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({book_title: bookTitle})
+        body: JSON.stringify({ book_title: bookTitle })
     })
     .then(response => response.json())
     .then(data => {
         const list = document.getElementById('recommendations-list');
-        list.innerHTML = '';  // Clear previous results
+        list.innerHTML = '';  // Effacer les résultats précédents
 
         if (Array.isArray(data)) {
             data.forEach(book => {
                 const li = document.createElement('li');
-                li.textContent = `${book.title} by ${book.authors} (Score: ${book.score.toFixed(2)})`;
-                
-                // Bouton pour ajouter aux favoris
+                li.className = "card my-3 p-3";  // Utiliser les classes de Bootstrap pour la carte
+
+                li.innerHTML = `
+                    <div class="media">
+                        <img src="${book.thumbnail}" alt="${book.title} cover" class="mr-3 thumbnail rounded">
+                        <div class="media-body">
+                            <h5 class="mt-0">${book.title}</h5>
+                            <p class="text-muted">by ${book.authors}</p>
+                            <p>Score: ${book.score.toFixed(2)}</p>
+                        </div>
+                    </div>
+                `;
+
                 const favButton = document.createElement('button');
+                favButton.className = "btn btn-outline-success mt-3";
                 favButton.textContent = "Add to Favorites";
                 favButton.onclick = () => addToFavorites(book);
 
@@ -72,6 +80,10 @@ function getRecommendations() {
         alert("Erreur lors de la requête de recommandations.");
     });
 }
+
+
+
+
 
 // Fonction pour ajouter un livre aux favoris
 function addToFavorites(book) {
@@ -90,7 +102,8 @@ function addToFavorites(book) {
         },
         body: JSON.stringify({ 
             book_title: book.title, 
-            book_author: book.authors // Envoie l'auteur aussi
+            book_author: book.authors, // Envoie l'auteur aussi
+            book_thumbnail: book.thumbnail  // Inclure la vignette ici
         })
     })
     .then(response => {
@@ -112,17 +125,17 @@ function addToFavorites(book) {
     });
 }
 
-// Fonction pour afficher la section des favoris
+
 function showFavorites() {
     if (!token) {
         alert("Token is missing. Please log in again.");
         return;
     }
 
-    fetch(`${BASE_URL}/favorites`, {  // Utilisation de BASE_URL pour récupérer les favoris
+    fetch(`${BASE_URL}/favorites`, {
         method: 'GET',
         headers: {
-            'Authorization': `Bearer ${token}`,  // Passe le token JWT dans l'en-tête
+            'Authorization': `Bearer ${token}`,
             'Content-Type': 'application/json'
         }
     })
@@ -134,14 +147,17 @@ function showFavorites() {
         if (Array.isArray(data) && data.length > 0) {
             data.forEach(book => {
                 const li = document.createElement('li');
-                li.textContent = `${book.title} by ${book.author}`;  // Affiche le titre et l'auteur
+
+                // Ajouter l'URL de la vignette directement dans le contenu texte
+                li.innerHTML = `<img src="${book.thumbnail}" alt="${book.title} cover" style="width:50px; vertical-align:middle; margin-right:10px;"> 
+                                ${book.title} by ${book.author}`;
+                
                 list.appendChild(li);
             });
         } else {
             list.innerHTML = '<li>No favorites yet.</li>';
         }
 
-        // Afficher la section des favoris et masquer celle des recommandations
         document.getElementById('recommendations-section').style.display = 'none';
         document.getElementById('favorites-section').style.display = 'block';
     })
@@ -150,6 +166,7 @@ function showFavorites() {
         alert("Erreur lors de la récupération des favoris.");
     });
 }
+
 
 // Fonction pour revenir aux recommandations
 function showRecommendations() {

@@ -52,17 +52,24 @@ def login():
         return jsonify(access_token=access_token), 200
     return jsonify({"msg": "Bad username or password"}), 401
 
+
+
+
+
 @app.route('/recommendations', methods=['POST'])
 @jwt_required()
 def get_recommendations():
     book_title = request.json.get('book_title')
     user_id = get_jwt_identity()
     
+    # Récupération des favoris de l'utilisateur
     user_favorites_doc = favorites_collection.find_one({"user_id": user_id})
-    user_favorites = user_favorites_doc["favorite_books"] if user_favorites_doc else []
+    # Extraire seulement les titres des livres favoris
+    user_favorite_titles = [fav['title'] for fav in user_favorites_doc["favorite_books"]] if user_favorites_doc else []
+    
     
     if book_title:
-        recommendations = recommander_livres_sans_categorie(book_title, data, cosine_sim_embeddings, user_favorites)
+        recommendations = recommander_livres_sans_categorie(book_title, data, cosine_sim_embeddings, user_favorite_titles)
         
         # Calcul des métriques
         similarity_scores = [rec['score'] for rec in recommendations]
@@ -78,14 +85,19 @@ def get_recommendations():
         return jsonify(recommendations)
     return jsonify({"msg": "No book title provided"}), 400
 
+
+
+
+
 @app.route('/favorites', methods=['POST'])
 @jwt_required()
 def add_to_favorites():
     user_id = get_jwt_identity()
     book_title = request.json.get('book_title')
     book_author = request.json.get('book_author')
+    book_thumbnail = request.json.get('book_thumbnail')  # Récupérer la vignette
     
-    new_favorite = {"title": book_title, "author": book_author}
+    new_favorite = {"title": book_title, "author": book_author,"thumbnail": book_thumbnail}
     user_favorites = favorites_collection.find_one({"user_id": user_id})
 
     if user_favorites:
@@ -95,6 +107,8 @@ def add_to_favorites():
         favorites_collection.insert_one({"user_id": user_id, "favorite_books": [new_favorite]})
 
     return jsonify({"msg": "Livre ajouté aux favoris"}), 200
+
+
 
 @app.route('/favorites', methods=['GET'])
 @jwt_required()
