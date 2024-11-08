@@ -25,15 +25,37 @@ def get_recommendations():
     response = requests.post(f"{BASE_URL}/recommendations", headers={'Authorization': token}, json={"book_title": book_title})
     return jsonify(response.json()), response.status_code
 
+
+
 @app.route('/favorites', methods=['POST'])
 def add_to_favorites():
     token = request.headers.get('Authorization')
     book_title = request.json.get('book_title')
     book_author = request.json.get('book_author')
-    book_thumbnail = request.json.get('book_thumbnail')  # Ajouter ce champ
+    book_thumbnail = request.json.get('book_thumbnail')
+    book_description = request.json.get('book_description')
+    book_published_year = request.json.get('book_published_year')
+    book_average_rating = request.json.get('book_average_rating')
+    book_categories = request.json.get('book_categories')
 
-    response = requests.post(f"{BASE_URL}/favorites", headers={'Authorization': token}, json={"book_title": book_title, "book_author": book_author,"book_thumbnail": book_thumbnail})
+    # Envoi de tous les champs dans le JSON
+    response = requests.post(
+        f"{BASE_URL}/favorites",
+        headers={'Authorization': token},
+        json={
+            "book_title": book_title,
+            "book_author": book_author,
+            "book_thumbnail": book_thumbnail,
+            "book_description": book_description,
+            "book_published_year": book_published_year,
+            "book_average_rating": book_average_rating,
+            "book_categories": book_categories
+        }
+    )
     return jsonify(response.json()), response.status_code
+
+
+
 
 @app.route('/favorites', methods=['GET'])
 def get_favorites():

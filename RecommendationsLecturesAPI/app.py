@@ -102,8 +102,20 @@ def add_to_favorites():
     book_title = request.json.get('book_title')
     book_author = request.json.get('book_author')
     book_thumbnail = request.json.get('book_thumbnail')  # Récupérer la vignette
+    book_description = request.json.get('description') # Ajout des champs supplémentaires
+    book_published_year = request.json.get('published_year')
+    book_average_rating = request.json.get('average_rating')
+    book_categories = request.json.get('categories')
     
-    new_favorite = {"title": book_title, "author": book_author,"thumbnail": book_thumbnail}
+    new_favorite = {
+        "title": book_title,
+        "author": book_author,
+        "thumbnail": book_thumbnail,
+        "description": book_description,
+        "published_year": book_published_year,
+        "average_rating": book_average_rating,
+        "categories": book_categories}
+    
     user_favorites = favorites_collection.find_one({"user_id": user_id})
 
     if user_favorites:

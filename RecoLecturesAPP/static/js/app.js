@@ -91,35 +91,29 @@ function getRecommendations() {
 
 
 
-
-
-// Fonction pour ajouter un livre aux favoris
 function addToFavorites(book) {
     if (!token) {
         alert("Token is missing. Please log in again.");
         return;
     }
 
-    console.log("Ajout du livre aux favoris avec le token:", token); // Log pour vérifier le token
-
-    fetch(`${BASE_URL}/favorites`, {  // Utilisation de BASE_URL pour ajouter aux favoris
+    fetch(`${BASE_URL}/favorites`, {
         method: 'POST',
         headers: {
-            'Authorization': `Bearer ${token}`,  // Passe le token JWT dans l'en-tête
+            'Authorization': `Bearer ${token}`,
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ 
-            book_title: book.title, 
-            book_author: book.authors, // Envoie l'auteur aussi
-            book_thumbnail: book.thumbnail  // Inclure la vignette ici
+        body: JSON.stringify({
+            book_title: book.title,
+            book_author: book.authors,
+            book_thumbnail: book.thumbnail,
+            description: book.description,
+            published_year: book.published_year,
+            average_rating: book.average_rating,
+            categories: book.categories
         })
     })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-        return response.json();
-    })
+    .then(response => response.json())
     .then(data => {
         if (data.msg === "Livre ajouté aux favoris") {
             alert("Book added to favorites!");
@@ -132,6 +126,10 @@ function addToFavorites(book) {
         alert("Erreur lors de la requête.");
     });
 }
+
+
+
+
 
 
 function showFavorites() {
@@ -155,9 +153,9 @@ function showFavorites() {
         if (Array.isArray(data) && data.length > 0) {
             data.forEach(book => {
                 const li = document.createElement('li');
-
-                // Ajouter l'URL de la vignette directement dans le contenu texte
-                li.innerHTML = `<img src="${book.thumbnail}" alt="${book.title} cover" style="width:50px; vertical-align:middle; margin-right:10px;"> 
+                
+                // Ajouter une vignette cliquable pour afficher les détails
+                li.innerHTML = `<img src="${book.thumbnail}" alt="${book.title} cover" style="width:50px; vertical-align:middle; margin-right:10px; cursor:pointer;" onclick="showBookDetails(${JSON.stringify(book).replace(/"/g, '&quot;')})">
                                 ${book.title} by ${book.author}`;
                 
                 list.appendChild(li);
@@ -176,6 +174,11 @@ function showFavorites() {
 }
 
 
+
+
+
+
+
 // Fonction pour revenir aux recommandations
 function showRecommendations() {
     document.getElementById('favorites-section').style.display = 'none';
@@ -187,15 +190,18 @@ function showRecommendations() {
 
 function showBookDetails(book) {
     document.getElementById('book-title').innerText = book.title;
-    document.getElementById('book-authors').innerText = `by ${book.authors}`;
-    document.getElementById('book-published-year').innerText = `Published Year: ${book.published_year}`;
-    document.getElementById('book-average-rating').innerText = `Rating: ${book.average_rating}`;
-    document.getElementById('book-categories').innerText = `Categories: ${book.categories}`;
-    document.getElementById('book-thumbnail').src = book.thumbnail;
-    document.getElementById('book-description').innerText = book.description;
+    // Utilisation de book.author comme fallback si book.authors n'est pas défini
+    document.getElementById('book-authors').innerText = `by ${book.authors || book.author || 'Unknown'}`;
+    document.getElementById('book-published-year').innerText = `Published Year: ${book.published_year || 'Unknown'}`;
+    document.getElementById('book-average-rating').innerText = `Rating: ${book.average_rating || 'Not rated'}`;
+    document.getElementById('book-categories').innerText = `Categories: ${book.categories || 'Not categorized'}`;
+    document.getElementById('book-thumbnail').src = book.thumbnail || 'default-thumbnail-url.jpg';
+    document.getElementById('book-description').innerText = book.description || 'No description available.';
 
     $('#bookModal').modal('show');
 }
+
+
 
 
 // Fonction pour basculer l'affichage de la description dans la modale
