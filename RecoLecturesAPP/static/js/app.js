@@ -148,15 +148,18 @@ function showFavorites() {
     .then(response => response.json())
     .then(data => {
         const list = document.getElementById('favorites-list');
-        list.innerHTML = '';  // Clear previous list
+        list.innerHTML = '';  // Efface la liste précédente
 
         if (Array.isArray(data) && data.length > 0) {
             data.forEach(book => {
                 const li = document.createElement('li');
                 
-                // Ajouter une vignette cliquable pour afficher les détails
-                li.innerHTML = `<img src="${book.thumbnail}" alt="${book.title} cover" style="width:50px; vertical-align:middle; margin-right:10px; cursor:pointer;" onclick="showBookDetails(${JSON.stringify(book).replace(/"/g, '&quot;')})">
-                                ${book.title} by ${book.author}`;
+                // Ajoute un bouton de suppression en plus de l'affichage habituel
+                li.innerHTML = `
+                    <img src="${book.thumbnail}" alt="${book.title} cover" style="width:50px; vertical-align:middle; margin-right:10px; cursor:pointer;" onclick="showBookDetails(${JSON.stringify(book).replace(/"/g, '&quot;')})">
+                    ${book.title} by ${book.author}
+                    <button class="btn btn-danger btn-sm ml-3" onclick="removeFromFavorites(${JSON.stringify(book).replace(/"/g, '&quot;')})">Supprimer</button>
+                `;
                 
                 list.appendChild(li);
             });
@@ -175,6 +178,35 @@ function showFavorites() {
 
 
 
+
+function removeFromFavorites(book) {
+    if (!token) {
+        alert("Token is missing. Please log in again.");
+        return;
+    }
+
+    fetch(`${BASE_URL}/favorites`, {
+        method: 'DELETE',
+        headers: {
+            'Authorization': `Bearer ${token}`,
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ book_title: book.title })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.msg === "Livre supprimé des favoris") {
+            alert("Book removed from favorites!");
+            showFavorites();  // Met à jour la liste des favoris après suppression
+        } else {
+            alert("Failed to remove book from favorites.");
+        }
+    })
+    .catch(error => {
+        console.error("Erreur lors de la requête removeFromFavorites:", error);
+        alert("Erreur lors de la requête.");
+    });
+}
 
 
 

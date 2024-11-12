@@ -1,0 +1,83 @@
+
+
+
+
+
+
+
+
+# Un utilisateur peut 'ajouter' des livres proposés par le systeme de recommendations , comme une fonction 'A lire plus tard' en gros comme des favoris
+
+
+
+résumé complet du fonctionnement de cette application de recommandation de livres, avec une explication du rôle de chaque fichier. L'application utilise une architecture cliente-serveur avec une API Flask pour le backend, une interface utilisateur HTML/JavaScript pour le frontend, et une base de données PostgreSQL et MongoDB pour stocker les informations sur les livres et les favoris des utilisateurs.
+
+1. app.py - Backend API avec Flask
+Le fichier app.py est le coeur de l'application backend. Voici ses principales fonctionnalités :
+
+Initialisation :
+
+Configure l’application Flask avec CORS pour accepter les requêtes provenant de http://127.0.0.1:5002.
+Initialise des connexions avec MongoDB (pour stocker les favoris des utilisateurs) et PostgreSQL (pour récupérer les informations sur les livres).
+Configure JWT (JSON Web Token) pour la gestion des sessions et l’authentification.
+Configure les métriques Prometheus pour surveiller la performance (similarité moyenne et écart type des recommandations).
+Limite les requêtes pour prévenir les abus (par exemple, 15 requêtes de login par minute).
+Routes :
+
+/login : Permet aux utilisateurs de se connecter. Envoie un jeton JWT si l'authentification réussit (ici en vérifiant un utilisateur et mot de passe par défaut).
+/recommendations : Reçoit un titre de livre et utilise une fonction de similarité cosinus pour générer des recommandations basées sur les livres dans la base de données PostgreSQL.
+Utilise MongoDB pour récupérer les livres favoris de l'utilisateur afin d’éviter de recommander des livres déjà ajoutés aux favoris.
+Récupère les informations des livres similaires depuis PostgreSQL et les enrichit avec des détails supplémentaires comme le score de similarité, les auteurs, la description, etc.
+/favorites (POST) : Ajoute un livre aux favoris d'un utilisateur. Les favoris sont stockés dans MongoDB.
+/favorites (GET) : Récupère la liste des favoris d'un utilisateur depuis MongoDB.
+Fonctions de Support :
+
+get_db_connection() : Gère la connexion à PostgreSQL.
+Calcul des métriques Prometheus : Calcule la similarité moyenne et l'écart type des recommandations, ainsi que la popularité moyenne des livres recommandés.
+2. RecoApp.py - Application Web (Frontend avec Flask)
+Le fichier RecoApp.py sert de serveur d’application pour l'interface utilisateur (front-end).
+
+Fonctions principales :
+/ (index) : Charge la page principale de l'application (fichier index.html).
+/login : Envoie les informations de connexion (nom d'utilisateur et mot de passe) à l'API backend pour obtenir un jeton JWT.
+/recommendations : Envoie une requête de recommandation à l’API backend en fournissant le jeton JWT et le titre d’un livre.
+/favorites (POST) : Envoie une requête pour ajouter un livre aux favoris.
+/favorites (GET) : Envoie une requête pour récupérer la liste des favoris d'un utilisateur.
+3. ScriptCompétence8.py - Module de Traitement des Données et Recommandations
+Ce fichier contient les fonctions pour charger les données, calculer les embeddings et les similarités cosinus, et générer les recommandations.
+
+Fonctions principales :
+charger_donnees_et_embeddings() : Charge les données des livres depuis PostgreSQL et génère des embeddings de description de livre en utilisant le modèle SentenceTransformer. Les embeddings sont stockés dans un fichier pour des chargements futurs plus rapides.
+calculate_or_load_cosine_similarity() : Calcule les similarités cosinus entre les embeddings pour permettre de trouver les livres similaires.
+calculate_cosine_similarity_in_batches() : Calcule la similarité cosinus par lots pour réduire l’utilisation de la mémoire.
+recommander_livres_sans_categorie() : Recommande des livres similaires au titre donné en excluant les livres déjà ajoutés aux favoris de l’utilisateur.
+4. app.js - JavaScript pour l'Interface Utilisateur (Frontend)
+Ce fichier gère les interactions utilisateur côté client en envoyant des requêtes à l'API Flask et en mettant à jour l'interface utilisateur en fonction des réponses reçues.
+
+Fonctions principales :
+login() : Envoie les informations de connexion et reçoit le jeton JWT en cas de succès. Si la connexion réussit, affiche la section des recommandations.
+getRecommendations() : Envoie une requête pour obtenir des recommandations basées sur le titre d’un livre, avec le jeton JWT. Met à jour l'interface pour afficher la liste des recommandations.
+addToFavorites() : Envoie une requête pour ajouter un livre spécifique aux favoris de l’utilisateur. Si le livre est ajouté, affiche une notification.
+showFavorites() : Envoie une requête pour récupérer les livres favoris de l'utilisateur et les affiche.
+removeFromFavorites() : Supprime un livre des favoris. Envoie une requête de suppression à l'API backend et met à jour la liste des favoris affichée.
+showBookDetails() : Affiche une modale avec les détails du livre sélectionné.
+Flux de l'Application
+Connexion : L’utilisateur se connecte via l’interface utilisateur, générant un jeton JWT si les informations d’identification sont correctes.
+Recommandations : L’utilisateur entre le titre d'un livre pour obtenir des recommandations. L'API utilise la similarité cosinus pour trouver des livres similaires, exclut ceux déjà ajoutés aux favoris et renvoie une liste de recommandations enrichies.
+Ajout aux Favoris : L'utilisateur peut ajouter des livres recommandés aux favoris. Les informations sont enregistrées dans MongoDB pour un accès rapide.
+Visualisation des Favoris : L'utilisateur peut afficher et supprimer des livres de ses favoris.
+Étapes Suivantes pour le Déploiement sur un Serveur OVH
+Pour déployer cette application sur un serveur OVH, suivez les étapes ci-dessous :
+
+Préparation du Serveur : Assurez-vous que le serveur est configuré avec Python, MongoDB, PostgreSQL et les bibliothèques Python nécessaires (par exemple, Flask, flask_jwt_extended, flask_limiter, pandas, torch, etc.).
+Configuration de l'Environnement :
+Mettez à jour les informations de connexion à PostgreSQL et MongoDB dans les fichiers Python en fonction de la configuration du serveur OVH.
+Assurez-vous que les fichiers d'embeddings et de similarité cosinus (embeddings.pt et cosine_sim_embeddings.pt) sont transférés vers le serveur ou recréés.
+Sécurisation et Configuration des Ports :
+Configurez les règles de pare-feu pour autoriser uniquement les ports nécessaires (par exemple, pour les connexions HTTP et les bases de données).
+Mettez à jour CORS pour autoriser les connexions depuis le domaine du serveur OVH.
+Déploiement avec un Serveur WSGI (comme Gunicorn) : Utilisez Gunicorn pour exécuter l’application Flask en production. Configurez un service systemd pour que l’application démarre automatiquement.
+Serveur Web (NGINX) : Utilisez NGINX en tant que reverse proxy pour gérer les requêtes HTTP et rediriger vers Gunicorn.
+Surveillance : Utilisez Prometheus pour surveiller les métriques de l’application en production.
+Certificat SSL : Configurez un certificat SSL pour sécuriser les connexions, surtout si l’application sera utilisée publiquement.
+Cette architecture permet de gérer efficacement les recommandations, les favoris et l’authentification avec JWT, le tout surveillé par Prometheus pour une meilleure visibilité des performances de l'application.
