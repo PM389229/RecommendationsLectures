@@ -1,5 +1,3 @@
-os-sys # intégré par défaut, pas nécessaire d'ajouter dans requirements.txt
-
 # PyTorch pour les réseaux de neurones et machine learning
 torch
 
@@ -35,3 +33,4 @@ numpy
 
 # Bibliothèque pour envoyer des requêtes HTTP
 requests
+
