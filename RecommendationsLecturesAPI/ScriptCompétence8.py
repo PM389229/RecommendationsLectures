@@ -1,12 +1,13 @@
 import os
-import torch
 import psycopg2
 import pandas as pd
 from sentence_transformers import SentenceTransformer
+import numpy as np
+from scipy.spatial.distance import cosine
 
 # Chemins pour les fichiers d'embeddings et de similarité cosinus
-EMBEDDINGS_FILE = 'C:\\Users\\pmgue\\Downloads\\ProjetChefDoeuvre\\RecommendationsLectures\\BlocCompétences2\\embeddings.pt'
-SIMILARITY_FILE = 'C:\\Users\\pmgue\\Downloads\\ProjetChefDoeuvre\\RecommendationsLectures\\BlocCompétences2\\cosine_sim_embeddings.pt'
+EMBEDDINGS_FILE = 'C:\\Users\\pmgue\\Downloads\\ProjetChefDoeuvre\\RecommendationsLectures\\BlocCompétences2\\embeddings.npy'
+SIMILARITY_FILE = 'C:\\Users\\pmgue\\Downloads\\ProjetChefDoeuvre\\RecommendationsLectures\\BlocCompétences2\\cosine_sim_embeddings.npy'
 
 # Fonction pour établir une connexion à la base de données PostgreSQL
 def get_db_connection():
@@ -39,7 +40,7 @@ def charger_donnees_et_embeddings():
         conn.close()
         
         # Charger les embeddings depuis le fichier
-        embeddings = torch.load(EMBEDDINGS_FILE)
+        embeddings = np.load(EMBEDDINGS_FILE)
     else:
         print("Calcul des embeddings pour la première fois")
         
@@ -60,15 +61,13 @@ def charger_donnees_et_embeddings():
 
         # Charger le modèle SentenceTransformer
         model = SentenceTransformer('all-MiniLM-L6-v2')
-        device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-        model.to(device)
 
         # Encoder les descriptions des livres en embeddings
         model.max_seq_length = 512
-        embeddings = model.encode(data['description'].fillna(''), convert_to_tensor=True)
+        embeddings = model.encode(data['description'].fillna(''), convert_to_tensor=False)  # Utilisation sans torch
 
         # Sauvegarder les embeddings pour les réutiliser plus tard
-        torch.save(embeddings, EMBEDDINGS_FILE)
+        np.save(EMBEDDINGS_FILE, embeddings)
         print("Embeddings sauvegardés")
 
     return data, embeddings
@@ -77,13 +76,13 @@ def charger_donnees_et_embeddings():
 def calculate_or_load_cosine_similarity(embeddings):
     if os.path.exists(SIMILARITY_FILE):
         print("Chargement des similarités cosinus à partir du fichier")
-        cosine_sim_embeddings = torch.load(SIMILARITY_FILE)
+        cosine_sim_embeddings = np.load(SIMILARITY_FILE)
     else:
         print("Calcul des similarités cosinus pour la première fois")
         cosine_sim_embeddings = calculate_cosine_similarity_in_batches(embeddings, batch_size=100)
         
         # Sauvegarder les similarités pour les réutiliser plus tard
-        torch.save(cosine_sim_embeddings, SIMILARITY_FILE)
+        np.save(SIMILARITY_FILE, cosine_sim_embeddings)
         print("Similarités cosinus sauvegardées")
 
     return cosine_sim_embeddings
@@ -93,9 +92,9 @@ def calculate_cosine_similarity_in_batches(embeddings, batch_size=100):
     cosine_sim_list = []
     for i in range(0, embeddings.shape[0], batch_size):
         batch_embeddings = embeddings[i:i + batch_size]
-        batch_cosine_sim = torch.mm(batch_embeddings, embeddings.T)
+        batch_cosine_sim = 1 - np.dot(batch_embeddings, embeddings.T)  # Utilisation de numpy pour calculer la similarité
         cosine_sim_list.append(batch_cosine_sim)
-    return torch.cat(cosine_sim_list)
+    return np.vstack(cosine_sim_list)  # Retourne un tableau numpy
 
 # Fonction de recommandation qui utilise les embeddings de similarité cosinus
 def recommander_livres_sans_categorie(titre_livre, data, cosine_sim_embeddings, user_favorite_titles):
