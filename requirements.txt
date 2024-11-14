@@ -1,3 +1,5 @@
+scipy
+scikit-learn
 
 
 # PostgreSQL pour la base de données
