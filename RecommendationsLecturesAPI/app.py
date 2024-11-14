@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 from flask_jwt_extended import JWTManager, create_access_token, jwt_required, get_jwt_identity
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
-from ScriptCompétence8 import charger_donnees_et_embeddings, calculate_or_load_cosine_similarity, recommander_livres_sans_categorie
+from RecommendationsLecturesAPI.ScriptCompétence8 import charger_donnees_et_embeddings, calculate_or_load_cosine_similarity, recommander_livres_sans_categorie
 from prometheus_client import Gauge, start_http_server
 from pymongo import MongoClient
 import numpy as np
