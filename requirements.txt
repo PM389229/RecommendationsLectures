@@ -6,7 +6,8 @@ psycopg2-binary
 # Gestion et manipulation de données
 pandas
 
-
+#Gunicorn
+gunicorn
 
 # Flask pour le serveur web
 Flask
