@@ -17,9 +17,14 @@ def get_db_connection():
         password="Lrk389229!"
     )
 
-
-# Fonction pour charger ou calculer les données et embeddings
-def charger_donnees_et_embeddings():
+def charger_donnees_et_embeddings() -> Tuple[pd.DataFrame, np.ndarray]:
+    """
+    Charge les données des livres depuis PostgreSQL et génère/charge les embeddings
+    en utilisant TF-IDF pour la vectorisation du texte.
+    
+    Returns:
+        Tuple[pd.DataFrame, np.ndarray]: Les données des livres et leurs embeddings
+    """
     # Vérification si les embeddings sont déjà sauvegardés
     if os.path.exists(EMBEDDINGS_FILE):
         print("Chargement des embeddings à partir du fichier")
@@ -59,19 +64,30 @@ def charger_donnees_et_embeddings():
         """, conn)
         conn.close()
 
-        # Charger le modèle SentenceTransformer
-        model = SentenceTransformer('all-MiniLM-L6-v2')
-
-        # Encoder les descriptions des livres en embeddings
-        model.max_seq_length = 512
-        embeddings = model.encode(data['description'].fillna(''), convert_to_tensor=False)  # Utilisation sans torch
-
+        # Initialiser le vectoriseur TF-IDF
+        vectorizer = TfidfVectorizer(
+            max_features=512,  # Limiter le nombre de features
+            stop_words='english',  # Supprimer les mots vides en anglais
+            ngram_range=(1, 2),  # Utiliser des unigrammes et bigrammes
+            min_df=2,  # Ignorer les termes apparaissant dans moins de 2 documents
+            strip_accents='unicode'  # Gérer les accents
+        )
+        
+        # Générer les embeddings TF-IDF
+        descriptions = data['description'].fillna('')
+        embeddings = vectorizer.fit_transform(descriptions).toarray()
+        
         # Sauvegarder les embeddings pour les réutiliser plus tard
         np.save(EMBEDDINGS_FILE, embeddings)
         print("Embeddings sauvegardés")
-
+        
+        # Sauvegarder également le vocabulaire pour référence future
+        vocab_file = EMBEDDINGS_FILE.replace('.npy', '_vocabulary.txt')
+        with open(vocab_file, 'w', encoding='utf-8') as f:
+            for word in vectorizer.get_feature_names_out():
+                f.write(f"{word}\n")
+    
     return data, embeddings
-
 
 # Fonction pour calculer ou charger les similarités cosinus
 def calculate_or_load_cosine_similarity(embeddings):
