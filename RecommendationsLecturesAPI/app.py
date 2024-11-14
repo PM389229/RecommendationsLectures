@@ -22,8 +22,7 @@ mongo_client = MongoClient("mongodb://admin:admin@localhost:27019")
 db = mongo_client["RecoLecturesDB"]
 favorites_collection = db["favorites"]
 
-# Démarrage du serveur Prometheus
-start_http_server(8001)
+
 
 # Création des métriques Prometheus
 similarity_mean_gauge = Gauge('recommendation_similarity_mean', 'Mean similarity score of recommendations')
