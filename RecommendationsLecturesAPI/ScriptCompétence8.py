@@ -1,9 +1,8 @@
 import os
-import psycopg2
-import pandas as pd
-from sentence_transformers import SentenceTransformer
 import numpy as np
-from scipy.spatial.distance import cosine
+import pandas as pd
+from sklearn.feature_extraction.text import TfidfVectorizer
+from typing import Tuple
 
 # Chemins pour les fichiers d'embeddings et de similarité cosinus
 EMBEDDINGS_FILE = 'C:\\Users\\pmgue\\Downloads\\ProjetChefDoeuvre\\RecommendationsLectures\\BlocCompétences2\\embeddings.npy'
@@ -17,6 +16,7 @@ def get_db_connection():
         user="postgres",
         password="Lrk389229!"
     )
+
 
 # Fonction pour charger ou calculer les données et embeddings
 def charger_donnees_et_embeddings():
@@ -71,6 +71,7 @@ def charger_donnees_et_embeddings():
         print("Embeddings sauvegardés")
 
     return data, embeddings
+
 
 # Fonction pour calculer ou charger les similarités cosinus
 def calculate_or_load_cosine_similarity(embeddings):
