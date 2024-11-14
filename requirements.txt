@@ -1,5 +1,4 @@
-# PyTorch pour les réseaux de neurones et machine learning
-torch
+
 
 # PostgreSQL pour la base de données
 psycopg2-binary
@@ -7,8 +6,7 @@ psycopg2-binary
 # Gestion et manipulation de données
 pandas
 
-# Sentence transformers pour NLP
-sentence-transformers
+
 
 # Flask pour le serveur web
 Flask
