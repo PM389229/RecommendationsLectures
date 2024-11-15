@@ -5,7 +5,8 @@ import requests
 app = Flask(__name__)
 
 # URL de base de l'API backend
-BASE_URL = "http://127.0.0.1:5001"
+BASE_URL = "https://projetchefdoeuvre.osc-fr1.scalingo.io"
+
 
 @app.route('/')
 def index():
