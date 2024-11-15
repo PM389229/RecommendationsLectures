@@ -30,7 +30,7 @@ def login():
     
     try:
         # Envoyer la requête POST au backend avec un timeout de 10 secondes
-        response = requests.post(f"{BASE_URL}/login", json={"username": username, "password": password}, timeout=10)
+        response = requests.post(f"{BASE_URL}/login", json={"username": username, "password": password}, timeout=30)
         response.raise_for_status()  # Vérifie si la requête a réussi
         
         # Utiliser la fonction pour gérer la réponse JSON en toute sécurité
