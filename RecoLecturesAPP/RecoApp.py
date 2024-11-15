@@ -26,7 +26,8 @@ def index():
 def login():
     username = request.json.get('username')
     password = request.json.get('password')
-    response = requests.post(f"{BASE_URL}/login", json={"username": username, "password": password})
+    response = requests.post(f"{BASE_URL}/login", json={"username": username, "password": password}, timeout=10)
+
     json_data = safe_json_response(response)
     return jsonify(json_data), response.status_code
 
