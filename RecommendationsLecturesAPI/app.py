@@ -73,11 +73,24 @@ def get_db_connection():
 @app.route('/login', methods=['POST'])
 @limiter.limit("15 per minute")
 def login():
+    # Vérification des données reçues
     username = request.json.get('username')
     password = request.json.get('password')
+    
+    # Logs pour vérifier les valeurs reçues
+    logging.info(f"Login attempt with username: {username}")
+    
+    # Vérification des identifiants
     if username == "admin" and password == "password":
+        # Création du jeton
         access_token = create_access_token(identity=username)
+        
+        # Log si le token est généré avec succès
+        logging.info(f"Access token created for user: {username}")
         return jsonify(access_token=access_token), 200
+    
+    # Log en cas d'échec de l'authentification
+    logging.warning("Invalid username or password")
     return jsonify({"msg": "Bad username or password"}), 401
 
 
