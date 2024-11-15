@@ -18,13 +18,6 @@ logging.basicConfig(filename='access.log', level=logging.INFO, format='%(asctime
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "http://127.0.0.1:5002"}})  # Autorise les requêtes provenant de 127.0.0.1:5002
 
-# Connexion à MongoDB
-mongo_client = MongoClient(os.environ["SCALINGO_MONGO_URL"])
-
-
-db = mongo_client["RecoLecturesDB"]
-favorites_collection = db["favorites"]
-
 
 
 # Création des métriques Prometheus
@@ -41,6 +34,28 @@ limiter = Limiter(key_func=get_remote_address, storage_uri="memory://")
 limiter.init_app(app)
 app.config['RATELIMIT_HEADERS_ENABLED'] = True
 
+# Vérification de la connexion à MongoDB
+# Vérification de la connexion à MongoDB
+try:
+    mongo_client = MongoClient(os.environ["SCALINGO_MONGO_URL"])  # Remplacez par votre URL MongoDB
+    db = mongo_client["RecoLecturesDB"]
+    logging.info("Connexion MongoDB réussie.")
+    
+    # Référence vers la collection "favorites"
+    favorites_collection = db["favorites"]
+
+except Exception as e:
+    logging.error(f"Erreur de connexion MongoDB : {e}")
+
+
+# Vérification de la connexion à PostgreSQL
+try:
+    conn = get_db_connection()  # Utilisez votre fonction de connexion PostgreSQL définie plus bas
+    logging.info("Connexion PostgreSQL réussie.")
+    conn.close()  # Fermer la connexion après le test de connexion
+except Exception as e:
+    logging.error(f"Erreur de connexion PostgreSQL : {e}")
+    
 # Fonction de connexion à PostgreSQL
 
 def get_db_connection():
