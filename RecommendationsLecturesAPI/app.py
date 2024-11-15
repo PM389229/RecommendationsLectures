@@ -69,29 +69,31 @@ def get_db_connection():
         port=url.port
     )
 
-# Route pour le login
 @app.route('/login', methods=['POST'])
 @limiter.limit("15 per minute")
 def login():
-    # Vérification des données reçues
-    username = request.json.get('username')
-    password = request.json.get('password')
+    logging.info("Début du traitement de la requête /login")
     
-    # Logs pour vérifier les valeurs reçues
-    logging.info(f"Login attempt with username: {username}")
-    
-    # Vérification des identifiants
-    if username == "admin" and password == "password":
-        # Création du jeton
-        access_token = create_access_token(identity=username)
-        
-        # Log si le token est généré avec succès
-        logging.info(f"Access token created for user: {username}")
-        return jsonify(access_token=access_token), 200
-    
-    # Log en cas d'échec de l'authentification
-    logging.warning("Invalid username or password")
-    return jsonify({"msg": "Bad username or password"}), 401
+    try:
+        username = request.json.get('username')
+        password = request.json.get('password')
+        logging.info(f"Paramètres reçus - username: {username}")
+
+        # Validation des identifiants (exemple simplifié)
+        if username == "admin" and password == "password":
+            logging.info("Identifiants corrects, création du token d'accès.")
+            access_token = create_access_token(identity=username)
+            logging.info("Token d'accès créé avec succès.")
+            return jsonify(access_token=access_token), 200
+
+        logging.warning("Identifiants incorrects")
+        return jsonify({"msg": "Bad username or password"}), 401
+
+    except Exception as e:
+        logging.error(f"Erreur lors de la connexion : {e}")
+        logging.error(traceback.format_exc())
+        return jsonify({"msg": "Erreur serveur"}), 500
+
 
 
 
