@@ -4,8 +4,18 @@ import requests
 
 app = Flask(__name__)
 
+
+
 # URL de base de l'API backend
 BASE_URL = "https://projetchefdoeuvre.osc-fr1.scalingo.io"
+
+def safe_json_response(response):
+    try:
+        return response.json()
+    except ValueError:
+        # Log an error if JSON decoding fails
+        app.logger.error("Failed to decode JSON response")
+        return {"error": "Invalid JSON response from server"}, 500
 
 
 @app.route('/')
@@ -17,7 +27,8 @@ def login():
     username = request.json.get('username')
     password = request.json.get('password')
     response = requests.post(f"{BASE_URL}/login", json={"username": username, "password": password})
-    return jsonify(response.json()), response.status_code
+    json_data = safe_json_response(response)
+    return jsonify(json_data), response.status_code
 
 @app.route('/recommendations', methods=['POST'])
 def get_recommendations():
