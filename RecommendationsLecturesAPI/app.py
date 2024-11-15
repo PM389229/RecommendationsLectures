@@ -19,7 +19,8 @@ app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "http://127.0.0.1:5002"}})  # Autorise les requêtes provenant de 127.0.0.1:5002
 
 # Connexion à MongoDB
-mongo_client = MongoClient("mongodb://projetchefdoeuvre-948:your_mongo_password@projetchefdoeuvre-948.mongo.b.osc-fr1.scalingo-dbs.com:34694/projetchefdoeuvre-948?ssl=true&replicaSet=projetchefdoeuvre-948-rs0")
+mongo_client = MongoClient(os.environ["SCALINGO_MONGO_URL"])
+
 
 db = mongo_client["RecoLecturesDB"]
 favorites_collection = db["favorites"]
@@ -43,7 +44,8 @@ app.config['RATELIMIT_HEADERS_ENABLED'] = True
 # Fonction de connexion à PostgreSQL
 
 def get_db_connection():
-    url = urlparse.urlparse("postgres://projetchefdoeuvre_7549:your_postgres_password@projetchefdoeuvre-7549.postgresql.b.osc-fr1.scalingo-dbs.com:34315/projetchefdoeuvre_7549?sslmode=prefer")
+    url = urlparse.urlparse(os.environ["SCALINGO_POSTGRESQL_URL"])
+
     return psycopg2.connect(
         database=url.path[1:],
         user=url.username,
