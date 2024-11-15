@@ -10,6 +10,7 @@ import psycopg2
 import logging
 import traceback
 from flask_cors import CORS
+import urllib.parse as urlparse
 
 # Configuration des logs
 logging.basicConfig(filename='access.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -18,7 +19,8 @@ app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "http://127.0.0.1:5002"}})  # Autorise les requêtes provenant de 127.0.0.1:5002
 
 # Connexion à MongoDB
-mongo_client = MongoClient("mongodb://admin:admin@localhost:27019")
+mongo_client = MongoClient("mongodb://projetchefdoeuvre-948:your_mongo_password@projetchefdoeuvre-948.mongo.b.osc-fr1.scalingo-dbs.com:34694/projetchefdoeuvre-948?ssl=true&replicaSet=projetchefdoeuvre-948-rs0")
+
 db = mongo_client["RecoLecturesDB"]
 favorites_collection = db["favorites"]
 
@@ -39,12 +41,15 @@ limiter.init_app(app)
 app.config['RATELIMIT_HEADERS_ENABLED'] = True
 
 # Fonction de connexion à PostgreSQL
+
 def get_db_connection():
+    url = urlparse.urlparse("postgres://projetchefdoeuvre_7549:your_postgres_password@projetchefdoeuvre-7549.postgresql.b.osc-fr1.scalingo-dbs.com:34315/projetchefdoeuvre_7549?sslmode=prefer")
     return psycopg2.connect(
-        host="localhost",
-        database="RecommendationsLectures",
-        user="postgres",
-        password="Lrk389229!"
+        database=url.path[1:],
+        user=url.username,
+        password=url.password,
+        host=url.hostname,
+        port=url.port
     )
 
 # Route pour le login
